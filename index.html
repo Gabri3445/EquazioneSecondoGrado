@@ -1,71 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Equazione di Secondo Grado</title>
+<html lang="it">
+<head> 
+
+<title>Home</title>
+
 <meta charset="UTF-8">
+
 </head>
+
 <body>
 
-<h1>Equazione di Secondo Grado</h1>
+<h1>Home</h1>
 
-<label for="inputValueA">A:</label><br>
-<input type="number" id="valueA"/>
+<ul>
 
-<p> </p>
+ <li><h2><a href="equazione-secondo-grado">Equazione di secondo grado</a></h2></li>
 
-<label for="valueB">B:</label><br>
-<input type="number" id="valueB"/>
-
-<p> </p>
-
-<label for="valueB">C:</label><br>
-<input type="number" id="valueC"/>
-
-<p> </p>
-
-<button type="button" onclick="equazioneSecondo()">Submit</button>
-
-<p> </p>
-
-<script>
-
-function equazioneSecondo(){
- var valueA = document.getElementById("valueA").value;
- var valueB = document.getElementById("valueB").value;
- var valueC = document.getElementById("valueC").value;
- var delta = 0
- var x1 = 0
- var x2 = 0
- delta = Math.pow(valueB, 2) - 4 * valueA * valueC
- document.getElementById("Delta").innerHTML = delta;
- x1 = (-valueB + Math.sqrt(delta)) / (2 * valueA)
- x2 = (-valueB - Math.sqrt(delta)) / (2 * valueA)
- console.log(valueA, valueB, valueC, delta, x1, x2);
- document.getElementById("X1").innerHTML = x1;
- document.getElementById("X2").innerHTML = x2;
-}
-
-</script>
-
-<b>Δ = <span id="Delta"></span> </b>
-
-<p> </p>
-
-<b>X1 = <span id="X1"></span> </b>
-
-<p> </p>
-
-<b>X2 = <span id="X2"></span> </b> 
-
-<p> </p>
-
-<p> </p>
-
-<a href="image.png">Flowchart</a>
-
-<p> </p>
-
-<a href="image2.png">Source</a>
+</ul>
 
 </body>
+
 </html>
