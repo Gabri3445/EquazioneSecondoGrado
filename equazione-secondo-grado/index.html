@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Equazione di Secondo Grado</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Equazione di Secondo Grado</h1>
+    <label for="valueA">A:</label>
+    <br>
+    <input type="number" id="valueA" />
+    <p></p>
+    <label for="valueB">B:</label>
+    <br>
+    <input type="number" id="valueB" />
+    <p></p>
+    <label for="valueB">C:</label>
+    <br>
+    <input type="number" id="valueC" />
+    <p></p>
+    <button type="button" onclick="equazioneSecondo()">Invia</button>
+    <p></p>
+    <script>
+      function equazioneSecondo() {
+        // Assegnare gli input A,B e C alle variabili e inizializza il delta, x1 e x2
+        var valueA = document.getElementById("valueA").value;
+        var valueB = document.getElementById("valueB").value;
+        var valueC = document.getElementById("valueC").value;
+        var delta = 0
+        var x1 = 0
+        var x2 = 0
+        // Formula del delta B^2 - 4 * A * C
+        delta = Math.pow(valueB, 2) - 4 * valueA * valueC
+        document.getElementById("Delta").innerHTML = delta;
+        // Controlla se il delta è positivo ovvero maggiore di 0
+        if (delta > 0) {
+          // Formula quadratica ( -B + radice quadrata del delta) / ( 2 * A ) con la radice fatta con Math.sqrt(Numero)
+          x1 = (-valueB + Math.sqrt(delta)) / (2 * valueA)
+          x2 = (-valueB - Math.sqrt(delta)) / (2 * valueA)
+          // Log A, B, C, delta, x1 e x2
+          console.log(valueA, valueB, valueC, delta, x1, x2);
+          //Assegna le variabili x1 e x2 ai tag X1 e X2 usati in righe 70 e 74
+          document.getElementById("X1").innerHTML = x1;
+          document.getElementById("X2").innerHTML = x2;
+          // Resetta la variabile errore
+          const errore = ""
+          document.getElementById("Errore").innerHTML = errore;
+        } else {
+          const errore = "Il discriminante è minore di 0 e i risultati sono non reali"
+          document.getElementById("Errore").innerHTML = errore;
+        }
+      }
+    </script>
+    <b>Δ = <span id="Delta"></span>
+    </b>
+    <p></p>
+    <b>X1 = <span id="X1"></span>
+    </b>
+    <p></p>
+    <b>X2 = <span id="X2"></span>
+    </b>
+    <p></p>
+    <b>
+      <span id="Errore"></span>
+    </b>
+    <p></p>
+    <p></p>
+    <a href="image.png">Flowchart</a>
+    <p></p>
+    <a href="image2.png">Source</a>
+    <p></p>
+    <a href="https://github.com/Gabri3445/Sito/tree/main/equazione-secondo-grado">Source(Github)</a>
+  </body>
+</html>
