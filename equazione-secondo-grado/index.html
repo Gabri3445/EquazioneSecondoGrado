@@ -1,0 +1,44 @@
+
+<p> </p>
+
+<label for="valueB">C:</label><br>
+<input type="number" id="valueC"/>
+
+<p> </p>
+
+<button type="button" onclick="equazioneSecondo()">Invia</button>
+
+<p> </p>
+
+<script>
+
+function equazioneSecondo(){
+ var valueA = document.getElementById("valueA").value;
+ var valueB = document.getElementById("valueB").value;
+ var valueC = document.getElementById("valueC").value;
+ var delta = 0
+ var x1 = 0
+ var x2 = 0
+ delta = Math.pow(valueB, 2) - 4 * valueA * valueC
+ document.getElementById("Delta").innerHTML = delta;
+ if(delta > 0){
+ x1 = (-valueB + Math.sqrt(delta)) / (2 * valueA)
+ x2 = (-valueB - Math.sqrt(delta)) / (2 * valueA)
+ console.log(valueA, valueB, valueC, delta, x1, x2);
+ document.getElementById("X1").innerHTML = x1;
+ document.getElementById("X2").innerHTML = x2;
+ const errore = ""
+ document.getElementById("Errore").innerHTML = errore;
+}
+else{
+ const errore = "Il discriminante è minore di 0 e i risultati sono non reali"
+ document.getElementById("Errore").innerHTML = errore;
+}
+ 
+}
+
+</script>
+
+<b>Δ = <span id="Delta"></span> </b>
+
+<p> </p>
