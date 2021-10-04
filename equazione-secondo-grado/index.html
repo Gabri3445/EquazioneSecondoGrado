@@ -38,11 +38,18 @@ function equazioneSecondo(){
  var x2 = 0
  delta = Math.pow(valueB, 2) - 4 * valueA * valueC
  document.getElementById("Delta").innerHTML = delta;
+ if(delta < 0){
  x1 = (-valueB + Math.sqrt(delta)) / (2 * valueA)
  x2 = (-valueB - Math.sqrt(delta)) / (2 * valueA)
  console.log(valueA, valueB, valueC, delta, x1, x2);
  document.getElementById("X1").innerHTML = x1;
  document.getElementById("X2").innerHTML = x2;
+}
+else{
+ const errore = "Il discriminante è minore di 0 e i risultati sono non reali"
+ document.getElementById("Errore").innerHTML = errore;
+}
+ 
 }
 
 </script>
@@ -56,6 +63,8 @@ function equazioneSecondo(){
 <p> </p>
 
 <b>X2 = <span id="X2"></span> </b> 
+ 
+ <b> <span id="Errore"></span> </b>
 
 <p> </p>
 
