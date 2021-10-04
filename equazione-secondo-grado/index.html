@@ -38,7 +38,7 @@ function equazioneSecondo(){
  var x2 = 0
  delta = Math.pow(valueB, 2) - 4 * valueA * valueC
  document.getElementById("Delta").innerHTML = delta;
- if(delta < 0){
+ if(delta > 0){
  x1 = (-valueB + Math.sqrt(delta)) / (2 * valueA)
  x2 = (-valueB - Math.sqrt(delta)) / (2 * valueA)
  console.log(valueA, valueB, valueC, delta, x1, x2);
@@ -63,6 +63,8 @@ else{
 <p> </p>
 
 <b>X2 = <span id="X2"></span> </b> 
+ 
+ <p> </p>
  
  <b> <span id="Errore"></span> </b>
 
