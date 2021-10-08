@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <title>Positivo o negativo</title>
+
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <h1>Positivo o negativo</h1>
+    <label for="numero">Numero:</label>
+    <br>
+    <input type="number" id="numero" />
+    <p></p>
+    <button type="button" onclick="posONeg()">Invia</button>
+    <script>
+        function posONeg() {
+            var numero = document.getElementById("numero").value;
+            if (numero > 0) {
+                document.getElementById("segno").innerHTML = "Il numero é positivo";
+            }
+            else {
+                document.getElementById("segno").innerHTML = "Il numero é negativo";
+            }
+        }
+    </script>
+    <p></p>
+    <b><b>Segno = <span id="segno"></span></b>
+</body>
+
+</html>
