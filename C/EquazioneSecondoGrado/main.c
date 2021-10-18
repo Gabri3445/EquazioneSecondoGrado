@@ -25,6 +25,7 @@ int main(){
     if(delta > 0){
         x1 = (-valueB + sqrt(delta)) / (2 * valueA);
         x2 = (-valueB - sqrt(delta)) / (2 * valueA);
+        
         printf("x1 = %d\n x2 = %d\n", x1, x2);
         system("pause");
     }
