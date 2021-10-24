@@ -1,0 +1,4 @@
+﻿  Source.c
+X:\Files\Document\!Scuola\Supermercato\Supermercato\Source.c(54,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+X:\Files\Document\!Scuola\Supermercato\Supermercato\Source.c(62,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Supermercato.vcxproj -> X:\Files\Document\!Scuola\Supermercato\Supermercato\x64\Debug\Supermercato.exe

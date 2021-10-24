@@ -1,0 +1,8 @@
+﻿  Source.c
+X:\Files\Document\!Scuola\Supermercato\Supermercato\Source.c(53,25): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+X:\Files\Document\!Scuola\Supermercato\Supermercato\Source.c(61,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Supermercato.vcxproj -> X:\Files\Document\!Scuola\Supermercato\Supermercato\x64\Release\Supermercato.exe
