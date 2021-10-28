@@ -51,7 +51,6 @@ int main()
 	if (totale > 100)
 	{
 		sconto = totale * 0.20;
-		printf("%f", sconto);
 		totfinale = totale - sconto;
 	}
 	else 
