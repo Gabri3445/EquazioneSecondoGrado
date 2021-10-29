@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="INF 03"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 06:50:13 PM"/>
+        <attribute name="created" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTAtMjk7IjAxOjUxOjQ5ICI7MjA3MQ=="/>
+        <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTAtMjk7IjAyOjEzOjM3ICI7OTsyMTgz"/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjEtMTAtMjk7MDY6NTA6MTMgUE07MTsyOTIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prodotto1" type="Real" array="False" size=""/>
+            <declare name="prodotto2" type="Real" array="False" size=""/>
+            <assign variable="prodotto2" expression="0"/>
+            <declare name="prodotto3" type="Real" array="False" size=""/>
+            <assign variable="prodotto3" expression="0"/>
+            <declare name="prodotto4" type="Real" array="False" size=""/>
+            <assign variable="prodotto4" expression="0"/>
+            <declare name="prodotto5" type="Real" array="False" size=""/>
+            <assign variable="prodotto5" expression="0"/>
+            <declare name="sconto" type="Real" array="False" size=""/>
+            <assign variable="sconto" expression="0"/>
+            <declare name="totale" type="Real" array="False" size=""/>
+            <assign variable="totale" expression="0"/>
+            <declare name="scontotot" type="Real" array="False" size=""/>
+            <assign variable="scontotot" expression="0"/>
+            <declare name="totfinale" type="Real" array="False" size=""/>
+            <assign variable="totfinale" expression="0"/>
+            <declare name="prodBool" type="Integer" array="False" size=""/>
+            <assign variable="prodBool" expression="0"/>
+            <output expression="&quot;Inserisci il prodotto 1: &quot;" newline="True"/>
+            <input variable="prodotto1"/>
+            <output expression="&quot;Vuoi continuare? 0/1&quot;" newline="True"/>
+            <input variable="prodBool"/>
+            <if expression="prodBool = 1">
+                <then>
+                    <output expression="&quot;Inserisci il prodotto 2: &quot;" newline="True"/>
+                    <input variable="prodotto2"/>
+                    <output expression="&quot;Vuoi continuare? 0/1&quot;" newline="True"/>
+                    <input variable="prodBool"/>
+                    <if expression="prodBool = 1">
+                        <then>
+                            <output expression="&quot;Inserisci il prodotto 3: &quot;" newline="True"/>
+                            <input variable="prodotto3"/>
+                            <output expression="&quot;Vuoi continuare? 0/1&quot;" newline="True"/>
+                            <input variable="prodBool"/>
+                            <if expression="prodBool = 1">
+                                <then>
+                                    <output expression="&quot;Inserisci il prodotto 4: &quot;" newline="True"/>
+                                    <input variable="prodotto4"/>
+                                    <output expression="&quot;Vuoi continuare? 0/1&quot;" newline="True"/>
+                                    <input variable="prodBool"/>
+                                    <if expression="prodBool = 1">
+                                        <then>
+                                            <output expression="&quot;Inserisci il prodotto 5: &quot;" newline="True"/>
+                                            <input variable="prodotto5"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <assign variable="totale" expression="prodotto1 + prodotto2 + prodotto3 + prodotto4 + prodotto5"/>
+            <if expression="totale &gt; 100">
+                <then>
+                    <assign variable="sconto" expression="totale * 0.20"/>
+                    <assign variable="totfinale" expression="totale - sconto"/>
+                </then>
+                <else>
+                    <if expression="totale &gt; 50">
+                        <then>
+                            <assign variable="sconto" expression="totale * 0.10"/>
+                            <assign variable="totfinale" expression="totale - sconto"/>
+                        </then>
+                        <else>
+                            <assign variable="totfinale" expression="totale"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Scontrino:&quot;" newline="True"/>
+            <output expression="&quot;Prodotto 1: &quot;" newline="False"/>
+            <output expression="prodotto1" newline="True"/>
+            <if expression="prodotto2 != 0">
+                <then>
+                    <output expression="&quot;Prodotto 2: &quot;" newline="False"/>
+                    <output expression="prodotto2" newline="True"/>
+                    <if expression="prodotto3 != 0">
+                        <then>
+                            <output expression="&quot;Prodotto 3: &quot;" newline="False"/>
+                            <output expression="prodotto3" newline="True"/>
+                            <if expression="prodotto4 != 0">
+                                <then>
+                                    <output expression="&quot;Prodotto 4: &quot;" newline="False"/>
+                                    <output expression="prodotto4" newline="True"/>
+                                    <if expression="prodotto5 != 0">
+                                        <then>
+                                            <output expression="&quot;Prodotto 5: &quot;" newline="False"/>
+                                            <output expression="prodotto5" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Costo totale: &quot;" newline="False"/>
+            <output expression="totale" newline="True"/>
+            <if expression="sconto != 0">
+                <then>
+                    <output expression="&quot;Sconto: &quot;" newline="False"/>
+                    <output expression="sconto" newline="True"/>
+                    <output expression="&quot;Costo con lo sconto: &quot;" newline="False"/>
+                    <output expression="totfinale" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
