@@ -47,3 +47,7 @@ p.big {
   p.center {
       text-align:center;
   }
+
+  td{
+    text-align: center;
+  }
