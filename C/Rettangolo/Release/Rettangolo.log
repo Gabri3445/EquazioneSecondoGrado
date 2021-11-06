@@ -1,0 +1,5 @@
+﻿  Source.c
+X:\Files\Document\!Scuola\Git\C\Rettangolo\Source.c(16,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+X:\Files\Document\!Scuola\Git\C\Rettangolo\Source.c(18,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+X:\Files\Document\!Scuola\Git\C\Rettangolo\Source.c(27,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+X:\Files\Document\!Scuola\Git\C\Rettangolo\Source.c(29,4): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
