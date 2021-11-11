@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gabri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-08 06:43:58 PM"/>
+        <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjEtMTEtMDg7MDY6Mzg6MjAgUE07MjgxNA=="/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjEtMTEtMDg7MDY6NDM6NTggUE07MTsyOTI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="base" type="Integer" array="False" size=""/>
+            <declare name="altezza" type="Integer" array="False" size=""/>
+            <declare name="perimetro" type="Integer" array="False" size=""/>
+            <declare name="area" type="Integer" array="False" size=""/>
+            <declare name="cond" type="Boolean" array="False" size=""/>
+            <assign variable="cond" expression="true"/>
+            <output expression="&quot;Inserisci la base&quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;Inserisci l'altezza&quot;" newline="True"/>
+            <input variable="altezza"/>
+            <while expression="cond == true">
+                <if expression="base == 0 || altezza == 0">
+                    <then>
+                        <output expression="&quot;La base o l'altezza non pu&#243; essere 0. Riprova&quot;" newline="True"/>
+                        <output expression="&quot;Inserisci la base&quot;" newline="True"/>
+                        <input variable="base"/>
+                        <output expression="&quot;Inserisci l'altezza&quot;" newline="True"/>
+                        <input variable="altezza"/>
+                    </then>
+                    <else>
+                        <assign variable="cond" expression="false"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="perimetro" expression="(base * 2) + (altezza * 2)"/>
+            <assign variable="area" expression="base * altezza"/>
+            <output expression="&quot;Il perimetro &#233; &quot;" newline="False"/>
+            <output expression="perimetro" newline="True"/>
+            <output expression="&quot;L'area &#233; &quot;" newline="False"/>
+            <output expression="area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
