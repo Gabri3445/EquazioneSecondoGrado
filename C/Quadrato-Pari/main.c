@@ -14,7 +14,7 @@ int main()
   scanf("%d", lato);
   while(cond == true)
   {
-    if(%lato != 0)
+    if(lato%2 != 0)
     {
       printf("Il numero non e pari. Inserisci di nuovo ");
       scanf("d", lato);
