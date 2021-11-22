@@ -16,7 +16,7 @@ int main()
   {
     if(lato%2 != 0)
     {
-      printf("Il numero non e pari. Inserisci di nuovo ");
+      printf("\nIl numero non e pari. Inserisci di nuovo ");
       scanf("d", lato);
     }
     else 
@@ -25,6 +25,6 @@ int main()
     }
   }
   area = pow(lato, 2);
-  printf("L'area e' %d", area);
+  printf("\nL'area e' %d", area);
   system("pause");
 }
