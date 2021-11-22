@@ -1,7 +1,7 @@
 ﻿  Source.c
-X:\Files\Document\!Scuola\Git\C\Voti\Source.c(23,52): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+X:\Files\Document\!Scuola\Git\C\Voti\Source.c(30,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating code
-  1 of 7 functions (14.3%) were compiled, the rest were copied from previous compilation.
+  0 of 7 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code

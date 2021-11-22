@@ -4,98 +4,51 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="INF 03"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-11-20 08:38:00 "/>
+        <attribute name="saved" value="2021-11-22 03:59:46 PM"/>
         <attribute name="created" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTEtMjA7IjA4OjI2OjE3ICI7MjA2Nw=="/>
         <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTEtMjA7IjA4OjM4OjAwICI7MTsyMTcw"/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjEtMTEtMjI7MDM6NTk6NDYgUE07MTsyOTI2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="NVOTI" type="Integer" array="False" size=""/>
             <assign variable="NVOTI" expression="5"/>
-            <declare name="voto0" type="Integer" array="False" size=""/>
-            <declare name="voto1" type="Integer" array="False" size=""/>
-            <declare name="voto2" type="Integer" array="False" size=""/>
-            <declare name="voto3" type="Integer" array="False" size=""/>
-            <declare name="voto4" type="Integer" array="False" size=""/>
+            <declare name="voto" type="Integer" array="False" size=""/>
             <declare name="votoMed" type="Real" array="False" size=""/>
             <declare name="votoMax" type="Integer" array="False" size=""/>
+            <assign variable="votoMax" expression="0"/>
             <declare name="votoMin" type="Integer" array="False" size=""/>
-            <output expression="&quot;Inserisci il primo voto &quot;" newline="False"/>
-            <input variable="voto0"/>
-            <output expression="&quot;Inserisci il secondo voto &quot;" newline="False"/>
-            <input variable="voto1"/>
-            <output expression="&quot;Inserisci il terzo voto &quot;" newline="False"/>
-            <input variable="voto2"/>
-            <output expression="&quot;Inserisci il quarto voto &quot;" newline="False"/>
-            <input variable="voto3"/>
-            <output expression="&quot;Inserisci il quinto voto &quot;" newline="False"/>
-            <input variable="voto4"/>
-            <assign variable="votoMed" expression="(voto0 + voto1 + voto2 + voto3 + voto4) / NVOTI"/>
-            <if expression="voto0 &gt; voto1 &amp;&amp; voto0 &gt; voto2 &amp;&amp; voto0 &gt; voto3 &amp;&amp; voto0 &gt; voto4">
-                <then>
-                    <assign variable="votoMax" expression="voto0"/>
-                </then>
-                <else>
-                    <if expression="voto1 &gt; voto2 &amp;&amp; voto1 &gt; voto3 &amp;&amp; voto1 &gt; voto4">
-                        <then>
-                            <assign variable="votoMax" expression="voto1"/>
-                        </then>
-                        <else>
-                            <if expression="voto2 &gt; voto3 &amp;&amp; voto2 &gt; voto4">
-                                <then>
-                                    <assign variable="votoMax" expression="voto2"/>
-                                </then>
-                                <else>
-                                    <if expression="voto3 &gt; voto4">
-                                        <then>
-                                            <assign variable="votoMax" expression="voto3"/>
-                                        </then>
-                                        <else>
-                                            <assign variable="votoMax" expression="voto4"/>
-                                        </else>
-                                    </if>
-                                </else>
-                            </if>
-                        </else>
-                    </if>
-                </else>
-            </if>
-            <if expression="voto0 &lt; voto1 &amp;&amp; voto0 &lt; voto2 &amp;&amp; voto0 &lt; voto3 &amp;&amp; voto0 &lt; voto4">
-                <then>
-                    <assign variable="votoMin" expression="voto0"/>
-                </then>
-                <else>
-                    <if expression="voto1 &lt; voto2 &amp;&amp; voto1 &lt; voto3 &amp;&amp; voto1 &lt; voto4">
-                        <then>
-                            <assign variable="votoMin" expression="voto1"/>
-                        </then>
-                        <else>
-                            <if expression="voto2 &lt; voto3 &amp;&amp; voto2 &lt; voto4">
-                                <then>
-                                    <assign variable="votoMin" expression="voto2"/>
-                                </then>
-                                <else>
-                                    <if expression="voto3 &lt; voto4">
-                                        <then>
-                                            <assign variable="votoMin" expression="voto3"/>
-                                        </then>
-                                        <else>
-                                            <assign variable="votoMin" expression="voto4"/>
-                                        </else>
-                                    </if>
-                                </else>
-                            </if>
-                        </else>
-                    </if>
-                </else>
-            </if>
-            <output expression="&quot;La media &#232; &quot;" newline="False"/>
+            <assign variable="votoMin" expression="10"/>
+            <declare name="sommaMed" type="Integer" array="False" size=""/>
+            <assign variable="sommaMed" expression="0"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <while expression="i &lt; NVOTI">
+                <output expression="&quot;Inserisci un voto&quot;" newline="False"/>
+                <input variable="voto"/>
+                <if expression="voto &gt; votoMax">
+                    <then>
+                        <assign variable="votoMax" expression="voto"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="voto &lt; votoMin">
+                    <then>
+                        <assign variable="votoMin" expression="voto"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sommaMed" expression="sommaMed + voto"/>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+            <assign variable="votoMed" expression="sommaMed / NVOTI"/>
+            <output expression="&quot;La media &#233; &quot;" newline="False"/>
             <output expression="votoMed" newline="True"/>
-            <output expression="&quot;Il voto minimo &#232; &quot;" newline="True"/>
-            <output expression="votoMin" newline="True"/>
-            <output expression="&quot;Il voto massimo &#232; &quot;" newline="True"/>
+            <output expression="&quot;Il voto massimo e &quot;" newline="False"/>
             <output expression="votoMax" newline="True"/>
+            <output expression="&quot;Il voto minimo e &quot;" newline="False"/>
+            <output expression="votoMin" newline="True"/>
         </body>
     </function>
 </flowgorithm>
