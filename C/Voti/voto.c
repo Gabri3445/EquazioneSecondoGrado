@@ -9,6 +9,7 @@ int main()
   int votoMax = 0;
   float votoMed;
   int sommaMed;
+  i = NVOTI;
   while(i < NVOTI)
   {
     printf("Inserisci un voto ");
