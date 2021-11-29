@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#define NVOTI 5
+#define NVOTI 5.00
 
 int
 main ()
