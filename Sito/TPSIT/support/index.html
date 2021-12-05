@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Supporto</title>
+</head>
+<body>
+    <form action="./support-sent/" method="get">
+        <div>
+            <div>
+                <label for="username">Username</label>
+                <input type="text" placeholder="Inserisci il tuo username" id="username" name="username">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Inserisci l'email" id="email" required name="email">
+            </div>
+            <div>
+                <p>Serve una mano? Ci siamo noi.</p>
+                <div>   
+                    <label for="recover">Ti sei scordato la password? Scegli questa opzione</label>
+                    <input type="radio" id="recover" value="recover" name="support" required>
+                </div>
+                <div>
+                    <label for="pagamento">Hai avuto un problema con il pagamento? Scegli questa</label>
+                    <input type="radio" id="pagamento" name="support" value="pagamento" required>
+                </div>
+                <div>
+                    <label for="bug">Hai trovato un bug? Scegli questa</label>
+                    <input type="radio" id="bug" name="support" value="bug" required>
+                </div>
+                <div>
+                    <label for="other">Hai un altro problema? Scegli questa</label>
+                    <input type="radio" id="other" name="support" value="other" required>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="message"><br>Descrivi il problema</label>
+            </div>
+            <textarea id="message" name="message" rows="10" cols="50" required></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Invia">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
