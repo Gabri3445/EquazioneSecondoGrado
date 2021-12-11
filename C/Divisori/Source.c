@@ -4,28 +4,30 @@
 
 void main()
 {
-	int num, numDiv, numCount;
-	bool cond = true;
+	long int num = 1;
 	do
 	{
 		printf("Scrivi un numero maggiore a zero ");
 		scanf("%d", &num);
-		if (num > 0)
-		{
-			numDiv = num;
-				while (numDiv > 0)
-				{
-					numCount = num % numDiv;
-					if (numCount == 0)
-					{
-						printf("\n%d\n", numDiv);
-					}
-					numDiv = numDiv--;
-				}
-		}		
-		else cond = false;
-		printf("\n");
-	} while (cond == true);
-	printf("Hai inserito un numero uguale o minore a zero\n");
+		divisori(num);
+	} while (num > 0);
+	printf("Hai inserito zero o un numero minore a zero\n");
 	system("pause");
+}
+
+int divisori(int num)
+{
+	long int numDiv, numCount;
+	numDiv = num;
+	while (numDiv > 0)
+		{
+			numCount = num % numDiv;
+			if (numCount == 0)
+			{
+				printf("\n%d\n", numDiv);
+			}
+			numDiv--;
+		}
+	printf("\n");
+	return 0;
 }

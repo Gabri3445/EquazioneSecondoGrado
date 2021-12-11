@@ -1,6 +1,7 @@
 ﻿  Source.c
-  Generating code
+C:\Users\INF 03\Desktop\Popez\git\Scuola\C\Divisori\Source.c(12,11): warning C4013: 'divisori' non definita. Verrà considerata come esterna che restituisce un int.
+  Generazione codice in corso...
   Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Divisori.vcxproj -> X:\Files\Document\!Scuola\Git\C\Divisori\x64\Release\Divisori.exe
+  All 8 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generazione codice terminata
+  Divisori.vcxproj -> C:\Users\INF 03\Desktop\Popez\git\Scuola\C\Divisori\x64\Release\Divisori.exe
