@@ -4,7 +4,7 @@
 
 void main()
 {
-	int num = 1;
+	long int num = 1;
 	do
 	{
 		printf("Scrivi un numero maggiore a zero ");
@@ -17,7 +17,7 @@ void main()
 
 int divisori(int num)
 {
-	int numDiv, numCount;
+	long int numDiv, numCount;
 	numDiv = num;
 	while (numDiv > 0)
 		{

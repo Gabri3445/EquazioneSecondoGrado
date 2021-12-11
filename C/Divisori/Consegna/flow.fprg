@@ -4,43 +4,40 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="INF 03"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-12-11 08:40:44 "/>
-        <attribute name="created" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTItMTE7IjA4OjMwOjMxICI7MjA1OQ=="/>
-        <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTItMTE7IjA4OjQwOjQ0ICI7MjsyMTcz"/>
+        <attribute name="saved" value="2021-12-04 09:57:10 "/>
+        <attribute name="created" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTItMDQ7IjA5OjM5OjIwICI7MjA2OQ=="/>
+        <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjEtMTItMDQ7IjA5OjU3OjEwICI7NDsyMTc5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="num" type="Integer" array="False" size=""/>
-            <assign variable="num" expression="1"/>
-            <do expression="num &gt; 0">
-                <output expression="&quot;Scrivi un numero maggiore a zero&quot;" newline="True"/>
-                <input variable="num"/>
-                <call expression="divisori(num)"/>
-            </do>
-            <output expression="&quot;Hai inserito zero o un numero minore a zero&quot;" newline="True"/>
-        </body>
-    </function>
-    <function name="divisori" type="None" variable="">
-        <parameters>
-            <parameter name="a" type="Integer" array="False"/>
-        </parameters>
-        <body>
-            <declare name="num" type="Integer" array="False" size=""/>
-            <assign variable="num" expression="a"/>
+            <declare name="cond" type="Boolean" array="False" size=""/>
+            <assign variable="cond" expression="true"/>
             <declare name="numDiv" type="Integer" array="False" size=""/>
             <declare name="numCount" type="Integer" array="False" size=""/>
-            <assign variable="numDiv" expression="num"/>
-            <while expression="numDiv &gt; 0">
-                <assign variable="numCount" expression="num % numDiv"/>
-                <if expression="numCount == 0">
+            <do expression="cond = true">
+                <output expression="&quot;Scrivi un numero maggiore a zero&quot;" newline="True"/>
+                <input variable="num"/>
+                <if expression="num &gt; 0">
                     <then>
-                        <output expression="numDiv" newline="True"/>
+                        <assign variable="numDiv" expression="num"/>
+                        <while expression="numDiv &gt; 0">
+                            <assign variable="numCount" expression="num%numDiv"/>
+                            <if expression="numCount == 0">
+                                <then>
+                                    <output expression="numDiv" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <assign variable="numDiv" expression="numDiv - 1"/>
+                        </while>
                     </then>
-                    <else/>
+                    <else>
+                        <assign variable="cond" expression="false"/>
+                    </else>
                 </if>
-                <assign variable="numDiv" expression="numDiv - 1"/>
-            </while>
+            </do>
         </body>
     </function>
 </flowgorithm>
