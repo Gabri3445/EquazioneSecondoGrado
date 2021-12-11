@@ -1,6 +1,6 @@
-﻿  Source.c
-  Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Divisori.vcxproj -> X:\Files\Document\!Scuola\Git\C\Divisori\x64\Release\Divisori.exe
+﻿  Generazione codice in corso...
+  2 of 8 functions (25.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generazione codice terminata
+  Divisori.vcxproj -> C:\Users\INF 03\Desktop\Popez\git\Scuola\C\Divisori\x64\Release\Divisori.exe
