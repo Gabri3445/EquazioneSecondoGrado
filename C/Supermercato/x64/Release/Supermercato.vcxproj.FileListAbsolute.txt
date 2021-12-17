@@ -1,1 +1,2 @@
 X:\Files\Document\!Scuola\Supermercato\Supermercato\x64\Release\Supermercato.exe
+X:\Files\Document\!Scuola\Git\C\Supermercato\x64\Release\Supermercato.exe
