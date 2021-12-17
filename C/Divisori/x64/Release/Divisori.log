@@ -1,3 +1,1 @@
-﻿  Source.c
-X:\Files\Document\!Scuola\Git\C\Divisori\Source.c(12,11): warning C4013: 'divisori' undefined; assuming extern returning int
-X:\Files\Document\!Scuola\Git\C\Divisori\Source.c(21,2): error C2146: syntax error: missing ';' before identifier 'numDiv'
+﻿  Divisori.vcxproj -> X:\Files\Document\!Scuola\Git\C\Divisori\x64\Release\Divisori.exe
