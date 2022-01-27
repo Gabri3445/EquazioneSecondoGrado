@@ -4,14 +4,24 @@ main: LDB #50
 SUB
 JSP [scontouno]
 JMP [scontodue]
-
 scontouno: LDA [prezzo]
-
+LDB #10
+DIV
+STA [przsct]
+LDA [prezzo]
+LDB [przsct]
+SUB	
+JMP [output]
 scontodue: LDA [prezzo]
-
-output:
-
+LDB #5
+DIV
+STA [przsct]
+LDA [prezzo]
+LDB [przsct]
+SUB
+JMP [output]
+output: OUT
+HLT
 == Vars ==
-
 prezzo: NOP
 przsct: NOP
