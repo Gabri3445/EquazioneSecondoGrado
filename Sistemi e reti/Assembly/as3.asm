@@ -1,4 +1,4 @@
--- MAIN --
+== MAIN ==
 
 INP
 STA  [A]
@@ -16,7 +16,7 @@ ADD
 OUT
 HLT
 
--- VARS --
+== VARS ==
 
 A: NOP
 B: NOP
