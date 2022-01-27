@@ -9,8 +9,6 @@ LDA [A]
 LDB [B]
 MUL
 STA [RES]
-LDA  [A]
-MUL
 LDB [RES]
 ADD
 OUT
