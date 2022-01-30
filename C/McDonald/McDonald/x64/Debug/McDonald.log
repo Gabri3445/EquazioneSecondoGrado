@@ -1,10 +1,8 @@
 ﻿  main.c
-X:\Files\Document\!Scuola\Git\C\main.c(63,20): warning C4013: 'scorte' undefined; assuming extern returning int
-X:\Files\Document\!Scuola\Git\C\main.c(54,6): warning C4101: 'clienti': unreferenced local variable
-X:\Files\Document\!Scuola\Git\C\main.c(52,6): warning C4101: 'scelta': unreferenced local variable
-X:\Files\Document\!Scuola\Git\C\main.c(107,19): warning C4013: 'modNum' undefined; assuming extern returning int
-X:\Files\Document\!Scuola\Git\C\main.c(114): warning C4716: 'scorte': must return a value
-X:\Files\Document\!Scuola\Git\C\main.c(141): warning C4716: 'comprare': must return a value
-X:\Files\Document\!Scuola\Git\C\main.c(145): warning C4716: 'chiudere': must return a value
-X:\Files\Document\!Scuola\Git\C\main.c(149): warning C4716: 'scontrino': must return a value
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(23,135): warning C4305: 'initializing': truncation from 'double' to 'float'
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(25,65): warning C4305: 'initializing': truncation from 'double' to 'float'
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(129): warning C4716: 'scorte': must return a value
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(192): warning C4716: 'chiudere': must return a value
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(188): warning C4716: 'comprare': must return a value
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(196): warning C4716: 'scontrino': must return a value
   McDonald.vcxproj -> X:\Files\Document\!Scuola\Git\C\McDonald\x64\Debug\McDonald.exe

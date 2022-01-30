@@ -1,0 +1,2 @@
+stampa solo se scorte > 0
+format = [index]nomPanino(numero in scorte) = prezzo €
