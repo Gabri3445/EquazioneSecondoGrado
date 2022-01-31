@@ -13,8 +13,7 @@ int scontrino();
 int staff();
 int modNum();
 int scorte();
-
-bool isOpen = true;
+int mediaf(float arr[]);
 
 int panini[NPANINI];
 
@@ -55,7 +54,11 @@ char nomBevande[NBEVANDE][MAXLHT] =
 	{"Mountain Dew"}
 };
 
-int clienti[CLT];
+float clienti[CLT];
+
+int numClienti = 0;
+
+float profitto = 0;
 
 int carrello[24];
 
@@ -79,7 +82,7 @@ int main()
 		default: printf("Inserisci un altro numero\n");
 			break;
 		}
-	}while (isOpen = true);
+	}while (true);
 }
 
 
@@ -121,7 +124,7 @@ int scorte()
 		} else if(scelta < 18)
 		{
 			panini[scelta] += numAgg;
-		} else if(scelta > 18)
+		} else if(scelta >= 18)
 		{
 			bevande[scelta -18] += numAgg;
 		}
@@ -167,30 +170,94 @@ int comprare()
 		{
 			if (bevande[i] > 0)
 			{
-				printf("[%d]%s(%d) = %.2f $\n", i + 17, nomBevande[i], bevande[i], cosBevande[i]);
+				printf("[%d]%s(%d) = %.2f $\n", i + 18, nomBevande[i], bevande[i], cosBevande[i]);
 			}
 		}
 		printf("[24]Termina\n");
 		scanf("%d", &scelta);
 		if (scelta < 24)
 		{
-			carrello[scelta] += 1;
-			if (scelta < 18)
+				if (scelta < 18 && panini[scelta] > 0)
+				{
+					panini[scelta] -= 1;
+					carrello[scelta] += 1;
+				}
+				else if (scelta >= 18 && bevande[scelta - 18] > 0)
+				{
+					bevande[scelta - 18] -= 1;
+					carrello[scelta] += 1;
+				}
+			else
 			{
-				panini[scelta] -= 1;
-			}
-			else if (scelta > 17)
-			{
-				bevande[scelta - 18] -= 1;
+				printf("Scegli un altro alimento, questo non é disponibile\n");
 			}
 		}
+		else if (scelta == 24)
+		{
+			scontrino();
+		}
 	} while (scelta != 24);
+
+
 }
 int chiudere()
 {
-
+	int i = 0;
+	float media = 0;
+	while (clienti[i] > 0)
+	{
+		profitto += clienti[i];
+		i++;
+	}
+	media = mediaf(clienti);
+	printf("Numero di clienti: %d\n", i);
+	printf("Profitto Totale: %f\n", profitto);
+	printf("Media degli importi: %.2f\n", media);
+	system("pause");
+	exit(0);
 }
 int scontrino() 
 {
-
+	printf("Ecco lo scontrino:\n");
+	for (int i = 0; i < NBEVANDE + NPANINI; i++)
+	{
+		if (carrello[i] > 0)
+		{
+			if (i < 18)
+			{
+				printf("%s = %.2f $\n", nomPanini[i], cosPanini[i]);
+			} else if (i >= 18)
+			{
+				printf("%s= %.2f $\n", nomBevande[i-18], cosBevande[i-18]);
+			}
+		}
+	}
+	for (int i = 0; i < NBEVANDE + NPANINI; i++)
+	{
+		if (carrello[i] > 0)
+		{
+			if(i < 18)
+			{
+				clienti[numClienti] += cosPanini[i];
+			} else if (i >= 18)
+			{
+				clienti[numClienti] += cosBevande[i-18];
+			}
+		}
+	}
+	printf("Costo totale:%.2f\n", clienti[numClienti]);
+	numClienti += 1;
+}
+int mediaf(float arr[])
+{
+	float sum = 0;
+	float avg;
+	int i = 0;
+	while (arr[i] > 0)
+	{
+		sum += arr[i];
+		i++;
+	}
+	avg = sum / i;
+	return avg;
 }
