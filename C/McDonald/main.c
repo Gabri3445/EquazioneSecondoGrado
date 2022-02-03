@@ -225,10 +225,10 @@ int scontrino()
 		{
 			if (i < 18)
 			{
-				printf("%s = %.2f $\n", nomPanini[i], cosPanini[i]);
+				printf("(%d)%s = %.2f $\n", carrello[i], nomPanini[i], cosPanini[i]);
 			} else if (i >= 18)
 			{
-				printf("%s= %.2f $\n", nomBevande[i-18], cosBevande[i-18]);
+				printf("(%d)%s= %.2f $\n", carrello[i], nomBevande[i-18], cosBevande[i-18]);
 			}
 		}
 	}
@@ -238,10 +238,10 @@ int scontrino()
 		{
 			if(i < 18)
 			{
-				clienti[numClienti] += cosPanini[i];
+				clienti[numClienti] += cosPanini[i] * carrello[i];
 			} else if (i >= 18)
 			{
-				clienti[numClienti] += cosBevande[i-18];
+				clienti[numClienti] += cosBevande[i-18] * carrello[i];
 			}
 		}
 	}
