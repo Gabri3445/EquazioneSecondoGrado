@@ -1,149 +1,63 @@
+body
+{
+    font-family: Readex Pro;
+}
+.container
+{
+    width: 64.84375%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .logo
 {
-    position: absolute;
-    width: 399px;
-    height: 95px;
-    left: 450px;
-    top: 0px;
-
-    font-family: Readex Pro;
+    width: 367px;
+    height: 80px;
+    margin-bottom: 0%;
     font-style: normal;
     font-weight: bold;
-    font-size: 76px;
+    font-size: 70px;
     line-height: 95px;
 }
-.nav1
-{
-    position: absolute;
-    width: 67px;
-    height: 28px;
-    left: 450px;
-    top: 113px;
 
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
+nav ul
+{
+    padding-left: 0%;
+}
+nav li
+{
+    display: inline-block;
+    list-style: none;
+    margin-right: 70px;
+}
 
-
-    color: #000000;
-}
-.nav2
-{
-    position: absolute;
-    width: 81px;
-    height: 28px;
-    left: 583px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
-.nav3
-{
-    position: absolute;
-    width: 67px;
-    height: 28px;
-    left: 730px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
-.nav4
-{
-    position: absolute;
-    width: 74px;
-    height: 28px;
-    left: 873px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
-.nav5
-{
-    position: absolute;
-    width: 190px;
-    height: 28px;
-    left: 1023px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
-.nav6
-{
-    position: absolute;
-    width: 107px;
-    height: 28px;
-    left: 1288px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
-.nav7
-{
-    position: absolute;
-    width: 87px;
-    height: 28px;
-    left: 1470px;
-    top: 113px;
-    
-    font-family: Readex Pro;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 27px;
-}
 .titolo
 {
-    position: absolute;
-    width: 988px;
-    height: 135px;
-    left: 786px;
-    top: 215px;
-
-    font-family: Readex Pro;
+    width: 845px;
+    height: 132px;
+    margin-top: 105px;
+    margin-bottom: 8px;
     font-style: normal;
     font-weight: 500;
     font-size: 53px;
     line-height: 66px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .img
 {
-    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 988px;
     height: 510px;
-    left: 786px;
-    top: 409px;
+    margin-bottom: 86px;
 }
 .mainText
 {
-    position: absolute;
     width: 817px;
-    height: 689px;
-    left: 872px;
-    top: 978px;
-
-    font-family: Readex Pro;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -152,15 +66,9 @@
 }
 .credits
 {
-    position: absolute;
-width: 120px;
-height: 16px;
-left: 1570px;
-top: 1774px;
-
-font-family: Readex Pro;
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
 }
