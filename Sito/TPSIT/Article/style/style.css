@@ -1,6 +1,7 @@
 body
 {
     font-family: Readex Pro;
+    margin: 0%;
 }
 .container
 {
@@ -10,18 +11,17 @@ body
 }
 .logo
 {
-    width: 367px;
-    height: 80px;
+    width: 100%;
     margin-bottom: 0%;
     font-style: normal;
     font-weight: bold;
     font-size: 70px;
     line-height: 95px;
 }
-
 nav ul
 {
     padding-left: 0%;
+    margin-top: 0%;
 }
 nav li
 {
@@ -29,32 +29,48 @@ nav li
     list-style: none;
     margin-right: 70px;
 }
+nav a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+}
 
+.articleWrapper
+{
+    width: 49.21686746987952%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleWrapper
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+}
 .titolo
 {
-    width: 845px;
-    height: 132px;
+    width: 100%;
     margin-top: 105px;
     margin-bottom: 8px;
     font-style: normal;
     font-weight: 500;
     font-size: 53px;
     line-height: 66px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .img
 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 988px;
-    height: 510px;
-    margin-bottom: 86px;
+    width: 100%;
+    padding-bottom: 86px;
+    margin-right: 0;
 }
 .mainText
 {
-    width: 817px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -63,6 +79,7 @@ nav li
     font-size: 25px;
     line-height: 31px;
     text-align: justify;
+    margin-top: 0%;
 }
 .credits
 {
@@ -71,4 +88,10 @@ nav li
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
+    padding-top: 100px;
+}
+.credits a
+{
+    text-decoration: none;
+    color: #000;
 }
