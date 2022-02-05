@@ -1,9 +1,4 @@
 ﻿  main.c
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(22,135): warning C4305: 'initializing': truncation from 'double' to 'float'
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(24,65): warning C4305: 'initializing': truncation from 'double' to 'float'
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(212,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(262,9): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(132): warning C4716: 'scorte': must return a value
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(202): warning C4716: 'comprare': must return a value
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(250): warning C4716: 'scontrino': must return a value
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(25,135): warning C4305: 'initializing': truncation from 'double' to 'float'
+X:\Files\Document\!Scuola\Git\C\McDonald\main.c(27,65): warning C4305: 'initializing': truncation from 'double' to 'float'
   McDonald.vcxproj -> X:\Files\Document\!Scuola\Git\C\McDonald\x64\Debug\McDonald.exe

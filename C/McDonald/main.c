@@ -1,10 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #define NPANINI 18
 #define NBEVANDE 6
 #define MAXLHT 100
 #define CLT 100
+#define NCOUPON 5
 
 int inizio();
 int comprare();
@@ -14,14 +16,15 @@ int staff();
 int modNum();
 int scorte();
 float mediaf(float arr[]);
+bool sconto();
 
 int panini[NPANINI];
 
 int bevande[NBEVANDE];
 
-float cosPanini[NPANINI] = {6.40, 8.10, 8.60, 8.60, 8.60, 6.70, 2.90, 1.80, 1.30, 4.50, 6.40, 2.90, 1.80, 2.40, 2.90, 1.80, 1.90, 5.60};
+float cosPanini[NPANINI] = {6.40f, 8.10f, 8.60f, 8.60f, 8.60f, 6.70f, 2.90f, 1.80f, 1.30f, 4.50f, 6.40f, 2.90f, 1.80f, 2.40f, 2.90f, 1.80f, 1.90f, 5.60f};
 
-float cosBevande[NBEVANDE] = {1.50, 2.80, 0.55, 2.80, 2.80, 1.90};
+float cosBevande[NBEVANDE] = {1.50f, 2.80f, 0.55f, 2.80f, 2.80f, 1.90f};
 
 char nomPanini[NPANINI][MAXLHT] =
 {
@@ -61,6 +64,21 @@ int numClienti = 0;
 float profitto = 0;
 
 int carrello[24];
+
+char couponList[NCOUPON][MAXLHT] = 
+{
+	{"MCDONALD5"},
+	{"MCDONALD10"},
+	{"MCDONALD15"},
+	{"MCDONALD20"},
+	{"MCDONALD25"}
+};
+
+float couponSconto[NCOUPON] = {0.05f, 0.10f, 0.15f, 0.20f, 0.25f};
+
+int couponScelto[NCOUPON];
+
+bool couponBool = false;
 
 int main()
 {
@@ -246,8 +264,23 @@ int scontrino()
 			}
 		}
 	}
+	sconto();
+	if (couponBool == true)
+	{
+		for (int i = 0; i < NCOUPON; i++)
+		{
+			if (couponScelto[i] > 0)
+			{
+				clienti[numClienti] =  clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+			}
+		}
+	}
 	printf("Costo totale:%.2f\n", clienti[numClienti]);
 	numClienti += 1;
+	for (int i = 0; i < 24; i++)
+	{
+		carrello[i] = 0;
+	}
 	return 0;
 }
 float mediaf(float arr[])
@@ -262,4 +295,24 @@ float mediaf(float arr[])
 	}
 	avg = sum / i;
 	return avg;
+}
+bool sconto()
+{
+	char couponInp[MAXLHT] = {""};
+	printf("Se hai un coupon inseriscilo(Se non hai un coupon scrivi 0)\n");
+	scanf("%s", &couponInp);
+	for (int i = 0; i < NCOUPON; i++)
+	{
+		if (strcmp(couponList[i], couponInp) == 0)
+		{
+			couponScelto[i] += 1;
+			couponBool = true;
+			return 0;
+		}
+		else
+		{
+			couponBool = false;
+		}
+	}
+	return 0;
 }
