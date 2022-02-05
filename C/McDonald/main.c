@@ -13,7 +13,7 @@ int scontrino();
 int staff();
 int modNum();
 int scorte();
-int mediaf(float arr[]);
+float mediaf(float arr[]);
 
 int panini[NPANINI];
 
@@ -129,6 +129,7 @@ int scorte()
 			bevande[scelta -18] += numAgg;
 		}
 	} while (scelta != 25);
+	return 0;
 }
 int modNum()
 {
@@ -198,7 +199,7 @@ int comprare()
 		}
 	} while (scelta != 24);
 
-
+	return 0;
 }
 int chiudere()
 {
@@ -247,8 +248,9 @@ int scontrino()
 	}
 	printf("Costo totale:%.2f\n", clienti[numClienti]);
 	numClienti += 1;
+	return 0;
 }
-int mediaf(float arr[])
+float mediaf(float arr[])
 {
 	float sum = 0;
 	float avg;
