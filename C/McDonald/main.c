@@ -17,6 +17,7 @@ int modNum();
 int scorte();
 float mediaf(float arr[]);
 bool sconto();
+void clear();
 
 int panini[NPANINI];
 
@@ -107,6 +108,7 @@ int main()
 int inizio()
 {
 	int scelta = 0;
+	clear();
 	printf("Benvenuto a McDonald. Cosa vuoi fare?\n[1]Compra [2]Staff Only\n");
 	scanf("%d", &scelta);
 	return scelta;
@@ -114,6 +116,7 @@ int inizio()
 int staff()
 {
 	int scelta = 0;
+	clear();
 	printf("Cosa vuoi fare?\n[1]Aggiungi Scorte [2]Spegni il totem [3]Torna indietro\n");
 	scanf("%d", &scelta);
 	return scelta;
@@ -124,6 +127,7 @@ int scorte()
 	int numAgg = 1;
 	do
 	{
+		clear();
 		printf("Quale vuoi aggiungere?\n");
 		for (int i = 0; i < NPANINI; ++i)
 		{
@@ -151,6 +155,7 @@ int scorte()
 }
 int modNum()
 {
+	clear();
 	int scelta = 0;
 	int num = 1;
 	printf("Quale numero vuoi aggiungere?\n[1]1\n[2]2\n[3]5\n[4]10\n[5]Scegli te il numero\n");
@@ -177,6 +182,7 @@ int comprare()
 	int scelta = 1;
 	do
 	{
+		clear();
 		printf("Quale vuoi comprare?\n");
 		for (int i = 0; i < NPANINI; ++i)
 		{
@@ -223,6 +229,7 @@ int chiudere()
 {
 	int i = 0;
 	float media = 0;
+	clear();
 	while (clienti[i] > 0)
 	{
 		profitto += clienti[i];
@@ -231,12 +238,16 @@ int chiudere()
 	media = mediaf(clienti);
 	printf("Numero di clienti: %d\n", i);
 	printf("Profitto Totale: %f\n", profitto);
-	printf("Media degli importi: %.2f\n", media);
+	if (media > 0)
+	{
+		printf("Media degli importi: %.2f\n", media);
+	}
 	system("pause");
 	exit(0);
 }
 int scontrino() 
 {
+	clear();
 	printf("Ecco lo scontrino:\n");
 	for (int i = 0; i < NBEVANDE + NPANINI; i++)
 	{
@@ -281,6 +292,7 @@ int scontrino()
 	{
 		carrello[i] = 0;
 	}
+	system("pause");
 	return 0;
 }
 float mediaf(float arr[])
@@ -299,7 +311,7 @@ float mediaf(float arr[])
 bool sconto()
 {
 	char couponInp[MAXLHT] = {""};
-	printf("Se hai un coupon inseriscilo(Se non hai un coupon scrivi 0)\n");
+	printf("Se hai un coupon inseriscilo (Se non hai un coupon scrivi 0)\n");
 	scanf("%s", &couponInp);
 	for (int i = 0; i < NCOUPON; i++)
 	{
@@ -315,4 +327,8 @@ bool sconto()
 		}
 	}
 	return 0;
+}
+void clear()
+{
+	system("cls");
 }

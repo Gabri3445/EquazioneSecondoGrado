@@ -1,4 +1,2 @@
 ﻿  main.c
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(25,135): warning C4305: 'initializing': truncation from 'double' to 'float'
-X:\Files\Document\!Scuola\Git\C\McDonald\main.c(27,65): warning C4305: 'initializing': truncation from 'double' to 'float'
   McDonald.vcxproj -> X:\Files\Document\!Scuola\Git\C\McDonald\x64\Debug\McDonald.exe
