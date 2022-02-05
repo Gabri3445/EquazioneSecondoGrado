@@ -23,9 +23,9 @@ int panini[NPANINI];
 
 int bevande[NBEVANDE];
 
-float cosPanini[NPANINI] = {6.40f, 8.10f, 8.60f, 8.60f, 8.60f, 6.70f, 2.90f, 1.80f, 1.30f, 4.50f, 6.40f, 2.90f, 1.80f, 2.40f, 2.90f, 1.80f, 1.90f, 5.60f};
+float cosPanini[NPANINI] = { 6.40f, 8.10f, 8.60f, 8.60f, 8.60f, 6.70f, 2.90f, 1.80f, 1.30f, 4.50f, 6.40f, 2.90f, 1.80f, 2.40f, 2.90f, 1.80f, 1.90f, 5.60f };
 
-float cosBevande[NBEVANDE] = {1.50f, 2.80f, 0.55f, 2.80f, 2.80f, 1.90f};
+float cosBevande[NBEVANDE] = { 1.50f, 2.80f, 0.55f, 2.80f, 2.80f, 1.90f };
 
 char nomPanini[NPANINI][MAXLHT] =
 {
@@ -66,7 +66,7 @@ float profitto = 0;
 
 int carrello[24];
 
-char couponList[NCOUPON][MAXLHT] = 
+char couponList[NCOUPON][MAXLHT] =
 {
 	{"MCDONALD5"},
 	{"MCDONALD10"},
@@ -75,7 +75,7 @@ char couponList[NCOUPON][MAXLHT] =
 	{"MCDONALD25"}
 };
 
-float couponSconto[NCOUPON] = {0.05f, 0.10f, 0.15f, 0.20f, 0.25f};
+float couponSconto[NCOUPON] = { 0.05f, 0.10f, 0.15f, 0.20f, 0.25f };
 
 int couponScelto[NCOUPON];
 
@@ -90,18 +90,18 @@ int main()
 		case 1: comprare();
 			break;
 		case 2: switch (staff())
-					{
-					case 1: scorte();
-						break;
-					case 2: chiudere();
-						break;
-					case 3: break;
-					}
+		{
+		case 1: scorte();
 			break;
+		case 2: chiudere();
+			break;
+		case 3: break;
+		}
+			  break;
 		default: printf("Inserisci un altro numero\n");
 			break;
 		}
-	}while (true);
+	} while (true);
 }
 
 
@@ -135,20 +135,22 @@ int scorte()
 		}
 		for (int i = 0; i < NBEVANDE; ++i)
 		{
-			printf("[%d]%s\n", i+18, nomBevande[i]);
+			printf("[%d]%s\n", i + 18, nomBevande[i]);
 		}
 		printf("[24]Modifica il numero da aggiungere(%d)\n[25]Esci\n", numAgg);
 		scanf("%d", &scelta);
 
-		if(scelta == 24)
+		if (scelta == 24)
 		{
 			numAgg = modNum();
-		} else if(scelta < 18)
+		}
+		else if (scelta < 18)
 		{
 			panini[scelta] += numAgg;
-		} else if(scelta >= 18)
+		}
+		else if (scelta >= 18)
 		{
-			bevande[scelta -18] += numAgg;
+			bevande[scelta - 18] += numAgg;
 		}
 	} while (scelta != 25);
 	return 0;
@@ -202,16 +204,16 @@ int comprare()
 		scanf("%d", &scelta);
 		if (scelta < 24)
 		{
-				if (scelta < 18 && panini[scelta] > 0)
-				{
-					panini[scelta] -= 1;
-					carrello[scelta] += 1;
-				}
-				else if (scelta >= 18 && bevande[scelta - 18] > 0)
-				{
-					bevande[scelta - 18] -= 1;
-					carrello[scelta] += 1;
-				}
+			if (scelta < 18 && panini[scelta] > 0)
+			{
+				panini[scelta] -= 1;
+				carrello[scelta] += 1;
+			}
+			else if (scelta >= 18 && bevande[scelta - 18] > 0)
+			{
+				bevande[scelta - 18] -= 1;
+				carrello[scelta] += 1;
+			}
 			else
 			{
 				printf("Scegli un altro alimento, questo non é disponibile\n");
@@ -245,7 +247,7 @@ int chiudere()
 	system("pause");
 	exit(0);
 }
-int scontrino() 
+int scontrino()
 {
 	clear();
 	printf("Ecco lo scontrino:\n");
@@ -256,9 +258,10 @@ int scontrino()
 			if (i < 18)
 			{
 				printf("(%d)%s = %.2f $\n", carrello[i], nomPanini[i], cosPanini[i]);
-			} else if (i >= 18)
+			}
+			else if (i >= 18)
 			{
-				printf("(%d)%s= %.2f $\n", carrello[i], nomBevande[i-18], cosBevande[i-18]);
+				printf("(%d)%s= %.2f $\n", carrello[i], nomBevande[i - 18], cosBevande[i - 18]);
 			}
 		}
 	}
@@ -266,12 +269,13 @@ int scontrino()
 	{
 		if (carrello[i] > 0)
 		{
-			if(i < 18)
+			if (i < 18)
 			{
 				clienti[numClienti] += cosPanini[i] * carrello[i];
-			} else if (i >= 18)
+			}
+			else if (i >= 18)
 			{
-				clienti[numClienti] += cosBevande[i-18] * carrello[i];
+				clienti[numClienti] += cosBevande[i - 18] * carrello[i];
 			}
 		}
 	}
@@ -282,7 +286,7 @@ int scontrino()
 		{
 			if (couponScelto[i] > 0)
 			{
-				clienti[numClienti] =  clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+				clienti[numClienti] = clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
 			}
 		}
 	}
@@ -310,7 +314,7 @@ float mediaf(float arr[])
 }
 bool sconto()
 {
-	char couponInp[MAXLHT] = {""};
+	char couponInp[MAXLHT] = { "" };
 	printf("Se hai un coupon inseriscilo (Se non hai un coupon scrivi 0)\n");
 	scanf("%s", &couponInp);
 	for (int i = 0; i < NCOUPON; i++)
