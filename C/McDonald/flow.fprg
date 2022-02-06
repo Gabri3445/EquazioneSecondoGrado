@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gabri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-06 05:30:53 PM"/>
+        <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MDQ6MzI6MTIgUE07MjgwNg=="/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MDU6MzA6NTMgUE07MTsyOTE4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <declare name="NPANINI" type="Integer" array="False" size=""/>
+            <assign variable="NPANINI" expression="18"/>
+            <declare name="NBEVANDE" type="Integer" array="False" size=""/>
+            <assign variable="NBEVANDE" expression="6"/>
+            <declare name="CLT" type="Integer" array="False" size=""/>
+            <assign variable="CLT" expression="100"/>
+            <declare name="NCOUPON" type="Integer" array="False" size=""/>
+            <assign variable="NCOUPON" expression="5"/>
+            <declare name="panini" type="Integer" array="True" size="NPANINI"/>
+            <for variable="i" start="0" end="NPANINI-1" direction="inc" step="1">
+                <assign variable="panini[i]" expression="0"/>
+            </for>
+            <declare name="bevande" type="Integer" array="True" size="NBEVANDE"/>
+            <for variable="i" start="0" end="NBEVANDE-1" direction="inc" step="1">
+                <assign variable="bevande[i]" expression="0"/>
+            </for>
+            <declare name="cosPanini" type="Real" array="True" size="NPANINI"/>
+            <declare name="cosBevande" type="Real" array="True" size="NBEVANDE"/>
+            <declare name="nomPanini" type="String" array="True" size="NPANINI"/>
+            <declare name="nomBevande" type="String" array="True" size="NBEVANDE"/>
+            <declare name="clienti" type="Real" array="True" size="100"/>
+            <for variable="i" start="0" end="CLT-1" direction="inc" step="1">
+                <assign variable="clienti[i]" expression="0"/>
+            </for>
+            <declare name="numClienti" type="Integer" array="False" size=""/>
+            <assign variable="numClienti" expression="0"/>
+            <declare name="profitto" type="Real" array="False" size=""/>
+            <assign variable="profitto" expression="0"/>
+            <declare name="carrello" type="Integer" array="True" size="24"/>
+            <for variable="i" start="0" end="24-1" direction="inc" step="1">
+                <assign variable="carrello[i]" expression="0"/>
+            </for>
+            <declare name="couponList" type="String" array="True" size="NCOUPON"/>
+            <declare name="couponSconto" type="Real" array="True" size="NCOUPON"/>
+            <declare name="couponScelto" type="Integer" array="True" size="NCOUPON"/>
+            <for variable="i" start="0" end="NCOUPON-1" direction="inc" step="1">
+                <assign variable="couponScelto[i]" expression="0"/>
+            </for>
+            <declare name="couponBool" type="Boolean" array="False" size=""/>
+            <assign variable="couponBool" expression="false"/>
+            <comment text="FINE DICHIARAZIONE AUTOMATICA"/>
+            <assign variable="nomPanini[0]" expression="&quot;Big Mac&quot;"/>
+            <assign variable="nomPanini[1]" expression="&quot;Gran Crispy&quot;"/>
+            <assign variable="nomPanini[2]" expression="&quot;Chicken Asiago&quot;"/>
+            <assign variable="nomPanini[3]" expression="&quot;Montasio &amp; Pancetta&quot;"/>
+            <assign variable="nomPanini[4]" expression="&quot;BBQ&quot;"/>
+            <assign variable="nomPanini[5]" expression="&quot;Crispy McBacon&quot;"/>
+            <assign variable="nomPanini[6]" expression="&quot;Double Cheesebuger&quot;"/>
+            <assign variable="nomPanini[7]" expression="&quot;Cheeseburger&quot;"/>
+            <assign variable="nomPanini[8]" expression="&quot;Hamburger&quot;"/>
+            <assign variable="nomPanini[9]" expression="&quot;Gluten Free Burger&quot;"/>
+            <assign variable="nomPanini[10]" expression="&quot;McChicken Originale&quot;"/>
+            <assign variable="nomPanini[11]" expression="&quot;Double Chicken BBQ&quot;"/>
+            <assign variable="nomPanini[12]" expression="&quot;Chickenburger&quot;"/>
+            <assign variable="nomPanini[13]" expression="&quot;McMuffin Bacon Egg&quot;"/>
+            <assign variable="nomPanini[14]" expression="&quot;Filet O Fish&quot;"/>
+            <assign variable="nomPanini[15]" expression="&quot;McToast&quot;"/>
+            <assign variable="nomPanini[16]" expression="&quot;Patatine&quot;"/>
+            <assign variable="nomPanini[17]" expression="&quot;6 Chicken Nuggets&quot;"/>
+            <assign variable="nomBevande[0]" expression="&quot;Acqua&quot;"/>
+            <assign variable="nomBevande[1]" expression="&quot;Coca Cola&quot;"/>
+            <assign variable="nomBevande[2]" expression="&quot;Pepsi&quot;"/>
+            <assign variable="nomBevande[3]" expression="&quot;Fanta&quot;"/>
+            <assign variable="nomBevande[4]" expression="&quot;Sprite&quot;"/>
+            <assign variable="nomBevande[5]" expression="&quot;Mountain Dew&quot;"/>
+            <assign variable="couponList[0]" expression="&quot;MCDONALD5&quot;"/>
+            <assign variable="couponList[1]" expression="&quot;MCDONALD10&quot;"/>
+            <assign variable="couponList[2]" expression="&quot;MCDONALD15&quot;"/>
+            <assign variable="couponList[3]" expression="&quot;MCDONALD20&quot;"/>
+            <assign variable="couponList[4]" expression="&quot;MCDONALD25&quot;"/>
+            <comment text="FINE DICHIARAZIONI STRINGHE"/>
+            <assign variable="cosPanini[0]" expression="6.40"/>
+            <assign variable="cosPanini[1]" expression="8.10"/>
+            <assign variable="cosPanini[2]" expression="8.60"/>
+            <assign variable="cosPanini[3]" expression="8.60"/>
+            <assign variable="cosPanini[4]" expression="8.60"/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+        </body>
+    </function>
+</flowgorithm>
