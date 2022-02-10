@@ -14,3 +14,7 @@ void printArr(int arr[], int size)
     printf("%d", arr[i];
   }
 }
+void bubbleSort(int arr[], int size)
+{
+  
+}
