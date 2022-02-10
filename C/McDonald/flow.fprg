@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="gabri"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-06 11:28:27 PM"/>
+        <attribute name="saved" value="2022-02-07 05:58:18 PM"/>
         <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MDQ6MzI6MTIgUE07MjgwNg=="/>
-        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MTE6Mjg6MjcgUE07ODsyOTMw"/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDc7MDU6NTg6MTggUE07OTsyOTM4"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -173,8 +173,8 @@
                                         <else>
                                             <if expression="scelta &gt;= 18 &amp;&amp; bevande[scelta] &gt; 0">
                                                 <then>
-                                                    <assign variable="bevande[scelta]" expression="bevande[scelta] - 1"/>
-                                                    <assign variable="bevande[scelta]" expression="bevande[scelta] + 1"/>
+                                                    <assign variable="bevande[scelta - 18]" expression="bevande[scelta - 18] - 1"/>
+                                                    <assign variable="bevande[scelta- 18]" expression="bevande[scelta - 18] + 1"/>
                                                 </then>
                                                 <else/>
                                             </if>
