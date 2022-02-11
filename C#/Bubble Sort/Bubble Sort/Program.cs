@@ -1,6 +1,7 @@
 ﻿int arrSize = 0;
 Console.WriteLine("Inserisci quanti elementi casuali vuoi");
 arrSize = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
 int[] arr = new int[arrSize];
 for (int i = 0; i < arrSize; i++)
 {
@@ -24,9 +25,7 @@ void bubbleSort(int[] arr)
         {
             if (arr[j] > arr[j + 1])
             {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+               swap(ref arr[j], ref arr[j + 1]);
             }
         }
     }
@@ -37,4 +36,10 @@ void printArray(int[] arr)
     {
         Console.WriteLine(arr[i]);
     }
+}
+void swap(ref int x, ref int y)
+{
+    int temp = x;
+    x = y;
+    y = temp;
 }
