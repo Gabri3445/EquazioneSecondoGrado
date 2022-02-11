@@ -1,0 +1,15 @@
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\DivisoriSharp.exe
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\DivisoriSharp.deps.json
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\DivisoriSharp.runtimeconfig.json
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\DivisoriSharp.dll
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\ref\DivisoriSharp.dll
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\bin\Debug\net6.0\DivisoriSharp.pdb
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.dll
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\ref\DivisoriSharp.dll
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.pdb
+X:\Files\Document\!Scuola\Git\C#\DivisoriSharp\DivisoriSharp\obj\Debug\net6.0\DivisoriSharp.genruntimeconfig.cache
