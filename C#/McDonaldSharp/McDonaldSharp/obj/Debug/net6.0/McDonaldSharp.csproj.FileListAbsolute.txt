@@ -28,3 +28,18 @@ C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\
 C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\ref\McDonaldSharp.dll
 C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.pdb
 C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.genruntimeconfig.cache
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.exe
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\ref\McDonaldSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.pdb
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\ref\McDonaldSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.pdb
+X:\Files\Document\!Scuola\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.genruntimeconfig.cache
