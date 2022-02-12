@@ -1,4 +1,9 @@
-﻿int NPANINI = 18, NBEVANDE = 6, CLT = 100, NCOUPON = 5;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System.IO;
+
+
+
+int NPANINI = 18, NBEVANDE = 6, CLT = 100, NCOUPON = 5;
 int[] panini = new int[NPANINI];
 int[] bevande = new int[NBEVANDE];
 float[] cosPanini = new float[] { 6.40f, 8.10f, 8.60f, 8.60f, 8.60f, 6.70f, 2.90f, 1.80f, 1.30f, 4.50f, 6.40f, 2.90f, 1.80f, 2.40f, 2.90f, 1.80f, 1.90f, 5.60f };
@@ -48,6 +53,7 @@ string[] couponList = new string[]
 float[] couponSconto = new float[] { 0.05f, 0.10f, 0.15f, 0.20f, 0.25f };
 int[] couponScelto = new int[NCOUPON];
 bool couponBool = false;
+readFromTxt(new StreamReader("text.txt"));
 main();
 
 void main()
@@ -109,7 +115,10 @@ int scorte()
         }
         for(int i = 0;i < NBEVANDE; i++)
         {
-            Console.WriteLine("[" + i + "]" + nomBevande[i]);
+            int j = i;
+            i += 18;
+            Console.WriteLine("[" + i + "]" + nomBevande[j]);
+            i -= 18;
         }
         Console.WriteLine("[24]Modifica il numero da aggiungere(" + numAgg + ")\n[25]Esci");
         scelta = Convert.ToInt32(Console.ReadLine());
@@ -121,11 +130,12 @@ int scorte()
         {
             panini[scelta] += numAgg;
         }
-        else if(scelta >= 18)
+        else if(scelta >= 18 && scelta < 25)
         {
             bevande[scelta - 18] += numAgg;
         }
     }while (scelta != 25);
+    writeToTxt(new StreamWriter("text.txt"));
     return 0;
 }
 int modNum()
@@ -159,21 +169,205 @@ int modNum()
 }
 int comprare()
 {
+    readFromTxt(new StreamReader("text.txt"));
+    int scelta = 1;
+    do
+    {
+        Console.Clear();
+        Console.WriteLine("Quale vuoi comprare?");
+        for(int i = 0; i < NPANINI; i++)
+        {
+            if(panini[i] > 0)
+            {
+                Console.WriteLine("["+i+"]"+nomPanini[i]+"("+panini[i]+") = "+ cosPanini[i]);
+            }
+        }
+        for(int i = 0;i < NBEVANDE; i++)
+        {
+            if(bevande[i] > 0)
+            {
+                int j = i;
+                i += 18;
+                Console.WriteLine("["+i+"]"+nomBevande[j]+"("+bevande[j]+") = "+ cosBevande[j]);
+                i -= 18;
+            }
+        }
+        Console.WriteLine("[24]Termina");
+        scelta = Convert.ToInt32(Console.ReadLine());
+        if(scelta < 24)
+        {
+            if(scelta < 18 && panini[scelta] > 0)
+            {
+                panini[scelta] -= 1;
+                carrello[scelta] += 1;
+            }
+            else if (scelta >= 18 && bevande[scelta -18] > 0)
+            {
+                bevande[scelta - 18] -= 1;
+                carrello[scelta] += 1;
+            }
+            else
+            {
+                Console.WriteLine("Scegli un altro alimento, questo non e disponibile");
+            }
+        } 
+        else if (scelta == 24)
+        {
+            scontrino();
+        }
+    }while(scelta != 24);
     return 0;
 }
 int chiudere()
 {
+    int i = 0;
+    float media = 0;
+    Console.Clear();
+    while(clienti[i] > 0)
+    {
+        profitto += clienti[i];
+        i++;
+    }
+    media = mediaf(clienti);
+    Console.WriteLine("Numero di clienti: " + i);
+    Console.WriteLine("Profitto totale: " + profitto);
+    if(media > 0)
+    {
+        Console.WriteLine("Media degli importi: " + media);
+    }
+    Console.ReadKey();
+    writeToTxt(new StreamWriter("text.txt"));
+    Environment.Exit(0);
     return 0;
 }
 int scontrino()
 {
+    Console.Clear();
+    Console.WriteLine("Ecco lo scontrino");
+    for(int i = 0; i < NBEVANDE + NPANINI; i++)
+    {
+        if(carrello[i] > 0)
+        {
+            if(i < 18)
+            {
+                Console.WriteLine("(" + carrello[i] + ")" + nomPanini[i] + " = " + cosPanini[i]);
+            }
+            else if (i >= 18)
+            {
+                Console.WriteLine("(" + carrello[i] + ")" + nomBevande[i - 18] + " = " + cosBevande[i - 18]);
+            }    
+        }
+    }
+    for (int i = 0; i < NBEVANDE + NPANINI; i++)
+    {
+        if (carrello[i] > 0)
+        {
+            if (i < 18)
+            {
+                clienti[numClienti] += cosPanini[i] * carrello[i];
+            }
+            else if (i >= 18)
+            {
+                clienti[numClienti] += cosBevande[i - 18] * carrello[i];
+            }
+        }
+    }
+    sconto();
+    if(couponBool)
+    {
+        for(int i = 0; i<NCOUPON; i++)
+        {
+            if(couponScelto[i] > 0)
+            {
+                clienti[numClienti] -= couponScelto[i] * clienti[numClienti];
+            }    
+        }
+    }
+    Console.WriteLine("Costo totale: " + clienti[numClienti]);
+    numClienti += 1;
+    for(int i = 0; i<24; i++)
+    {
+        carrello[i] = 0;
+    }
+    Console.ReadKey();
+    writeToTxt(new StreamWriter("text.txt"));
     return 0;
 }
-float mediaf()
+float mediaf(float[] arr)
 {
-    return 0f;
+    float sum = 0, avg = 0;
+    int i = 0;
+    while(arr[i] > 0)
+    {
+        sum += arr[i];
+        i++;
+    }
+    avg = sum / i;
+    return avg;
 }
 bool sconto()
 {
-    return true;
+    string couponInp = " ";
+    Console.WriteLine("Se hai un coupon inseriscilo (Se non hai un coupon scrivi 0)");
+    couponInp = Console.ReadLine();
+    for(int i = 0; i<NCOUPON; i++)
+    {
+        if(String.Equals(couponList[i], couponInp))
+        {
+            couponScelto[i] += 1;
+            couponBool = true;
+            return true;
+        }
+        else
+        {
+            couponBool = false;
+        }
+    }
+    return false;
+}
+void writeToTxt(StreamWriter sw)
+{
+    try
+    {
+        for (int i = 0; i < NPANINI; i++)
+        {
+            sw.WriteLine(panini[i]);
+        }
+        for(int i = 0; i <NBEVANDE; i++)
+        {
+            sw.WriteLine(bevande[i]);
+        }    
+        sw.Close();
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine("Exception: " + e.Message);
+    }
+    finally
+    {
+    }
+    return;
+}
+void readFromTxt(StreamReader sr)
+{
+    try
+    {
+        for (int i = 0; i < NPANINI; i++)
+        {
+            panini[i] += Convert.ToInt32(sr.ReadLine());
+        }
+        for (int i = 0; i < NBEVANDE; i++)
+        {
+            bevande[i] += Convert.ToInt32(sr.ReadLine());
+        }
+        sr.Close();
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine("Exception: " + e.Message);
+    }
+    finally
+    {
+    }
+    return;
 }

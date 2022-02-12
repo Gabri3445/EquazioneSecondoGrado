@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Files\\Document\\!Scuola\\Git\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj": {}
+    "C:\\Users\\INF 16\\Documents\\Lopez\\Scuola\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj": {}
   },
   "projects": {
-    "X:\\Files\\Document\\!Scuola\\Git\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj": {
+    "C:\\Users\\INF 16\\Documents\\Lopez\\Scuola\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\Files\\Document\\!Scuola\\Git\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj",
+        "projectUniqueName": "C:\\Users\\INF 16\\Documents\\Lopez\\Scuola\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj",
         "projectName": "McDonaldSharp",
-        "projectPath": "X:\\Files\\Document\\!Scuola\\Git\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj",
-        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "X:\\Files\\Document\\!Scuola\\Git\\C#\\McDonaldSharp\\McDonaldSharp\\obj\\",
+        "projectPath": "C:\\Users\\INF 16\\Documents\\Lopez\\Scuola\\C#\\McDonaldSharp\\McDonaldSharp\\McDonaldSharp.csproj",
+        "packagesPath": "C:\\Users\\INF 16\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\INF 16\\Documents\\Lopez\\Scuola\\C#\\McDonaldSharp\\McDonaldSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\INF 16\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

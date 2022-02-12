@@ -13,3 +13,18 @@ X:\Files\Document\!Scuola\Git\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\Mc
 X:\Files\Document\!Scuola\Git\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\ref\McDonaldSharp.dll
 X:\Files\Document\!Scuola\Git\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.pdb
 X:\Files\Document\!Scuola\Git\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.genruntimeconfig.cache
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.exe
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.deps.json
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.runtimeconfig.json
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.dll
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\ref\McDonaldSharp.dll
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\bin\Debug\net6.0\McDonaldSharp.pdb
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.csproj.AssemblyReference.cache
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.AssemblyInfoInputs.cache
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.AssemblyInfo.cs
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.csproj.CoreCompileInputs.cache
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.dll
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\ref\McDonaldSharp.dll
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.pdb
+C:\Users\INF 16\Documents\Lopez\Scuola\C#\McDonaldSharp\McDonaldSharp\obj\Debug\net6.0\McDonaldSharp.genruntimeconfig.cache
