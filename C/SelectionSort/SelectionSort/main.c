@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define ARRLENGTH 5
 
-void printArr(int arr[]);
+void printArr();
 void selecSort();
 void swap(int* x, int* y);
 
@@ -10,38 +10,40 @@ int arr[ARRLENGTH] = { 6, 60, 2, 40, 1 };
 
 int main ()
 {
-  printArr(arr);
+  printArr();
   selecSort();
-  printArr(arr);
+  printArr();
 }
 
-void printArr(int arr[])
+void printArr()
 {
   for (int i = 0; i < ARRLENGTH; i++)
   {
-    printf("%d", arr[i]);
+    printf("%d\t", arr[i]);
   }
+  printf("\n");
 }
 
 void selecSort()
 {
-  int minNum = INT_MAX;
+  int min;
   for (int i = 0; i < ARRLENGTH - 1; i++)
   {
-    for (int j = 0; j < ARRLENGTH - 1 - 1; j++)
+      min = i;
+    for (int j = i + 1; j < ARRLENGTH; j++)
     {
-      if (arr[j] < minNum)
+      if (arr[j] < arr[min])
       {
-        minNum = j;
+          min = j;
       }
     }
-    
+    swap(&arr[min], &arr[i]);
   }
 }
 
 void swap(int* x, int* y)
 {
-  temp = *x;
+  int temp = *x;
   *x = *y;
   *y = temp;
 }
