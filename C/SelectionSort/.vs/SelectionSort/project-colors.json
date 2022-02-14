@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "db2d821d-bc3b-4853-81e9-ef0e5a37ee9a": {
+      "ProjectGuid": "db2d821d-bc3b-4853-81e9-ef0e5a37ee9a",
+      "DisplayName": "SelectionSort",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
