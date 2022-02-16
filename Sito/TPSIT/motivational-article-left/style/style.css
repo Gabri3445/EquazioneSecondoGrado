@@ -117,6 +117,11 @@ body
     margin-top: 60px;
     margin-bottom: 0%;
 }
+.col3right
+{
+    margin-right: 25.23364485981308%;
+}
+
 .articleContent *
 {
     font-family: Crimson Pro;
@@ -126,7 +131,7 @@ body
     line-height: 27px;
     /* or 150% */
 
-    text-align: center;
+    text-align: left;
 
     color: #000000;
     margin-top: 20px;
@@ -151,7 +156,7 @@ body
 .socialLink h4
 {
     margin-top: 102px;
-    text-align: center;
+    text-align: right;
     font-family: Crimson Pro;
     font-style: italic;
     font-weight: normal;
@@ -168,19 +173,15 @@ body
     list-style: none;
     padding-left: 0%;
     margin-bottom: 0%;
-    text-align: center;
+    text-align: right;
     width: 100%;
-    align-items: center;
+    align-items: right;
 }
 .socialLink li
 {
-    align-items: center;
+    align-items: right;
     height: 18px;
     display: inline-block;
-}
-.credits div
-{
-    
 }
 .credits p
 {
@@ -196,4 +197,9 @@ body
     text-align: center;
     color: #000000;
     border-top: #000000 solid 1px;
+}
+.col4
+{
+    margin: 0 auto;
+    width: 32.33644859813084%;
 }
