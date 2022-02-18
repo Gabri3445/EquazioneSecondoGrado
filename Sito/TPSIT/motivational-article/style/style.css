@@ -197,3 +197,8 @@ body
     color: #000000;
     border-top: #000000 solid 1px;
 }
+.col12
+{
+    width: 76.42%;
+    margin: 0 auto;
+}
