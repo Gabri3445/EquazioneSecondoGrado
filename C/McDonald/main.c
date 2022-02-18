@@ -239,7 +239,7 @@ int chiudere()
 	}
 	media = mediaf(clienti);
 	printf("Numero di clienti: %d\n", i);
-	printf("Profitto Totale: %f\n", profitto);
+	printf("Profitto Totale: %.2f\n", profitto);
 	if (media > 0)
 	{
 		printf("Media degli importi: %.2f\n", media);
