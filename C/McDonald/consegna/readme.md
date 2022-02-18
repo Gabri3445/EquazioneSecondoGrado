@@ -44,7 +44,7 @@ nomBevande\[\], profitto, media
 | Carrello\[24\]         | INT/GLB       | W/I           | Quale alimenti o bevande il cliente ha scelto                                                            |
 | couponList             | ARR/STR/GLB   | W             | Ogni coupon attivabile                                                                                   |
 | couponSconto           | ARR/FLT/GLB   | W             | Quanto sconto deve essere tolto in percentuale calcolato con ( percentuale di sconto / 100 )             |
-| couponScelto           | INT/GLB       | W             | Coupon applicato dal cliente                                                                             |
+| couponScelto           | ARR/INT/GLB   | W             | Coupon applicato dal cliente                                                                             |
 | couponBool             | BOOL/GLB      | W             | Se è stato applicato un coupon oppure no                                                                 |
 | Scelta                 | INT           | I             | Input dell’utente per navigare nei menu o per scegliere un alimento. Presente in quasi tutte le funzioni |
 | numAgg                 | INT           | I             | Numero di scorte da aggiungere                                                                           |
