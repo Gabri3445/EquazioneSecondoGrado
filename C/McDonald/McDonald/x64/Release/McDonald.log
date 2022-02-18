@@ -1,0 +1,6 @@
+﻿  main.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 17 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  McDonald.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\McDonald\x64\Release\McDonald.exe
