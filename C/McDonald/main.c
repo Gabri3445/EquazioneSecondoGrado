@@ -216,7 +216,7 @@ int comprare()
 			}
 			else
 			{
-				printf("Scegli un altro alimento, questo non é disponibile\n");
+				printf("Scegli un altro alimento, questo non Ã© disponibile\n");
 			}
 		}
 		else if (scelta == 24)
@@ -279,19 +279,22 @@ int scontrino()
 			}
 		}
 	}
-	sconto();
-	if (couponBool == true)
+	if(clienti[numClienti] > 0)
 	{
-		for (int i = 0; i < NCOUPON; i++)
+		sconto();
+		if (couponBool == true)
 		{
-			if (couponScelto[i] > 0)
+			for (int i = 0; i < NCOUPON; i++)
 			{
-				clienti[numClienti] = clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+				if (couponScelto[i] > 0)
+				{
+					clienti[numClienti] = clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+				}
 			}
 		}
+		printf("Costo totale:%.2f\n", clienti[numClienti]);
+		numClienti += 1;
 	}
-	printf("Costo totale:%.2f\n", clienti[numClienti]);
-	numClienti += 1;
 	for (int i = 0; i < 24; i++)
 	{
 		carrello[i] = 0;
