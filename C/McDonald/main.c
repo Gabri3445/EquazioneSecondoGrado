@@ -250,7 +250,6 @@ int chiudere()
 int scontrino()
 {
 	clear();
-	printf("Ecco lo scontrino:\n");
 	for (int i = 0; i < NBEVANDE + NPANINI; i++)
 	{
 		if (carrello[i] > 0)
@@ -281,6 +280,7 @@ int scontrino()
 	}
 	if(clienti[numClienti] > 0)
 	{
+		printf("Ecco lo scontrino:\n");
 		sconto();
 		if (couponBool == true)
 		{
@@ -294,12 +294,12 @@ int scontrino()
 		}
 		printf("Costo totale:%.2f\n", clienti[numClienti]);
 		numClienti += 1;
+		system("pause");
 	}
 	for (int i = 0; i < 24; i++)
 	{
 		carrello[i] = 0;
 	}
-	system("pause");
 	return 0;
 }
 float mediaf(float arr[])

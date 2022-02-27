@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Files\\Document\\!Scuola\\Git\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj": {}
+    "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj": {}
   },
   "projects": {
-    "X:\\Files\\Document\\!Scuola\\Git\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj": {
+    "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\Files\\Document\\!Scuola\\Git\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj",
+        "projectUniqueName": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj",
         "projectName": "DivisoriSharp",
-        "projectPath": "X:\\Files\\Document\\!Scuola\\Git\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj",
+        "projectPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\DivisoriSharp\\DivisoriSharp\\DivisoriSharp.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "X:\\Files\\Document\\!Scuola\\Git\\C#\\DivisoriSharp\\DivisoriSharp\\obj\\",
+        "outputPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\DivisoriSharp\\DivisoriSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
