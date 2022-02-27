@@ -84,7 +84,7 @@ void main()
 
 int inizio()
 {
-    int scelta = 0;
+    int scelta;
     Console.Clear();
     Console.WriteLine("Benvenuto a McDonald. Cosa vuoi fare?\n[1]Compra [2]Staff Only");
     scelta = Convert.ToInt32(Console.ReadLine());
@@ -92,7 +92,7 @@ int inizio()
 }
 int staff()
 {
-    int scelta = 0;
+    int scelta;
     Console.Clear();
     Console.WriteLine("Cosa vuoi fare?\n[1]Aggiungi Scorte [2]Spegni il totem [3]Torna indietro");
     scelta = Convert.ToInt32(Console.ReadLine());
@@ -100,7 +100,7 @@ int staff()
 }
 int scorte()
 {
-    int scelta = 1;
+    int scelta;
     int numAgg = 1;
     do
     {
@@ -138,7 +138,7 @@ int scorte()
 int modNum()
 {
     Console.Clear();
-    int scelta = 0;
+    int scelta;
     int num = 1;
     Console.WriteLine("Quale numero vuoi aggiungere?\n[1]1\n[2]2\n[3]5\n[4]10\n[5]Scegli te il numero");
     scelta = Convert.ToInt32(Console.ReadLine());
@@ -167,7 +167,7 @@ int modNum()
 int comprare()
 {
     readFromTxt(new StreamReader(filePath));
-    int scelta = 1;
+    int scelta;
     do
     {
         Console.Clear();
@@ -218,7 +218,7 @@ int comprare()
 int chiudere()
 {
     int i = 0;
-    float media = 0;
+    float media;
     Console.Clear();
     while (clienti[i] > 0)
     {
@@ -232,8 +232,8 @@ int chiudere()
     {
         Console.WriteLine("Media degli importi: " + media);
     }
-    Console.ReadKey();
     writeToTxt(new StreamWriter(filePath));
+    Console.ReadKey();
     Environment.Exit(0);
     return 0;
 }
@@ -292,7 +292,8 @@ int scontrino()
 }
 float mediaf(float[] arr)
 {
-    float sum = 0, avg = 0;
+    float avg;
+    float sum = 0;
     int i = 0;
     while (arr[i] > 0)
     {
@@ -305,7 +306,7 @@ float mediaf(float[] arr)
 bool sconto()
 {
     Console.WriteLine("Se hai un coupon inseriscilo (Se non hai un coupon scrivi 0)");
-    string couponInp = new string(Console.ReadLine());
+    string couponInp = new(Console.ReadLine());
     for (int i = 0; i < NCOUPON; i++)
     {
         if (String.Equals(couponList[i], couponInp))
@@ -377,10 +378,7 @@ void createFile()
         }
         else
         {
-            using (FileStream fs = File.Create(filePath))
-            {
-
-            }
+            using FileStream fs = File.Create(filePath);
         }
     }
     catch (Exception Ex)

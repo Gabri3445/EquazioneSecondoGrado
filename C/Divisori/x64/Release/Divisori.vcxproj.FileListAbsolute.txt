@@ -1,2 +1,3 @@
 X:\Files\Document\!Scuola\Git\C\Divisori\x64\Release\Divisori.exe
 C:\Users\INF 03\Desktop\Popez\git\Scuola\C\Divisori\x64\Release\Divisori.exe
+X:\Files\Document\!Scuola\Scuola\C\Divisori\x64\Release\Divisori.exe

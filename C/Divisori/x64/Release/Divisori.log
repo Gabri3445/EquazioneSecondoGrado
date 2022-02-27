@@ -1,1 +1,7 @@
-﻿  Divisori.vcxproj -> X:\Files\Document\!Scuola\Git\C\Divisori\x64\Release\Divisori.exe
+﻿  Source.c
+X:\Files\Document\!Scuola\Scuola\C\Divisori\Source.c(11,11): warning C4013: 'divisori' undefined; assuming extern returning int
+  Generating code
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 8 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Divisori.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Divisori\x64\Release\Divisori.exe

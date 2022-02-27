@@ -18,6 +18,8 @@ int scorte();
 float mediaf(float arr[]);
 bool sconto();
 void clear();
+void write();
+void read();
 
 int panini[NPANINI];
 
@@ -83,6 +85,7 @@ bool couponBool = false;
 
 int main()
 {
+	read();
 	do
 	{
 		switch (inizio())
@@ -153,6 +156,7 @@ int scorte()
 			bevande[scelta - 18] += numAgg;
 		}
 	} while (scelta != 25);
+	write();
 	return 0;
 }
 int modNum()
@@ -181,6 +185,7 @@ int modNum()
 }
 int comprare()
 {
+	read();
 	int scelta = 1;
 	do
 	{
@@ -216,7 +221,7 @@ int comprare()
 			}
 			else
 			{
-				printf("Scegli un altro alimento, questo non é disponibile\n");
+				printf("Scegli un altro alimento, questo non ï¿½ disponibile\n");
 			}
 		}
 		else if (scelta == 24)
@@ -244,6 +249,7 @@ int chiudere()
 	{
 		printf("Media degli importi: %.2f\n", media);
 	}
+	write();
 	system("pause");
 	exit(0);
 }
@@ -297,6 +303,7 @@ int scontrino()
 		carrello[i] = 0;
 	}
 	system("pause");
+	write();
 	return 0;
 }
 float mediaf(float arr[])
@@ -335,4 +342,43 @@ bool sconto()
 void clear()
 {
 	system("cls");
+}
+void write()
+{
+	FILE *fp;
+	fp = fopen("file0", "w");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i <NPANINI; i++)
+	{
+		fprintf(fp, "%d\n", panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fprintf(fp, "%d\n", bevande[i]);
+	}
+	fclose(fp);
+}
+void read()
+{
+	FILE *fp;
+	fp = fopen("file0", "r");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i < NPANINI; i++)
+	{
+		fscanf(fp, "%d", &panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fscanf(fp, "%d", &bevande[i]);
+	}
+	
+	fclose(fp);
 }
