@@ -35,12 +35,12 @@
 .mainNav ul
 {
     text-align: right;
-    padding-top: 63px;
+    padding-top: 6vh;
 }
 .mainNav li
 {
     display: inline-block;
-    padding-right: 65px;
+    padding-right: 4.51388888888889%;
 }
 .mainNav li:last-child
 {
@@ -48,17 +48,18 @@
 }
 .mainNav
 {
-    margin-bottom: 294px;
+    margin-bottom: 28.7109375vh;
 }
 .mainTitle
 {
     font-style: normal;
     font-weight: bold;
-    font-size: 74px;
+    font-size: 7.2265625vh;
     line-height: 74px;
 
     color: #FFFFFF;
     text-align: center;
+    width: 100%;
 }
 .mainTitle::before
 {
@@ -66,9 +67,9 @@
     height: 3px;
     margin: auto;
     background-color: #FFF;
-    width: 916px;
+    width: 63.61111111111111vw;
     display: block;
-    margin-bottom: 34px;
+    margin-bottom: 3.3203125vh;
 }
 .mainTitle::after
 {
@@ -76,9 +77,9 @@
     height: 3px;
     margin: auto;
     background-color: #FFF;
-    width: 916px;
+    width: 63.61111111111111vw;
     display: block;
-    margin-top: 34px;
+    margin-top: 3.3203125vh;
 }
 .button
 {
@@ -91,27 +92,27 @@
 
 
     color: #000000;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 44px;
-    padding-right: 43px;
+    padding-top: 1.66015625vh;
+    padding-bottom: 1.66015625vh;
+    padding-left: 3.05555555555556%;
+    padding-right: 3.05555555555556%;
     border: transparent;
     cursor: pointer;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 34px;
+    margin-top: 3.3203125vh;
 }
 .socialLinks
 {
     text-align: center;
-    padding-top: 317px;
+    padding-top: 30.95703125vh;
 }
 .socialLinks li
 {
     display: inline-block;
-    padding-right: 34px;
+    padding-right: 2.36111111111111%;
 }
 .socialLinks li:last-child
 {
