@@ -1,0 +1,119 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainContainer
+{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: url(../static/img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.oswald
+{
+    font-family: 'Oswald', sans-serif;
+}
+.robotoMono
+{
+    font-family: 'Roboto Mono', monospace;
+}
+.mainNav *
+{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+
+
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.mainNav ul
+{
+    text-align: right;
+    padding-top: 63px;
+}
+.mainNav li
+{
+    display: inline-block;
+    padding-right: 65px;
+}
+.mainNav li:last-child
+{
+    padding-right: 100px;
+}
+.mainNav
+{
+    margin-bottom: 294px;
+}
+.mainTitle
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 74px;
+    line-height: 74px;
+
+    color: #FFFFFF;
+    text-align: center;
+}
+.mainTitle::before
+{
+    content: "";
+    height: 3px;
+    margin: auto;
+    background-color: #FFF;
+    width: 916px;
+    display: block;
+    margin-bottom: 34px;
+}
+.mainTitle::after
+{
+    content: "";
+    height: 3px;
+    margin: auto;
+    background-color: #FFF;
+    width: 916px;
+    display: block;
+    margin-top: 34px;
+}
+.button
+{
+    background-color: #FFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    /* identical to box height, or 114% */
+
+
+    color: #000000;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 44px;
+    padding-right: 43px;
+    border: transparent;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+}
+.socialLinks
+{
+    text-align: center;
+    padding-top: 317px;
+}
+.socialLinks li
+{
+    display: inline-block;
+    padding-right: 34px;
+}
+.socialLinks li:last-child
+{
+    padding-right: 0;
+}
