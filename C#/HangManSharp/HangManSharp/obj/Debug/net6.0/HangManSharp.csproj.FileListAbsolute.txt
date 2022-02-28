@@ -1,0 +1,16 @@
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\HangManSharp.exe
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\HangManSharp.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\HangManSharp.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\HangManSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\HangManSharp.pdb
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\refint\HangManSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.pdb
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\HangManSharp.genruntimeconfig.cache
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\obj\Debug\net6.0\ref\HangManSharp.dll
+X:\Files\Document\!Scuola\Scuola\C#\HangManSharp\HangManSharp\bin\Debug\net6.0\words
