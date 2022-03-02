@@ -1,10 +1,16 @@
 ﻿using HangManSharp;
+
+//Variables
+string randomWord = null;
+char[] word;
+string input = "";
+
 //Instantiate classes
 Backend _backend = new Backend();
 Backend.ConsoleSpinner consoleSpinner = new Backend.ConsoleSpinner();
 
 //Catch the thread return value
-string randomWord = null;
+
 Thread initThread = new Thread(() => { randomWord = _backend.GetWord(); });
 initThread.Start();
 //Loading animation
@@ -16,5 +22,16 @@ while (initThread.IsAlive != true)
 }
 initThread.Join();
 Console.Clear();
-char[] word = randomWord.ToCharArray();
-Console.WriteLine("Insert the word\t\t\t\t\t\tThe word is {0} characters long", randomWord.Length);
+word = randomWord.ToCharArray();
+
+do 
+{
+    Console.WriteLine("Insert the word\t\t\t\t\t\tThe word is {0} characters long", randomWord.Length);
+    input = Console.ReadLine();
+    if(_backend.Compare(word, input) != null)
+    {
+
+    }
+
+}
+while (true);
