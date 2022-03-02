@@ -9,29 +9,27 @@ namespace HangManSharp
 {
     internal class Backend
     {
-        public string getWord()
-        {
-            const int wordCount = 1000;
-            int randomWordNum = Random.Shared.Next(wordCount);
-            try
-            {
-                StreamReader sr = new StreamReader("words");
+        public string GetWord() => File.ReadLines("words").Skip(Random.Shared.Next(1000)).Take(1).FirstOrDefault();
 
-                for (int i = 0; i < wordCount; i++)
-                {
-                    sr.ReadLine();
-                    if (i == randomWordNum)
-                    {
-                        return sr.ReadLine();
-                    }
-                }
-            }
-            catch (Exception ex)
+        public class ConsoleSpinner
+        {
+            int counter;
+            public ConsoleSpinner()
             {
-                Console.WriteLine(ex.Message);
-                Environment.Exit(1);
+                counter = 0;
             }
-            return null;
+            public void Turn()
+            {
+                counter++;
+                switch (counter % 4)
+                {
+                    case 0: Console.Write("/"); break;
+                    case 1: Console.Write("-"); break;
+                    case 2: Console.Write("\\"); break;
+                    case 3: Console.Write("|"); break;
+                }
+                Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            }
         }
     }
 }

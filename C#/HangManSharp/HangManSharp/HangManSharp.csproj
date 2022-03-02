@@ -8,12 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="WordList\words">
+    <None Remove="words" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="words">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="words">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>
