@@ -44,11 +44,24 @@ namespace HangManSharp
 
             for (int i = 0; i < str.Length; i++)
             {
-                if (str[i] != inputChar[i])
+                if (str[i] == inputChar[i])
                     arr[i] = 1;
+                for (int j = 0; j < str.Length; j++)
+                {
+                    if (inputChar[i] == str[j])
+                        arr[i] = 2;
+                }
             }
 
             return arr;
+        }
+
+        public static void RemoveCurrentConsoleLine()
+        {
+            int currentCursorLine = Console.CursorTop;
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, currentCursorLine);
         }
     }
 }
