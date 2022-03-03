@@ -26,7 +26,7 @@ Console.Clear();
 word = randomWord.ToCharArray();
 
 
-Console.WriteLine("Insert the word\t\t\t\t\t\tThe word is {0} characters long", randomWord.Length);
+Console.WriteLine("Insert the word\t\t\t\t\t\t\t\t\tThe word is {0} characters long", randomWord);
 do 
 {
     input = Console.ReadLine();
@@ -34,24 +34,17 @@ do
     if(_backend.Compare(word, input) != null)
     {
         checkArr = _backend.Compare(word, input);
-        for (int i = 0; i < word.Length; i++)
-        {
-            if(checkArr[i] == 1)
-            {
-                
-            }
-            else if(checkArr[i] == 2)
-            {
-
-            }
-        }
+        _backend.Print(checkArr, input);
     } 
-    else
+    else if (_backend.Compare(word, input) == null)
     {
-        Console.Write("Use the provided word count\r");
+        Console.Write("Use the provided word count");
         Thread.Sleep(1000);
         Backend.RemoveCurrentConsoleLine();
-        Console.SetCursorPosition()
+    }
+    else
+    {
+
     }
 
 }

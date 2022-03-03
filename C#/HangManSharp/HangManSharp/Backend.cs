@@ -46,14 +46,45 @@ namespace HangManSharp
             {
                 if (str[i] == inputChar[i])
                     arr[i] = 1;
-                for (int j = 0; j < str.Length; j++)
+                else
                 {
-                    if (inputChar[i] == str[j])
-                        arr[i] = 2;
+                    for (int j = 0; j < str.Length; j++)
+                    {
+                        if (inputChar[i] == str[j])
+                            arr[i] = 2;
+                    }
                 }
             }
 
             return arr;
+        }
+
+        public void Print(int[] arr, string input)
+        {
+            char[] inputChar = input.ToCharArray();
+            for (int i = 0; i < input.Length; i++)
+            {
+                switch (arr[i])
+                {
+                    case 0: 
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(inputChar[i]);
+                        break;
+                    case 1:
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(inputChar[i]);
+                        break;
+                    case 2:
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write(inputChar[i]);
+                        break;
+                    default:
+                        Console.Write("Error");
+                        Environment.Exit(1);
+                        break;
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         public static void RemoveCurrentConsoleLine()
