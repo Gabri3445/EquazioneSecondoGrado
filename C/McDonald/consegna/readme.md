@@ -12,8 +12,7 @@ dipende dal coupon. Se l’utente è un membro dello staff allora gli viene
 presentata una altra scelta. L’utente sceglie se vuole aggiungere le
 scorte dove puó modificare il numero da aggiungere, se vuole finire la
 giornata il cui menu fa vedere quanti clienti ci sono stati, il profitto
-totale e la media dei costi. Si possono salvare le scorte in un file
-solo con la versione di C#.
+totale e la media dei costi. Si possono salvare le scorte in un file.
 
 ## I/O
 
