@@ -11,8 +11,7 @@ all’utente se ha un coupon e se si viene applicato uno sconto che
 dipende dal coupon. Se l’utente è un membro dello staff allora gli viene
 presentata una altra scelta. L’utente sceglie se vuole aggiungere le
 scorte dove puó modificare il numero da aggiungere, se vuole finire la
-giornata, il profitto
-totale e la media dei costi. Le scorte vengono salvate in un file quando 
+giornata. Le scorte vengono salvate in un file quando 
 vengono modificate.
 
 ## I/O
