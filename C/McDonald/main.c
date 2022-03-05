@@ -8,6 +8,8 @@
 #define CLT 100
 #define NCOUPON 5
 
+//Declaration and initialization of variables
+
 int inizio();
 int comprare();
 int chiudere();
@@ -18,6 +20,11 @@ int scorte();
 float mediaf(float arr[]);
 bool sconto();
 void clear();
+void write();
+void read();
+void createFile();
+
+char filePath[] = { "file0" };
 
 int panini[NPANINI];
 
@@ -81,8 +88,12 @@ int couponScelto[NCOUPON];
 
 bool couponBool = false;
 
+//Program start
+
 int main()
 {
+	createFile();
+	read();
 	do
 	{
 		switch (inizio())
@@ -107,6 +118,7 @@ int main()
 
 int inizio()
 {
+	//User or staff choice
 	int scelta = 0;
 	clear();
 	printf("Benvenuto a McDonald. Cosa vuoi fare?\n[1]Compra [2]Staff Only\n");
@@ -115,6 +127,7 @@ int inizio()
 }
 int staff()
 {
+	//Staff menu
 	int scelta = 0;
 	clear();
 	printf("Cosa vuoi fare?\n[1]Aggiungi Scorte [2]Spegni il totem [3]Torna indietro\n");
@@ -123,6 +136,7 @@ int staff()
 }
 int scorte()
 {
+	//Menu for adding stocks
 	int scelta = 1;
 	int numAgg = 1;
 	do
@@ -153,10 +167,12 @@ int scorte()
 			bevande[scelta - 18] += numAgg;
 		}
 	} while (scelta != 25);
+	write();
 	return 0;
 }
 int modNum()
 {
+	//Modify the number added
 	clear();
 	int scelta = 0;
 	int num = 1;
@@ -172,8 +188,15 @@ int modNum()
 		break;
 	case 4: num = 10;
 		break;
-	case 5: scanf("%d", &num);
-		break;
+	case 5: do
+	{
+		scanf("%d", &num);
+		if (num <= 0)
+		{
+			printf("Inserisci un numero maggiore di zero\n");
+		}
+	} while (num <= 0);
+	break;
 	default:
 		break;
 	}
@@ -181,11 +204,14 @@ int modNum()
 }
 int comprare()
 {
+	//Menu for buying
+	read();
 	int scelta = 1;
 	do
 	{
 		clear();
 		printf("Quale vuoi comprare?\n");
+		//Only print if available
 		for (int i = 0; i < NPANINI; ++i)
 		{
 			if (panini[i] > 0)
@@ -229,6 +255,7 @@ int comprare()
 }
 int chiudere()
 {
+	//Close the shop
 	int i = 0;
 	float media = 0;
 	clear();
@@ -244,11 +271,13 @@ int chiudere()
 	{
 		printf("Media degli importi: %.2f\n", media);
 	}
+	write();
 	system("pause");
 	exit(0);
 }
 int scontrino()
 {
+	//Print the receipt
 	clear();
 	for (int i = 0; i < NBEVANDE + NPANINI; i++)
 	{
@@ -278,7 +307,7 @@ int scontrino()
 			}
 		}
 	}
-	if(clienti[numClienti] > 0)
+	if (clienti[numClienti] > 0)
 	{
 		printf("Ecco lo scontrino:\n");
 		sconto();
@@ -300,10 +329,12 @@ int scontrino()
 	{
 		carrello[i] = 0;
 	}
+	write();
 	return 0;
 }
 float mediaf(float arr[])
 {
+	//Average for closing function
 	float sum = 0;
 	float avg;
 	int i = 0;
@@ -317,6 +348,7 @@ float mediaf(float arr[])
 }
 bool sconto()
 {
+	//Coupon
 	char couponInp[MAXLHT] = { "" };
 	printf("Se hai un coupon inseriscilo (Se non hai un coupon scrivi 0)\n");
 	scanf("%s", &couponInp);
@@ -338,4 +370,54 @@ bool sconto()
 void clear()
 {
 	system("cls");
+}
+void write()
+{
+	FILE* fp;
+	fp = fopen(filePath, "w");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i < NPANINI; i++)
+	{
+		fprintf(fp, "%d\n", panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fprintf(fp, "%d\n", bevande[i]);
+	}
+	fclose(fp);
+}
+void read()
+{
+	FILE* fp;
+	fp = fopen(filePath, "r");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i < NPANINI; i++)
+	{
+		fscanf(fp, "%d", &panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fscanf(fp, "%d", &bevande[i]);
+	}
+
+	fclose(fp);
+}
+void createFile()
+{
+	FILE* fp;
+	fp = fopen(filePath, "a");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	fclose(fp);
 }
