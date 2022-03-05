@@ -13,7 +13,7 @@ presentata una altra scelta. L’utente sceglie se vuole aggiungere le
 scorte dove puó modificare il numero da aggiungere, se vuole finire la
 giornata il cui menu fa vedere quanti clienti ci sono stati, il profitto
 totale e la media dei costi. Le scorte vengono salvate in un file quando 
-vengono modificate
+vengono modificate.
 
 ## I/O
 
