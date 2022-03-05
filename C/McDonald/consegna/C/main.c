@@ -18,6 +18,11 @@ int scorte();
 float mediaf(float arr[]);
 bool sconto();
 void clear();
+void write();
+void read();
+void createFile();
+
+char filePath[] = { "file0" };
 
 int panini[NPANINI];
 
@@ -83,6 +88,8 @@ bool couponBool = false;
 
 int main()
 {
+	createFile();
+	read();
 	do
 	{
 		switch (inizio())
@@ -153,6 +160,7 @@ int scorte()
 			bevande[scelta - 18] += numAgg;
 		}
 	} while (scelta != 25);
+	write();
 	return 0;
 }
 int modNum()
@@ -172,7 +180,14 @@ int modNum()
 		break;
 	case 4: num = 10;
 		break;
-	case 5: scanf("%d", &num);
+	case 5: do
+	{
+		scanf("%d", &num);
+		if (num <= 0)
+		{
+			printf("Inserisci un numero maggiore di zero\n");
+		}
+	} while (num <= 0);
 		break;
 	default:
 		break;
@@ -181,6 +196,7 @@ int modNum()
 }
 int comprare()
 {
+	read();
 	int scelta = 1;
 	do
 	{
@@ -216,7 +232,7 @@ int comprare()
 			}
 			else
 			{
-				printf("Scegli un altro alimento, questo non é disponibile\n");
+				printf("Scegli un altro alimento, questo non Ã© disponibile\n");
 			}
 		}
 		else if (scelta == 24)
@@ -239,18 +255,18 @@ int chiudere()
 	}
 	media = mediaf(clienti);
 	printf("Numero di clienti: %d\n", i);
-	printf("Profitto Totale: %f\n", profitto);
+	printf("Profitto Totale: %.2f\n", profitto);
 	if (media > 0)
 	{
 		printf("Media degli importi: %.2f\n", media);
 	}
+	write();
 	system("pause");
 	exit(0);
 }
 int scontrino()
 {
 	clear();
-	printf("Ecco lo scontrino:\n");
 	for (int i = 0; i < NBEVANDE + NPANINI; i++)
 	{
 		if (carrello[i] > 0)
@@ -279,24 +295,29 @@ int scontrino()
 			}
 		}
 	}
-	sconto();
-	if (couponBool == true)
+	if(clienti[numClienti] > 0)
 	{
-		for (int i = 0; i < NCOUPON; i++)
+		printf("Ecco lo scontrino:\n");
+		sconto();
+		if (couponBool == true)
 		{
-			if (couponScelto[i] > 0)
+			for (int i = 0; i < NCOUPON; i++)
 			{
-				clienti[numClienti] = clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+				if (couponScelto[i] > 0)
+				{
+					clienti[numClienti] = clienti[numClienti] - (couponSconto[i] * clienti[numClienti]);
+				}
 			}
 		}
+		printf("Costo totale:%.2f\n", clienti[numClienti]);
+		numClienti += 1;
+		system("pause");
 	}
-	printf("Costo totale:%.2f\n", clienti[numClienti]);
-	numClienti += 1;
 	for (int i = 0; i < 24; i++)
 	{
 		carrello[i] = 0;
 	}
-	system("pause");
+	write();
 	return 0;
 }
 float mediaf(float arr[])
@@ -335,4 +356,54 @@ bool sconto()
 void clear()
 {
 	system("cls");
+}
+void write()
+{
+	FILE* fp;
+	fp = fopen(filePath, "w");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i < NPANINI; i++)
+	{
+		fprintf(fp, "%d\n", panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fprintf(fp, "%d\n", bevande[i]);
+	}
+	fclose(fp);
+}
+void read()
+{
+	FILE* fp;
+	fp = fopen(filePath, "r");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	for (int i = 0; i < NPANINI; i++)
+	{
+		fscanf(fp, "%d", &panini[i]);
+	}
+	for (int i = 0; i < NBEVANDE; i++)
+	{
+		fscanf(fp, "%d", &bevande[i]);
+	}
+
+	fclose(fp);
+}
+void createFile() 
+{
+	FILE* fp;
+	fp = fopen(filePath, "a");
+	if (fp == NULL)
+	{
+		printf("Errore\n");
+		exit(1);
+	}
+	fclose(fp);
 }

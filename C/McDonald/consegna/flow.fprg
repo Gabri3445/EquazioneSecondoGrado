@@ -4,9 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="gabri"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-07 05:58:18 PM"/>
+        <attribute name="saved" value="2022-03-05 09:50:51 "/>
         <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MDQ6MzI6MTIgUE07MjgwNg=="/>
         <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDc7MDU6NTg6MTggUE07OTsyOTM4"/>
+        <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjItMDMtMDU7IjA5OjUwOjUxICI7NDsyMTc5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -165,16 +166,21 @@
                             <input variable="scelta"/>
                             <if expression="scelta &lt; 24">
                                 <then>
-                                    <if expression="scelta &lt; 18 &amp;&amp; panini[scelta] &gt; 0">
+                                    <if expression="scelta &lt; 18">
                                         <then>
-                                            <assign variable="panini[scelta]" expression="panini[scelta] - 1"/>
-                                            <assign variable="carrello[scelta]" expression="carrello[scelta] + 1"/>
+                                            <if expression="panini[scelta] &gt; 0">
+                                                <then>
+                                                    <assign variable="panini[scelta]" expression="panini[scelta] - 1"/>
+                                                    <assign variable="carrello[scelta]" expression="carrello[scelta] + 1"/>
+                                                </then>
+                                                <else/>
+                                            </if>
                                         </then>
                                         <else>
-                                            <if expression="scelta &gt;= 18 &amp;&amp; bevande[scelta] &gt; 0">
+                                            <if expression="scelta &gt;= 18 &amp;&amp; bevande[scelta - 18] &gt; 0">
                                                 <then>
                                                     <assign variable="bevande[scelta - 18]" expression="bevande[scelta - 18] - 1"/>
-                                                    <assign variable="bevande[scelta- 18]" expression="bevande[scelta - 18] + 1"/>
+                                                    <assign variable="carrello[scelta]" expression="carrello[scelta] + 1"/>
                                                 </then>
                                                 <else/>
                                             </if>
