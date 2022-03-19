@@ -1,0 +1,15 @@
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Debug\net6.0\DividersEnum.exe
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Debug\net6.0\DividersEnum.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Debug\net6.0\DividersEnum.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Debug\net6.0\DividersEnum.dll
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Debug\net6.0\DividersEnum.pdb
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.dll
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\refint\DividersEnum.dll
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.pdb
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\DividersEnum.genruntimeconfig.cache
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\obj\Debug\net6.0\ref\DividersEnum.dll
