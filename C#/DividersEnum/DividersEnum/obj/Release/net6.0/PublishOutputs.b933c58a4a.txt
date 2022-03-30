@@ -1,0 +1,5 @@
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Release\net6.0\publish\DividersEnum.exe
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Release\net6.0\publish\DividersEnum.dll
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Release\net6.0\publish\DividersEnum.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Release\net6.0\publish\DividersEnum.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\DividersEnum\DividersEnum\bin\Release\net6.0\publish\DividersEnum.pdb
