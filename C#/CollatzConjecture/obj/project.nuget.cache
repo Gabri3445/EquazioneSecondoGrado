@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "GvN5eWdhRBPICKM3OyHFah064aVxJBSl+GqBw7sf+7Gs6sg5RiedEyGjp41fuaya1YFfaMturaE2e3WF/odh0w==",
+  "dgSpecHash": "hq1v/gVa5mRT/BQBnBXJu6pTbg4HGoiaeedBfd4xbBhqcNj1FRm0U4lIp5BS2OkbtVxFDGnKm6Uc8pYDPXPcHg==",
   "success": true,
   "projectFilePath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\CollatzConjecture\\CollatzConjecture.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\scottplot\\4.1.39\\scottplot.4.1.39.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.drawing.common\\4.6.1\\system.drawing.common.4.6.1.nupkg.sha512"
+  ],
   "logs": []
 }
