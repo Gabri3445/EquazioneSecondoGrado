@@ -1,0 +1,11 @@
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\CollatzConjecture.exe
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\CollatzConjecture.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\CollatzConjecture.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\CollatzConjecture.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\CollatzConjecture.pdb
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\Microsoft.Win32.SystemEvents.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\ScottPlot.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\System.Drawing.Common.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+X:\Files\Document\!Scuola\Scuola\C#\CollatzConjecture\bin\release\net6.0\publish\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

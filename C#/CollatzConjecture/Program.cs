@@ -1,9 +1,22 @@
 ﻿using CollatzConjecture;
+using System.Diagnostics;
 
-int num = Convert.ToInt32(Console.ReadLine());
+Stopwatch sw = new Stopwatch();
+
+long num = Convert.ToInt64(Console.ReadLine());
+Console.Clear();
+sw.Start();
 double[] data = Backend.Collatz(num).ToArray();
-var plt = new ScottPlot.Plot(1920, 1080);
-plt.Palette = ScottPlot.Palette.OneHalf;
+var plt = new ScottPlot.Plot(1000, 1000);
 plt.AddSignal(data);
 plt.SaveFig("./CollatzConjecture.png");
-Console.WriteLine(data.Length);
+sw.Stop();
+TimeSpan ts = sw.Elapsed;
+
+string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+    ts.Hours, ts.Minutes, ts.Seconds,
+    ts.Milliseconds / 10);
+Console.WriteLine("Runtime " + elapsedTime);
+
+Console.WriteLine($"Lenght of Collatz Conjecture = {data.Length - 1}");
+Console.ReadKey();

@@ -2,7 +2,7 @@ namespace CollatzConjecture
 {
     public class Backend
     {
-        public static IEnumerable<double> Collatz(int input)
+        public static IEnumerable<double> Collatz(long input)
         {
             if (input == 1)
             {
