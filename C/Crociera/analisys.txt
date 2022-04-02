@@ -1,0 +1,22 @@
+Input
+Congnome
+Nome
+Data di nascita
+
+Nave
+10 da 4 = 40 persone
+10 da 3 = 30 persone
+10 da 2 = 20 persone
+10 da 1 = 10 persone
+
+100 persone tot.
+
+Gruppi familiari tutti in singola cabina (se la famiglia supera 4
+persone dividi in due cabine [4, 1; 2, 3]).
+
+Stampa cabine occupate e chi c'e dentro.
+
+Ogni crocierista ha un saldo che puo spendere (ex. se utente non e
+maggiorenne non puo comprare alcohol).
+
+Stampare quanto ha speso ogni crocierista e ogni nucleo familiare.
