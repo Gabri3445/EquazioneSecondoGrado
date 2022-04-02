@@ -1,0 +1,5 @@
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\Release\net6.0\publish\TetrisSong.exe
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\Release\net6.0\publish\TetrisSong.dll
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\Release\net6.0\publish\TetrisSong.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\Release\net6.0\publish\TetrisSong.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\Release\net6.0\publish\TetrisSong.pdb

@@ -1,0 +1,15 @@
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\release\net6.0\TetrisSong.exe
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\release\net6.0\TetrisSong.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\release\net6.0\TetrisSong.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\release\net6.0\TetrisSong.dll
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\bin\release\net6.0\TetrisSong.pdb
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.dll
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\refint\TetrisSong.dll
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.pdb
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\TetrisSong.genruntimeconfig.cache
+X:\Files\Document\!Scuola\Scuola\C#\TetrisSong\obj\release\net6.0\ref\TetrisSong.dll
