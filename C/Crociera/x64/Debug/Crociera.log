@@ -1,2 +1,3 @@
 ﻿  Source.c
+X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(34,7): warning C4013: 'Sleep' undefined; assuming extern returning int
   Crociera.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Crociera\x64\Debug\Crociera.exe
