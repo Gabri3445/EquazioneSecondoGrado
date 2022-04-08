@@ -19,14 +19,14 @@ int divisori(int num)
 	long int numDiv, numCount;
 	numDiv = num;
 	while (numDiv > 0)
+	{
+		numCount = num % numDiv;
+		if (numCount == 0)
 		{
-			numCount = num % numDiv;
-			if (numCount == 0)
-			{
-				printf("\n%d\n", numDiv);
-			}
-			numDiv--;
+			printf("\n%d\n", numDiv);
 		}
+		numDiv--;
+	}
 	printf("\n");
 	return 0;
 }
