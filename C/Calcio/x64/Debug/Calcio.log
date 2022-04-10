@@ -1,0 +1,4 @@
+﻿  Source.c
+X:\Files\Document\!Scuola\Scuola\C\Calcio\Source.c(48,12): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+X:\Files\Document\!Scuola\Scuola\C\Calcio\Source.c(69,6): warning C4101: 'numSquad': unreferenced local variable
+  Calcio.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Calcio\x64\Debug\Calcio.exe
