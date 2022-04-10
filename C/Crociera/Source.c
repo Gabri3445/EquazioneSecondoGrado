@@ -31,6 +31,7 @@ int occupiedCabins4[_NUM_CABINE]; //Number of occupied 4 people cabines
 int state = 0; //0 = registration 1 = shopping 2 = output
 bool isRunning = true; //Is the program running?
 bool isFull = false; //Is the ship full?
+bool isCabinFull = false; //Are the cabins full?
 
 int main()
 {
@@ -66,7 +67,8 @@ void registration()
 	bool _isRunning = true;
 	do
 	{
-		if (numPeople != 100)
+		isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic (Doesn't work)
+		if (isCabinFull == false)
 		{
 			printf("[0]Registra una famiglia\n");
 		}
@@ -81,8 +83,10 @@ void registration()
 				scanf("%d", &familyMemb);
 			} while (familyMemb < 0);
 			numPeople += familyMemb;
-			if (_TOT_PEOPLE - numPeople > 0)
+			isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic
+			if (isCabinFull == false)
 			{
+				/* Do later
 				for (int i = 0; i < familyMemb; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", i + 1);
@@ -111,6 +115,7 @@ void registration()
 						scanf("%d", &birthdayYear[i]);
 					}
 				}
+				*/
 
 				//cabin logic
 
@@ -118,6 +123,7 @@ void registration()
 			}
 			else
 			{
+				isCabinFull = false; //Also temporary
 				numPeople -= familyMemb;
 				printf("Non ci sono abbastanza posti\n");
 				Sleep(1000);
@@ -143,12 +149,12 @@ void registration()
 
 void shopping()
 {
-	printf("giglo");
+	printf("fuck off\n");
 }
 
 void output()
 {
-	//print cabins
+	//print cabins and passengers families
 	isRunning = false;
 }
 
