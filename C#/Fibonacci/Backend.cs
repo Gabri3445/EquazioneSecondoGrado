@@ -2,7 +2,7 @@ namespace Backend
 {
     class Fibonacci
     {
-        public static IEnumerable<int> FibonacciSequence(long n)
+        public static IEnumerable<int> FibonacciSequence(int n)
         {
             int a = 0;
             int b = 1;
