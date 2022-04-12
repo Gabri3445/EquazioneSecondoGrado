@@ -1,0 +1,15 @@
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\bin\Debug\net6.0\Fibonacci.exe
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\bin\Debug\net6.0\Fibonacci.deps.json
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\bin\Debug\net6.0\Fibonacci.runtimeconfig.json
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\bin\Debug\net6.0\Fibonacci.dll
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\bin\Debug\net6.0\Fibonacci.pdb
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.csproj.AssemblyReference.cache
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.GeneratedMSBuildEditorConfig.editorconfig
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.AssemblyInfoInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.AssemblyInfo.cs
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.csproj.CoreCompileInputs.cache
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.dll
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\refint\Fibonacci.dll
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.pdb
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\Fibonacci.genruntimeconfig.cache
+X:\Files\Document\!Scuola\Scuola\C#\Fibonacci\obj\Debug\net6.0\ref\Fibonacci.dll
