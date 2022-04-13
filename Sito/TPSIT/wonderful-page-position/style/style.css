@@ -49,6 +49,7 @@
 .mainNav
 {
     margin-bottom: 47.8515625vh;
+    visibility: hidden;
 }
 .mainTitle
 {
@@ -127,11 +128,10 @@
 {
     display: block;
     width: 3.81944444444444%;
-    height: 1.953125%;
+    height: 20px;
     position: fixed;
     top: 6.73828125%;
     left: 5.55555555555556%;
-    background-color: red;
 }
 .hamburger .whiteLine
 {
@@ -152,7 +152,7 @@
     height: 2px;
     background-color: white;
     position: absolute;
-    top: -13px;
+    top: -10px;
     transform: translateY(-50%);
     transition: all 0.2s ease-in-out;
 }
@@ -164,7 +164,11 @@
     height: 2px;
     background-color: white;
     position: absolute;
-    top: 13px;
+    top: 10px;
     transform: translateY(-50%);
     transition: all 0.2s ease-in-out;
+}
+.open
+{
+    visibility: visible !important; 
 }
