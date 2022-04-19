@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var urlParams = new URLSearchParams(window.location.search);
+        document.write("Nome:", urlParams.get('name'), "<br>");
+        document.write("Cognome:  ", urlParams.get('surname'), "<br>");
+        document.write("Sesso:  ", urlParams.get('sex'), "<br>");
+        document.write("Data di nascita: ", urlParams.get('birthday'), "<br>");
+        document.write("Cittá di nascita: ", urlParams.get('cityBorn'), "<br>");
+        document.write("Provincia di nascita: ", urlParams.get('provinceBorn'), "<br>");
+        document.write("CAP: ", urlParams.get('capBorn'), "<br>");
+        document.write("Codice fiscale: ", urlParams.get('fisCode'), "<br>");
+        document.write("Cittá di residenza: ", urlParams.get('cityRes'), "<br>");
+        document.write("Provincia di residenza: ", urlParams.get('provinceRes'), "<br>");
+        document.write("CAP: ", urlParams.get('capRes'), "<br>");
+        document.write("Indirizzo di casa: ", urlParams.get('homeAdd'), "<br>");
+        document.write("Numero civico: ", urlParams.get('civicNum'), "<br>");
+        document.write("Numero di telefono: ", urlParams.get('phone'), "<br>");
+        document.write("Email: ", urlParams.get('email'), "<br>");
+        document.write("Password: ", urlParams.get('password'), "<br>");
+        document.write("Privacy policy: ", urlParams.get('privacy'), "<br>");
+        document.write("Terms of service: ", urlParams.get('tos'), "<br>");
+        document.write("Cookie: ", urlParams.get('cookie'), "<br>");
+        document.write("Newsletter: ", urlParams.get('newsletter'), "<br>");
+    </script>
+
+</body>
+</html>
