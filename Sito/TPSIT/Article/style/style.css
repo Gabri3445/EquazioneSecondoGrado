@@ -1,0 +1,97 @@
+body
+{
+    font-family: Readex Pro;
+    margin: 0%;
+}
+.container
+{
+    width: 64.84375%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo
+{
+    width: 100%;
+    margin-bottom: 0%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 95px;
+}
+nav ul
+{
+    padding-left: 0%;
+    margin-top: 0%;
+}
+nav li
+{
+    display: inline-block;
+    list-style: none;
+    margin-right: 2.734375%;
+}
+nav a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+}
+
+.articleWrapper
+{
+    width: 49.21686746987952%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleWrapper
+{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+}
+.titolo
+{
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 53px;
+    line-height: 66px;
+}
+.img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 86px;
+    margin-right: 0;
+}
+.mainText
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: justify;
+    margin-top: 0%;
+}
+.credits
+{
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    padding-top: 100px;
+}
+.credits a
+{
+    text-decoration: none;
+    color: #000;
+}
