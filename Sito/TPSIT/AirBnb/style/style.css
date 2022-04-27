@@ -31,6 +31,38 @@
     transition: all 1s ease-in-out;
 }
 
+.flex
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navMenu ul
+{
+    padding: 55px;
+    list-style: none;
+}
+
+.navMenu a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+
+.navMenu li
+{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navMenu li:last-child
+{
+    margin-right: 0;
+}
+
 #content p {
     font-size: 22px;
     line-height: 1.5;
