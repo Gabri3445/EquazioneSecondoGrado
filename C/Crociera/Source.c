@@ -149,7 +149,7 @@ void registration()
 
 void shopping()
 {
-	printf("fuck off\n");
+	printf("wauw\n");
 }
 
 void output()
