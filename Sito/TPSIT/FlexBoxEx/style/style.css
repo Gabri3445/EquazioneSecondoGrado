@@ -1,0 +1,56 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: deeppink;
+}
+
+#mainWrapper
+{
+    min-height: 100%;
+    margin-top: 15%;
+}
+
+.flex
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex2
+{
+    display: flex;
+    justify-content: center;
+}
+
+img
+{
+    height: 300px;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+#mainWrapper h1
+{
+    width: 75%;
+    text-align: center;
+}
+
+#mainWrapper .news *
+{
+    text-align: center;
+}
+
+#mainWrapper .news div
+{
+    width: 25%;
+}
