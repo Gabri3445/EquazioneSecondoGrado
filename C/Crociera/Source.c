@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <time.h>
+
 
 //Function prototype
 void registration(); //registration function
@@ -12,13 +14,15 @@ void clear(); //clear function
 //Constants
 #define _TOT_PEOPLE 100 //Max number of people
 #define _NUM_CABINE 10 // Max number of cabines
+#define _MAX_LENGHT 1000 //Max length of the 
 
 
 //Main input vars
 int numFamily[_TOT_PEOPLE]; //Number of people in each family
+int numFamili = 0;
 int numPeople = 0; //Total number of people
-char names[_TOT_PEOPLE]; //Names of people
-char surnames[_TOT_PEOPLE]; //Surnames of people
+char names[_TOT_PEOPLE][_MAX_LENGHT]; //Names of people
+char surnames[_TOT_PEOPLE][_MAX_LENGHT]; //Surnames of people
 int birthdayDay[_TOT_PEOPLE]; //Birthday day of people
 int birthdayMonth[_TOT_PEOPLE]; //Birthday month of people
 int birthdayYear[_TOT_PEOPLE]; //Birthday year of people
@@ -64,7 +68,12 @@ int main()
 void registration()
 {
 	int choice, familyMemb;
-	bool _isRunning = true;
+	int cabinNum[4]; //Next free cabin
+	for (int i = 0; i < 4; i++)
+	{
+		cabinNum[i] = 0;
+	}
+	bool _isRunning = true; //Is this running
 	do
 	{
 		isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic (Doesn't work)
@@ -84,10 +93,11 @@ void registration()
 			} while (familyMemb < 0);
 			numPeople += familyMemb;
 			isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic
+			
 			if (isCabinFull == false)
 			{
-				/* Do later
-				for (int i = 0; i < familyMemb; i++)
+				/*
+				for (int i = numFamili; i < familyMemb + numFamili; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", i + 1);
 					scanf("%s", &names[i]);
@@ -114,10 +124,22 @@ void registration()
 						printf("Non valido, riinserisci\n");
 						scanf("%d", &birthdayYear[i]);
 					}
+					numFamili++;
 				}
 				*/
 
-				//cabin logic
+				//Cabin Logic
+				if (familyMemb > 4)
+				{
+					//Dividi Famiglie
+				}
+				else if (familyMemb <= 4)
+				{
+					if (cabinNum[familyMemb - 1] < 10)
+					{
+						cabinNum[familyMemb - 1]++;
+					}
+				}
 
 				clear();
 			}
