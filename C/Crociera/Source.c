@@ -14,11 +14,11 @@ void clear(); //clear function
 //Constants
 #define _TOT_PEOPLE 100 //Max number of people
 #define _NUM_CABINE 10 // Max number of cabines
-#define _MAX_LENGHT 1000 //Max length of the 
+#define _MAX_LENGHT 1000 //Max length of strings
 
 
 //Main input vars
-int numFamily[_TOT_PEOPLE]; //Number of people in each family
+// int numFamily[_TOT_PEOPLE]; //Number of people in each family
 int numFamili = 0;
 int numPeople = 0; //Total number of people
 char names[_TOT_PEOPLE][_MAX_LENGHT]; //Names of people
@@ -28,10 +28,20 @@ int birthdayMonth[_TOT_PEOPLE]; //Birthday month of people
 int birthdayYear[_TOT_PEOPLE]; //Birthday year of people
 
 //Work vars
-int occupiedCabins1[_NUM_CABINE]; //Number of occupied 1 person cabines
+int occupiedCabins[4]; //Number of occupied cabines
+/*
+* [0] - Cabin 1
+* [1] - Cabin 2
+* [2] - Cabin 3
+* [3] - Cabin 4
+*/
+
+/* No longer needed
 int occupiedCabins2[_NUM_CABINE]; //Number of occupied 2 people cabines
 int occupiedCabins3[_NUM_CABINE]; //Number of occupied 3 people cabines
 int occupiedCabins4[_NUM_CABINE]; //Number of occupied 4 people cabines
+*/
+
 int state = 0; //0 = registration 1 = shopping 2 = output
 bool isRunning = true; //Is the program running?
 bool isFull = false; //Is the ship full?
@@ -68,15 +78,14 @@ int main()
 void registration()
 {
 	int choice, familyMemb;
-	int cabinNum[4]; //Next free cabin
+	bool _isRunning = true; //Is this running
+	bool _isCabinFull[4];
 	for (int i = 0; i < 4; i++)
 	{
-		cabinNum[i] = 0;
+		_isCabinFull[i] = false;
 	}
-	bool _isRunning = true; //Is this running
 	do
 	{
-		isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic (Doesn't work)
 		if (isCabinFull == false)
 		{
 			printf("[0]Registra una famiglia\n");
@@ -90,10 +99,8 @@ void registration()
 			{
 				printf("Quanti membri ci sono?(Posti occupati = %d)\n", numPeople);
 				scanf("%d", &familyMemb);
-			} while (familyMemb < 0);
+			} while (familyMemb < 0 || familyMemb > 4);
 			numPeople += familyMemb;
-			isCabinFull = _TOT_PEOPLE - numPeople >= 0 ? false : true; //Temporary, replace with cabin logic
-			
 			if (isCabinFull == false)
 			{
 				/*
@@ -129,23 +136,70 @@ void registration()
 				*/
 
 				//Cabin Logic
-				if (familyMemb > 4)
+				switch (familyMemb)
 				{
-					//Dividi Famiglie
-				}
-				else if (familyMemb <= 4)
-				{
-					if (cabinNum[familyMemb - 1] < 10)
+				case 4:
+					if (occupiedCabins[3] <= 10)
 					{
-						cabinNum[familyMemb - 1]++;
+						occupiedCabins[3]++;
+						break;
 					}
+					else
+					{
+						_isCabinFull[3] = true;
+						printf("Non ci sono abbastanza cabine per 4 persone\n");
+					}
+					break;
+				case 3:
+					if (occupiedCabins[2] <= 10)
+					{
+						occupiedCabins[2]++;
+						break;
+					}
+					else
+					{
+						_isCabinFull[2] = true;
+						printf("Non ci sono abbastanza cabine per 3 persone\n");
+					}
+					break;
+				case 2:
+					if (occupiedCabins[1] <= 10)
+					{
+						occupiedCabins[1]++;
+						break;
+					}
+					else
+					{
+						_isCabinFull[1] = true;
+						printf("Non ci sono abbastanza cabine per 2 persone\n");
+					}
+					break;
+				case 1:
+					if (occupiedCabins[0] <= 10)
+					{
+						occupiedCabins[0]++;
+						break;
+					}
+					else
+					{
+						_isCabinFull[0] = true;
+						printf("Non ci sono abbastanza cabine per 1 persona\n");
+					}
+					break;
+				default:
+					return EXIT_FAILURE;
+					break;
+				}
+
+				if (_isCabinFull[3] && _isCabinFull[2] && _isCabinFull[1] && _isCabinFull[0])
+				{
+					isCabinFull = true;
 				}
 
 				clear();
 			}
 			else
 			{
-				isCabinFull = false; //Also temporary
 				numPeople -= familyMemb;
 				printf("Non ci sono abbastanza posti\n");
 				Sleep(1000);
@@ -176,7 +230,24 @@ void shopping()
 
 void output()
 {
-	//print cabins and passengers families
+	clear();
+	printf("Cabine Occupate\n");
+	for (int i = 0; i < 4; i++)
+	{
+		printf("Cabine da %d occupate : %d\n", i + 1, occupiedCabins[i]);
+	}
+	if (isCabinFull)
+	{
+		printf("Tutte le cabine erano piene\n");
+	}
+	system("pause");
+	printf("Persone presenti nella crociera");
+	for (int i = 0; i < numPeople; i++)
+	{
+		printf("Persona numero %d\n", i + 1);
+		printf("Nome: %s\nCognome: %s\n");
+		printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[i], birthdayMonth[i], birthdayYear[i]);
+	}
 	isRunning = false;
 }
 
