@@ -19,7 +19,8 @@ void clear(); //clear function
 
 //Main input vars
 // int numFamily[_TOT_PEOPLE]; //Number of people in each family
-int numFamili = 0;
+
+int numFamily = 0;
 int numPeople = 0; //Total number of people
 char names[_TOT_PEOPLE][_MAX_LENGHT]; //Names of people
 char surnames[_TOT_PEOPLE][_MAX_LENGHT]; //Surnames of people
@@ -103,10 +104,10 @@ void registration()
 			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
-				/*
-				for (int i = numFamili; i < familyMemb + numFamili; i++)
+
+				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
-					printf("Membro della famiglia(%d)\nInserisci il nome\n", i + 1);
+					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
 					scanf("%s", &names[i]);
 					printf("Inserisci il cognome\n");
 					scanf("%s", &surnames[i]);
@@ -131,9 +132,10 @@ void registration()
 						printf("Non valido, riinserisci\n");
 						scanf("%d", &birthdayYear[i]);
 					}
-					numFamili++;
 				}
-				*/
+
+				numFamily += familyMemb;
+
 
 				//Cabin Logic
 				switch (familyMemb)
@@ -225,7 +227,8 @@ void registration()
 
 void shopping()
 {
-	printf("wauw\n");
+	printf("wao\n");
+	state = 2;
 }
 
 void output()
@@ -244,8 +247,8 @@ void output()
 	printf("Persone presenti nella crociera");
 	for (int i = 0; i < numPeople; i++)
 	{
-		printf("Persona numero %d\n", i + 1);
-		printf("Nome: %s\nCognome: %s\n");
+		printf("\nPersona numero %d\n", i + 1);
+		printf("Nome: %s\nCognome: %s\n", names[i], surnames[i]);
 		printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[i], birthdayMonth[i], birthdayYear[i]);
 	}
 	isRunning = false;
