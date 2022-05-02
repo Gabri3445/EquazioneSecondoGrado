@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Source.c
 X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(54,7): warning C4013: 'Sleep' undefined; assuming extern returning int
 X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(192,25): warning C4098: 'registration': 'void' function returning a value
@@ -7,3 +8,6 @@ X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(192,25): warning C4098: 're
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Crociera.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Crociera\x64\Release\Crociera.exe
+=======
+﻿  Crociera.vcxproj -> C:\Users\gabri\Documents\Scuola\C\Crociera\x64\Release\Crociera.exe
+>>>>>>> bc7b39c130ff686f2c75db73a9e14779ec3a3502
