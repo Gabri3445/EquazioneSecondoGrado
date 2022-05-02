@@ -29,11 +29,11 @@ Output: numPeople, i, occupiedCabins\[\], names\[\], surname\[\], birthdayDay\[\
 | \_MAX_LENGHT                    | CONST / INT / GLB | W             | Numero massimo di lunghezza delle stringhe  |
 | numFamily                       | INT / GLB         | W             | Numero di persone                           |
 | numPeople                       | INT / GLB         | O             | Numero di persone                           |
-| Names\[\_TOT_PEOPLE\]           | STR / GLB / ARR   | I/ O          | Nomi dei crocieristi                        |
-| Surnames\[\[\_TOT_PEOPLE\]      | STR / GLB / ARR   | I/ O          | Cognomi dei crocieristi                     |
-| birthdayDay\[\[\_TOT_PEOPLE\]   | INT / GLB / ARR   | I/ O          | Giorno di nascita dei crocieristi           |
-| birthdayMonth\[\[\_TOT_PEOPLE\] | INT / GLB / ARR   | I/ O          | Mese di nascita dei crocieristi             |
-| birthdayYear\[\[\_TOT_PEOPLE\]  | INT / GLB / ARR   | I/ O          | Anno di nascita dei crocieristi             |
+| Names\[\_TOT_PEOPLE\]           | STR / GLB / ARR   | I/O           | Nomi dei crocieristi                        |
+| Surnames\[\[\_TOT_PEOPLE\]      | STR / GLB / ARR   | I/O           | Cognomi dei crocieristi                     |
+| birthdayDay\[\[\_TOT_PEOPLE\]   | INT / GLB / ARR   | I/O           | Giorno di nascita dei crocieristi           |
+| birthdayMonth\[\[\_TOT_PEOPLE\] | INT / GLB / ARR   | I/O           | Mese di nascita dei crocieristi             |
+| birthdayYear\[\[\_TOT_PEOPLE\]  | INT / GLB / ARR   | I/O           | Anno di nascita dei crocieristi             |
 | moneySpent\[\[\_TOT_PEOPLE\]    | FLT / GLB / ARR   | O             | Soldi spesi dai crocieristi                 |
 | occupiedCabins\[4\]             | INT / GLB / ARR   | O             | Cabine occupate                             |
 | State                           | INT / GLB         | W             | Stato del programma                         |
