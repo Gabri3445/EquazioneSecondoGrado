@@ -44,4 +44,4 @@ Output: numPeople, i, occupiedCabins\[\], names\[\], surname\[\], birthdayDay\[\
 | familyMemb                      | INT               | I             | Membri di una singola famiglia              |
 | \_isRunning                     | BOOL              | W             | La funzione è in esecuzione?                |
 | \_isCabinFull\[4\]              | BOOL / ARR        | W             | Sono piene le cabine?                       |
-| i                               | INT / GLB         | O/W           | Contatore generico                          |
+| I                               | INT / GLB         | O/W           | Contatore generico                          |
