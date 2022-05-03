@@ -106,12 +106,7 @@ void registration()
 			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
-<<<<<<< HEAD
-				for (int i = numFamili; i < familyMemb + numFamili; i++)
-=======
-				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
->>>>>>> 1623d102f924bce811ef2a8e99277aea9a0c381a
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
 					scanf("%s", &names[i]);
@@ -235,7 +230,7 @@ void shopping()
 {
 	for (int i = 0; i < numPeople; i++)
 	{
-		moneySpent[i] = ((double)rand() / RAND_MAX) * 300;
+		moneySpent[i] = ((double)rand() / RAND_MAX) * 500;
 	}
 	state = 2;
 }
