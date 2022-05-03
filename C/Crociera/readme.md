@@ -45,3 +45,21 @@ Output: numPeople, i, occupiedCabins\[\], names\[\], surname\[\], birthdayDay\[\
 | \_isRunning                     | BOOL              | W             | La funzione è in esecuzione?                |
 | \_isCabinFull\[4\]              | BOOL / ARR        | W             | Sono piene le cabine?                       |
 | I                               | INT / GLB         | O/W           | Contatore generico                          |
+
+## Campione I/O
+| Input | Output |
+| ----- | ------ |
+| Scelta=0 ( Registra una famiglia ) | |
+| familyMemb = 2 | |
+| | Membro della famiglia (1)|
+| Mario | |
+| Rossi | |
+| 20 | |
+| 12| |
+| 1990 | |
+| | Membro della famiglia (2) |
+| Nicolo | |
+| Lorusso | |
+| 28 | |
+| 5 | |
+| 2001 | |
