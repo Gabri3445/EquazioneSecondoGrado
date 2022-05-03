@@ -28,6 +28,8 @@ int birthdayDay[_TOT_PEOPLE]; //Birthday day of people
 int birthdayMonth[_TOT_PEOPLE]; //Birthday month of people
 int birthdayYear[_TOT_PEOPLE]; //Birthday year of people
 float moneySpent[_TOT_PEOPLE]; //Money spent by people
+int familyLenght[_TOT_PEOPLE];
+int familyIndex = 0;
 
 //Work vars
 int occupiedCabins[4]; //Number of occupied cabines
@@ -106,6 +108,9 @@ void registration()
 			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
+				familyLenght[familyIndex] = familyMemb;
+				familyIndex++;
+				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
@@ -134,6 +139,7 @@ void registration()
 						scanf("%d", &birthdayYear[i]);
 					}
 				}
+				*/
 
 				numFamily += familyMemb;
 
@@ -243,12 +249,24 @@ void output()
 	{
 		printf("Cabine da %d occupate : %d\n", i + 1, occupiedCabins[i]);
 	}
-	if (isCabinFull)
+	for (int i = 0; i < familyIndex; i++)
 	{
-		printf("Tutte le cabine erano piene\n");
+		printf("\nCabina %d\n", i + 1);
+		for (int j = 0; j < familyLenght[i]; j++)
+		{
+			printf("\n\nPersona numero %d\n", j + 1);
+			printf("Nome: %s\nCognome: %s\n", names[j], surnames[j]);
+			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[j], birthdayMonth[j], birthdayYear[j]);
+			printf("Soldi spesi: %.2f", moneySpent[j]); printf("\n\nPersona numero %d\n", j + 1);
+			printf("Nome: %s\nCognome: %s\n", names[j], surnames[j]);
+			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[j], birthdayMonth[j], birthdayYear[j]);
+			printf("Soldi spesi: %.2f", moneySpent[j]);
+		}
 	}
-	system("pause");
-	printf("Persone presenti nella crociera");
+	
+	
+	
+	/*
 	for (int i = 0; i < numPeople; i++)
 	{
 		printf("\n\nPersona numero %d\n", i + 1);
@@ -256,6 +274,7 @@ void output()
 		printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[i], birthdayMonth[i], birthdayYear[i]);
 		printf("Soldi spesi: %.2f", moneySpent[i]);
 	}
+	*/
 	isRunning = false;
 }
 
