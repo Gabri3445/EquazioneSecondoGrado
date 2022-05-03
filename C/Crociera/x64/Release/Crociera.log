@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Source.c
 C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(53,7): warning C4013: 'Sleep' undefined; assuming extern returning int
 C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(188,25): warning C4098: 'registration': 'void' function returning a value
@@ -10,3 +11,6 @@ C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(246,10): message : the missi
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Crociera.vcxproj -> C:\Users\gabri\Documents\Scuola\C\Crociera\x64\Release\Crociera.exe
+=======
+﻿  Crociera.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Crociera\x64\Release\Crociera.exe
+>>>>>>> 1623d102f924bce811ef2a8e99277aea9a0c381a

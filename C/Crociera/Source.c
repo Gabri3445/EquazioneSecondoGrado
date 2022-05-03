@@ -19,13 +19,15 @@ void clear(); //clear function
 
 //Main input vars
 // int numFamily[_TOT_PEOPLE]; //Number of people in each family
-int numFamili = 0;
+
+int numFamily = 0;
 int numPeople = 0; //Total number of people
 char names[_TOT_PEOPLE][_MAX_LENGHT]; //Names of people
 char surnames[_TOT_PEOPLE][_MAX_LENGHT]; //Surnames of people
 int birthdayDay[_TOT_PEOPLE]; //Birthday day of people
 int birthdayMonth[_TOT_PEOPLE]; //Birthday month of people
 int birthdayYear[_TOT_PEOPLE]; //Birthday year of people
+float moneySpent[_TOT_PEOPLE]; //Money spent by people
 
 //Work vars
 int occupiedCabins[4]; //Number of occupied cabines
@@ -49,6 +51,7 @@ bool isCabinFull = false; //Are the cabins full?
 
 int main()
 {
+	srand(time(NULL));
 	printf("Benvenuto al programma di registrazione\n");
 	Sleep(2000L);
 	clear();
@@ -103,9 +106,14 @@ void registration()
 			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
+<<<<<<< HEAD
 				for (int i = numFamili; i < familyMemb + numFamili; i++)
+=======
+				/*
+				for (int i = numFamily; i < familyMemb + numFamily; i++)
+>>>>>>> 1623d102f924bce811ef2a8e99277aea9a0c381a
 				{
-					printf("Membro della famiglia(%d)\nInserisci il nome\n", i + 1);
+					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
 					scanf("%s", &names[i]);
 					printf("Inserisci il cognome\n");
 					scanf("%s", &surnames[i]);
@@ -130,8 +138,10 @@ void registration()
 						printf("Non valido, riinserisci\n");
 						scanf("%d", &birthdayYear[i]);
 					}
-					numFamili++;
 				}
+
+				numFamily += familyMemb;
+
 
 				//Cabin Logic
 				switch (familyMemb)
@@ -223,7 +233,11 @@ void registration()
 
 void shopping()
 {
-	printf("wauw\n");
+	for (int i = 0; i < numPeople; i++)
+	{
+		moneySpent[i] = ((double)rand() / RAND_MAX) * 300;
+	}
+	state = 2;
 }
 
 void output()
@@ -242,9 +256,10 @@ void output()
 	printf("Persone presenti nella crociera");
 	for (int i = 0; i < numPeople; i++)
 	{
-		printf("Persona numero %d\n", i + 1);
-		printf("Nome: %s\nCognome: %s\n");
+		printf("\n\nPersona numero %d\n", i + 1);
+		printf("Nome: %s\nCognome: %s\n", names[i], surnames[i]);
 		printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[i], birthdayMonth[i], birthdayYear[i]);
+		printf("Soldi spesi: %.2f", moneySpent[i]);
 	}
 	isRunning = false;
 }
