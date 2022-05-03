@@ -103,7 +103,6 @@ void registration()
 			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
-				/*
 				for (int i = numFamili; i < familyMemb + numFamili; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", i + 1);
@@ -133,7 +132,6 @@ void registration()
 					}
 					numFamili++;
 				}
-				*/
 
 				//Cabin Logic
 				switch (familyMemb)
