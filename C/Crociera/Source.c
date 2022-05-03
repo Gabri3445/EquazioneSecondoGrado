@@ -110,7 +110,6 @@ void registration()
 			{
 				familyLenght[familyIndex] = familyMemb;
 				familyIndex++;
-				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
@@ -139,7 +138,6 @@ void registration()
 						scanf("%d", &birthdayYear[i]);
 					}
 				}
-				*/
 
 				numFamily += familyMemb;
 
@@ -243,6 +241,7 @@ void shopping()
 
 void output()
 {
+	int counter = 0;
 	clear();
 	printf("Cabine Occupate\n");
 	for (int i = 0; i < 4; i++)
@@ -251,21 +250,19 @@ void output()
 	}
 	for (int i = 0; i < familyIndex; i++)
 	{
-		printf("\nCabina %d\n", i + 1);
+		printf("\nCabina da %d\n", familyLenght[i]);
 		for (int j = 0; j < familyLenght[i]; j++)
 		{
-			printf("\n\nPersona numero %d\n", j + 1);
-			printf("Nome: %s\nCognome: %s\n", names[j], surnames[j]);
-			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[j], birthdayMonth[j], birthdayYear[j]);
-			printf("Soldi spesi: %.2f", moneySpent[j]); printf("\n\nPersona numero %d\n", j + 1);
-			printf("Nome: %s\nCognome: %s\n", names[j], surnames[j]);
-			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[j], birthdayMonth[j], birthdayYear[j]);
-			printf("Soldi spesi: %.2f", moneySpent[j]);
+			printf("\nPersona numero %d\n", counter + 1);
+			printf("Nome: %s\nCognome: %s\n", names[counter], surnames[counter]);
+			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[counter], birthdayMonth[counter], birthdayYear[counter]);
+			printf("Soldi spesi: %.2f\n", moneySpent[counter]);
+			counter++;
 		}
 	}
-	
-	
-	
+
+
+
 	/*
 	for (int i = 0; i < numPeople; i++)
 	{
