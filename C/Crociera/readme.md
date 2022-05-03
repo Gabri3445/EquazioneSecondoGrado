@@ -63,3 +63,23 @@ Output: numPeople, i, occupiedCabins\[\], names\[\], surname\[\], birthdayDay\[\
 | 28 | |
 | 5 | |
 | 2001 | |
+| Scelta=1 | |
+| | Cabine Occupate |
+| | Cabine da 1 occupate : 0 |
+| | Cabine da 2 occupate : 1 |
+| | Cabine da 3 occupate : 0 |
+| | Cabine da 4 occupate : 0 |
+| | Persona numero 1 |
+| | Nome: Mario |
+| | Cognome: Rossi |
+| | Giorno di nascita: 20 |
+| | Mese di nascita: 12 |
+| | Anno di nascita: 1990 |
+| | Soldi spesi: 391.32 |
+| | Persona numero 2 |
+| | Nome: Nicolo |
+| | Cognome: Lorusso |
+| | Giorno di nascita: 28 |
+| | Mese di nascita: 5 |
+| | Anno di nascita: 2001 |
+| | Soldi spesi: 300.36 |
