@@ -110,6 +110,7 @@ void registration()
 			{
 				familyLenght[familyIndex] = familyMemb;
 				familyIndex++;
+				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
@@ -138,6 +139,7 @@ void registration()
 						scanf("%d", &birthdayYear[i]);
 					}
 				}
+				*/
 
 				numFamily += familyMemb;
 
@@ -242,6 +244,7 @@ void shopping()
 void output()
 {
 	int counter = 0;
+	float familySpent = 0.0f;
 	clear();
 	printf("Cabine Occupate\n");
 	for (int i = 0; i < 4; i++)
@@ -256,9 +259,12 @@ void output()
 			printf("\nPersona numero %d\n", counter + 1);
 			printf("Nome: %s\nCognome: %s\n", names[counter], surnames[counter]);
 			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[counter], birthdayMonth[counter], birthdayYear[counter]);
-			printf("Soldi spesi: %.2f\n", moneySpent[counter]);
+			printf("Soldi spesi dal singolo: %.2f\n", moneySpent[counter]);
+			familySpent += moneySpent[counter];
 			counter++;
 		}
+		printf("\nSoldi spesi dalla famiglia: %.2f\n", familySpent);
+		familySpent = 0.0f;
 	}
 
 
