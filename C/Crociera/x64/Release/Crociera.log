@@ -1,11 +1,1 @@
-﻿  Source.c
-C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(56,12): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(58,7): warning C4013: 'Sleep' undefined; assuming extern returning int
-C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(199,25): warning C4098: 'registration': 'void' function returning a value
-C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(239,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Generating code
-  0 of 12 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Crociera.vcxproj -> C:\Users\gabri\Documents\Scuola\C\Crociera\x64\Release\Crociera.exe
+﻿  Crociera.vcxproj -> C:\Users\gabri\Documents\Scuola\C\Crociera\x64\Release\Crociera.exe
