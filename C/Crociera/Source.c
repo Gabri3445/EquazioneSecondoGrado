@@ -107,11 +107,6 @@ void registration()
 			} while (familyMemb < 0 || familyMemb > 4);
 			if (isCabinFull == false)
 			{
-<<<<<<< HEAD
-=======
-				familyLenght[familyIndex] = familyMemb;
-				familyIndex++;
->>>>>>> 4fbce0f02e8862b7b54ce5316298b95db904fb53
 				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
@@ -142,10 +137,7 @@ void registration()
 					}
 				}
 				*/
-
-				
-
-
+			
 				//Cabin Logic
 				switch (familyMemb)
 				{
