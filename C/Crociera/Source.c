@@ -107,6 +107,11 @@ void registration()
 			} while (familyMemb < 0 || familyMemb > 4);
 			if (isCabinFull == false)
 			{
+<<<<<<< HEAD
+=======
+				familyLenght[familyIndex] = familyMemb;
+				familyIndex++;
+>>>>>>> 4fbce0f02e8862b7b54ce5316298b95db904fb53
 				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
@@ -261,6 +266,7 @@ void shopping()
 void output()
 {
 	int counter = 0;
+	float familySpent = 0.0f;
 	clear();
 	printf("Cabine Occupate\n");
 	for (int i = 0; i < 4; i++)
@@ -275,9 +281,12 @@ void output()
 			printf("\nPersona numero %d\n", counter + 1);
 			printf("Nome: %s\nCognome: %s\n", names[counter], surnames[counter]);
 			printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[counter], birthdayMonth[counter], birthdayYear[counter]);
-			printf("Soldi spesi: %.2f\n", moneySpent[counter]);
+			printf("Soldi spesi dal singolo: %.2f\n", moneySpent[counter]);
+			familySpent += moneySpent[counter];
 			counter++;
 		}
+		printf("\nSoldi spesi dalla famiglia: %.2f\n", familySpent);
+		familySpent = 0.0f;
 	}
 
 

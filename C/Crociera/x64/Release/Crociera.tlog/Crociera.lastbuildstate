@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.31.31103:TargetPlatformVersion=10.0.20348.0:
 Release|x64|X:\Files\Document\!Scuola\Scuola\C\Crociera\|
+=======
+PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.31.31103:TargetPlatformVersion=10.0.19041.0:
+Release|x64|C:\Users\gabri\Documents\Scuola\C\Crociera\|
+>>>>>>> 4fbce0f02e8862b7b54ce5316298b95db904fb53
