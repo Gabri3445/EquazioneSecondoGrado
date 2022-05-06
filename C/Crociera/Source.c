@@ -98,18 +98,16 @@ void registration()
 		printf("[1]Parti\n");
 		scanf("%d", &choice);
 		clear();
-		if (numPeople != 100 && choice == 0)
+		if (numPeople != 100 && choice == 0 && isCabinFull == false)
 		{
 			do
 			{
 				printf("Quanti membri ci sono?(Posti occupati = %d)\n", numPeople);
 				scanf("%d", &familyMemb);
 			} while (familyMemb < 0 || familyMemb > 4);
-			numPeople += familyMemb;
 			if (isCabinFull == false)
 			{
-				familyLenght[familyIndex] = familyMemb;
-				familyIndex++;
+				/*
 				for (int i = numFamily; i < familyMemb + numFamily; i++)
 				{
 					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
@@ -138,59 +136,80 @@ void registration()
 						scanf("%d", &birthdayYear[i]);
 					}
 				}
+				*/
 
-				numFamily += familyMemb;
+				
 
 
 				//Cabin Logic
 				switch (familyMemb)
 				{
 				case 4:
-					if (occupiedCabins[3] <= 10)
+					if (occupiedCabins[3] < 10)
 					{
 						occupiedCabins[3]++;
+						familyLenght[familyIndex] = familyMemb;
+						familyIndex++;
+						numFamily += familyMemb;
+						numPeople += familyMemb;
 						break;
 					}
 					else
 					{
 						_isCabinFull[3] = true;
 						printf("Non ci sono abbastanza cabine per 4 persone\n");
+						system("pause");
 					}
 					break;
 				case 3:
-					if (occupiedCabins[2] <= 10)
+					if (occupiedCabins[2] < 10)
 					{
 						occupiedCabins[2]++;
+						familyLenght[familyIndex] = familyMemb;
+						familyIndex++;
+						numFamily += familyMemb;
+						numPeople += familyMemb;
 						break;
 					}
 					else
 					{
 						_isCabinFull[2] = true;
 						printf("Non ci sono abbastanza cabine per 3 persone\n");
+						system("pause");
 					}
 					break;
 				case 2:
-					if (occupiedCabins[1] <= 10)
+					if (occupiedCabins[1] < 10)
 					{
 						occupiedCabins[1]++;
+						familyLenght[familyIndex] = familyMemb;
+						familyIndex++;
+						numFamily += familyMemb;
+						numPeople += familyMemb;
 						break;
 					}
 					else
 					{
 						_isCabinFull[1] = true;
 						printf("Non ci sono abbastanza cabine per 2 persone\n");
+						system("pause");
 					}
 					break;
 				case 1:
-					if (occupiedCabins[0] <= 10)
+					if (occupiedCabins[0] < 10)
 					{
 						occupiedCabins[0]++;
+						familyLenght[familyIndex] = familyMemb;
+						familyIndex++;
+						numFamily += familyMemb;
+						numPeople += familyMemb;
 						break;
 					}
 					else
 					{
 						_isCabinFull[0] = true;
 						printf("Non ci sono abbastanza cabine per 1 persona\n");
+						system("pause");
 					}
 					break;
 				default:
