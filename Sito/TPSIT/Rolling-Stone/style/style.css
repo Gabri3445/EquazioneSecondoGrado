@@ -1,20 +1,21 @@
-*
-{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-#headerWrapper
-{
+#headerWrapper {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
+    background-color: white;
+    box-shadow: -0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -0px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-header
-{
+header {
     width: 100%;
     display: flex;
     height: 50px;
@@ -22,108 +23,114 @@ header
     justify-content: center;
 }
 
-header img
-{
+header img {
     height: 30px;
 }
 
-#col12
-{
+#col12 {
     width: 75%;
     max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
 }
 
-header div:nth-child(2) img
-{
+header div:nth-child(2) img {
     height: 25px;
 }
 
-header div:first-child
-{
+header div:first-child {
     margin-left: 0%;
 }
 
-header div:nth-child(3)
-{
+header div:nth-child(3) {
     flex-grow: 1;
 }
 
-header div:nth-child(4)
-{
+header div:nth-child(4) {
     margin-right: 2%;
 }
 
-.italic
-{
+.italic {
     font-style: italic;
 }
 
-header #HeaderLink
-{
+header #HeaderLink {
     text-decoration: none;
-    color : black;
+    color: black;
 }
 
-header h4
-{
+header h4 {
     display: inline;
 }
 
-header div
-{
+header div {
     margin-left: 20px;
 }
 
-.centeredText
-{
+.centeredText {
     width: 100%;
     text-align: center;
 }
 
-.bold
-{
+.bold {
     font-weight: bold;
 }
 
-header button
-{
+header button {
     background-color: red;
     border: 0;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    color: white;
 }
 
-#blackLine
-{
+#blackLine {
     width: 100%;
     height: 1px;
     background-color: black;
     margin: 0 auto;
 }
 
-.flexMain
-{
+.flexMain {
     display: flex;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
 }
 
-.firstNews
-{
+.firstNews {
     width: 100%;
     height: 300px;
     background-color: aqua;
     margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.secondNews
-{
+.secondNews {
+    display: flex;
     width: 100%;
     height: 250px;
     background-color: green;
+    display: flex;
+}
+
+.firstNews div
+{
+    flex-grow: 1;
+    height: 100%;
+}
+
+.firstNews *
+{
+    text-align: center;;
+    color: white;
+}
+
+.firstNews h2
+{
+    
 }
