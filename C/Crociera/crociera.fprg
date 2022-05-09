@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="gabri"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-05-09 09:18:15 PM"/>
+        <attribute name="saved" value="2022-05-09 11:33:08 PM"/>
         <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDUtMDk7MDc6NTM6NTkgUE07MjgyOQ=="/>
-        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDUtMDk7MDk6MTg6MTUgUE07MzsyOTM0"/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDUtMDk7MTE6MzM6MDggUE07MTE7Mjk3Mw=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -55,11 +55,185 @@
             <declare name="manualNames" type="Boolean" array="False" size=""/>
             <assign variable="manualNames" expression="true"/>
             <comment text="Main"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <assign variable="choice" expression="0"/>
+            <declare name="familyMemb" type="Integer" array="False" size=""/>
+            <assign variable="familyMemb" expression="0"/>
+            <declare name="LIsRunning" type="Boolean" array="False" size=""/>
+            <assign variable="LIsRunning" expression="true"/>
+            <declare name="LIsCabinFull" type="Boolean" array="True" size="4"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="LIsCabinFull[i]" expression="false"/>
+            </for>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <declare name="familySpent" type="Real" array="False" size=""/>
+            <assign variable="familySpent" expression="0"/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <assign variable="j" expression="0"/>
             <output expression="&quot;Benvenuto al programma di registrazione&quot;" newline="True"/>
             <do expression="isRunning == true">
                 <if expression="state == 0">
                     <then>
                         <comment text="registration"/>
+                        <do expression="LIsRunning == true">
+                            <if expression="isCabinFull == false">
+                                <then>
+                                    <output expression="&quot;[0]Registra una famiglia&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;[1]Parti&quot;" newline="True"/>
+                            <output expression="manualNames" newline="True"/>
+                            <input variable="choice"/>
+                            <if expression="numPeople != 100 &amp;&amp; choice == 0 &amp;&amp; isCabinFull == false">
+                                <then>
+                                    <do expression="familyMemb &lt; 0 || familyMemb &gt; 4">
+                                        <output expression="&quot;Quanti membri ci sono?(Posti occupati = &quot; &amp;numPeople &amp;&quot;)&quot;" newline="True"/>
+                                        <input variable="familyMemb"/>
+                                    </do>
+                                    <if expression="isCabinFull == false">
+                                        <then>
+                                            <if expression="manualNames == true">
+                                                <then>
+                                                    <for variable="i" start="numFamily" end="(familyMemb + numFamily) - 1" direction="inc" step="1">
+                                                        <output expression="&quot;Numero persona(&quot; &amp;numPeople &amp;&quot;)&quot;" newline="True"/>
+                                                        <output expression="&quot;Inserisci il nome&quot;" newline="True"/>
+                                                        <input variable="names[i]"/>
+                                                        <output expression="&quot;Inserisci il cognome&quot;" newline="True"/>
+                                                        <input variable="surnames[i]"/>
+                                                        <output expression="&quot;Inserisci il giorno di nascita&quot;" newline="True"/>
+                                                        <input variable="birthdayDay[i]"/>
+                                                        <while expression="birthdayDay[i] &gt; 31 || birthdayDay[i] &lt; 1">
+                                                            <output expression="&quot;Non valido, riinserisci&quot;" newline="True"/>
+                                                            <input variable="birthdayDay[i]"/>
+                                                        </while>
+                                                        <output expression="&quot;Inserisci il mese di nascita&quot;" newline="True"/>
+                                                        <input variable="birthdayMonth[i]"/>
+                                                        <while expression="birthdayMonth[i] &gt; 12 || birthdayMonth[i] &lt; 1">
+                                                            <output expression="&quot;Non valido, riinserisci&quot;" newline="True"/>
+                                                            <input variable="birthdayMonth[i]"/>
+                                                        </while>
+                                                        <output expression="&quot;Inserisci il giorno di nascita&quot;" newline="True"/>
+                                                        <input variable="birthdayDay[i]"/>
+                                                        <while expression="birthdayYear[i] &gt; 2022 || birthdayYear[i] &lt; 1900">
+                                                            <output expression="&quot;Non valido, riinserisci&quot;" newline="True"/>
+                                                            <input variable="birthdayYear[i]"/>
+                                                        </while>
+                                                    </for>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                            <if expression="familyMemb == 4">
+                                                <then>
+                                                    <if expression="occupiedCabins[3] &lt; 10">
+                                                        <then>
+                                                            <assign variable="occupiedCabins[3]" expression="occupiedCabins[3] + 1"/>
+                                                            <assign variable="familyLenght[familyIndex]" expression="familyMemb"/>
+                                                            <assign variable="familyIndex" expression="familyIndex + 1"/>
+                                                            <assign variable="numFamily" expression="numFamily + familyMemb"/>
+                                                            <assign variable="numPeople" expression="numPeople + familyMemb"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="LIsCabinFull[3]" expression="true"/>
+                                                            <output expression="&quot;Non ci sono abbastanza cabine per 4 persone&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <if expression="familyMemb == 3">
+                                                        <then>
+                                                            <if expression="occupiedCabins[2] &lt; 10">
+                                                                <then>
+                                                                    <assign variable="occupiedCabins[2]" expression="occupiedCabins[2] + 1"/>
+                                                                    <assign variable="familyLenght[familyIndex]" expression="familyMemb"/>
+                                                                    <assign variable="familyIndex" expression="familyIndex + 1"/>
+                                                                    <assign variable="numFamily" expression="numFamily + familyMemb"/>
+                                                                    <assign variable="numPeople" expression="numPeople + familyMemb"/>
+                                                                </then>
+                                                                <else>
+                                                                    <assign variable="LIsCabinFull[2]" expression="true"/>
+                                                                    <output expression="&quot;Non ci sono abbastanza cabine per 4 persone&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="familyMemb == 2">
+                                                                <then>
+                                                                    <if expression="occupiedCabins[1] &lt; 10">
+                                                                        <then>
+                                                                            <assign variable="occupiedCabins[1]" expression="occupiedCabins[1] + 1"/>
+                                                                            <assign variable="familyLenght[familyIndex]" expression="familyMemb"/>
+                                                                            <assign variable="familyIndex" expression="familyIndex + 1"/>
+                                                                            <assign variable="numFamily" expression="numFamily + familyMemb"/>
+                                                                            <assign variable="numPeople" expression="numPeople + familyMemb"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <assign variable="LIsCabinFull[1]" expression="true"/>
+                                                                            <output expression="&quot;Non ci sono abbastanza cabine per 4 persone&quot;" newline="True"/>
+                                                                        </else>
+                                                                    </if>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="familyMemb == 1">
+                                                                        <then>
+                                                                            <if expression="occupiedCabins[0] &lt; 10">
+                                                                                <then>
+                                                                                    <assign variable="occupiedCabins[0]" expression="occupiedCabins[0] + 1"/>
+                                                                                    <assign variable="familyLenght[familyIndex]" expression="familyMemb"/>
+                                                                                    <assign variable="familyIndex" expression="familyIndex + 1"/>
+                                                                                    <assign variable="numFamily" expression="numFamily + familyMemb"/>
+                                                                                    <assign variable="numPeople" expression="numPeople + familyMemb"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <assign variable="LIsCabinFull[0]" expression="true"/>
+                                                                                    <output expression="&quot;Non ci sono abbastanza cabine per 4 persone&quot;" newline="True"/>
+                                                                                </else>
+                                                                            </if>
+                                                                        </then>
+                                                                        <else/>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <assign variable="numPeople" expression="numPeople - familyMemb"/>
+                                            <output expression="&quot;Non ci sono abbastanza posti&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="choice == 1">
+                                        <then>
+                                            <output expression="&quot;Buon viaggio!&quot;" newline="True"/>
+                                            <assign variable="state" expression="1"/>
+                                            <assign variable="LIsRunning" expression="false"/>
+                                        </then>
+                                        <else>
+                                            <if expression="choice == 2">
+                                                <then>
+                                                    <if expression="manualNames == true">
+                                                        <then>
+                                                            <assign variable="manualNames" expression="false"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="manualNames" expression="true"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Inserisci una scelta valida&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </do>
                     </then>
                     <else>
                         <if expression="state == 1">
@@ -74,6 +248,31 @@
                                 <if expression="state == 2">
                                     <then>
                                         <comment text="output"/>
+                                        <output expression="&quot;Cabine Occupate&quot;" newline="True"/>
+                                        <for variable="i" start="0" end="3" direction="inc" step="1">
+                                            <output expression="&quot;Cabine da &quot;" newline="False"/>
+                                            <output expression="i + 1" newline="False"/>
+                                            <output expression="&quot;occupate : &quot;" newline="False"/>
+                                            <output expression="occupiedCabins[i]" newline="True"/>
+                                        </for>
+                                        <for variable="i" start="0" end="familyIndex - 1" direction="inc" step="1">
+                                            <output expression="&quot;Cabina da &quot; &amp;familyLenght[i]" newline="True"/>
+                                            <for variable="j" start="0" end="familyLenght[i] - 1" direction="inc" step="1">
+                                                <output expression="&quot;Persona numero &quot;" newline="False"/>
+                                                <output expression="counter + 1" newline="True"/>
+                                                <output expression="&quot;Nome : &quot; &amp;names[counter]" newline="True"/>
+                                                <output expression="&quot;Cognome : &quot; &amp;surnames[counter]" newline="True"/>
+                                                <output expression="&quot;Giorno di nascita : &quot; &amp;birthdayDay[counter]" newline="True"/>
+                                                <output expression="&quot;Mese di nascita : &quot; &amp;birthdayMonth[counter]" newline="True"/>
+                                                <output expression="&quot;Anno di nascita : &quot; &amp;birthdayYear[counter]" newline="True"/>
+                                                <output expression="&quot;Soldi spesi dal singolo : &quot; &amp;moneySpent[counter]" newline="True"/>
+                                                <assign variable="familySpent" expression="moneySpent[counter]"/>
+                                                <assign variable="counter" expression="counter + 1"/>
+                                            </for>
+                                            <output expression="&quot;Soldi spesi dalla famiglia : &quot; &amp;familySpent" newline="True"/>
+                                            <assign variable="familySpent" expression="0"/>
+                                        </for>
+                                        <assign variable="isRunning" expression="false"/>
                                     </then>
                                     <else/>
                                 </if>

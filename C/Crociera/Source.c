@@ -113,7 +113,7 @@ void registration()
 				{
 					for (int i = numFamily; i < familyMemb + numFamily; i++)
 					{
-						printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
+						printf("Numero persona(%d)\nInserisci il nome\n", numPeople);
 						scanf("%s", &names[i]);
 						printf("Inserisci il cognome\n");
 						scanf("%s", &surnames[i]);
