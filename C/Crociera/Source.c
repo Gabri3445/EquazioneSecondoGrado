@@ -50,6 +50,7 @@ int state = 0; //0 = registration 1 = shopping 2 = output
 bool isRunning = true; //Is the program running?
 bool isFull = false; //Is the ship full?
 bool isCabinFull = false; //Are the cabins full?
+bool manualNames = true; //Manual or automatic names?
 
 int main()
 {
@@ -96,6 +97,7 @@ void registration()
 			printf("[0]Registra una famiglia\n");
 		}
 		printf("[1]Parti\n");
+		printf("[2]Inserire i nomi manualmente? (%s)\n", (manualNames) ? "Manuale" : "Automatica");
 		scanf("%d", &choice);
 		clear();
 		if (numPeople != 100 && choice == 0 && isCabinFull == false)
@@ -107,36 +109,37 @@ void registration()
 			} while (familyMemb < 0 || familyMemb > 4);
 			if (isCabinFull == false)
 			{
-				/*
-				for (int i = numFamily; i < familyMemb + numFamily; i++)
+				if (manualNames)
 				{
-					printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
-					scanf("%s", &names[i]);
-					printf("Inserisci il cognome\n");
-					scanf("%s", &surnames[i]);
-					printf("Inserisci il giorno di nascita\n");
-					scanf("%d", &birthdayDay[i]);
-					while (birthdayDay[i] > 31 || birthdayDay[i] < 1)
+					for (int i = numFamily; i < familyMemb + numFamily; i++)
 					{
-						printf("Non valido, riinserisci\n");
+						printf("Membro della famiglia(%d)\nInserisci il nome\n", numPeople);
+						scanf("%s", &names[i]);
+						printf("Inserisci il cognome\n");
+						scanf("%s", &surnames[i]);
+						printf("Inserisci il giorno di nascita\n");
 						scanf("%d", &birthdayDay[i]);
-					}
-					printf("Inserisci il mese di nascita\n");
-					scanf("%d", &birthdayMonth[i]);
-					while (birthdayMonth[i] > 12 || birthdayMonth[i] < 1)
-					{
-						printf("Non valido, riinserisci\n");
+						while (birthdayDay[i] > 31 || birthdayDay[i] < 1)
+						{
+							printf("Non valido, riinserisci\n");
+							scanf("%d", &birthdayDay[i]);
+						}
+						printf("Inserisci il mese di nascita\n");
 						scanf("%d", &birthdayMonth[i]);
-					}
-					printf("Inserisci l'anno di nascita\n");
-					scanf("%d", &birthdayYear[i]);
-					while (birthdayYear[i] > 2022 || birthdayYear[i] < 1900)
-					{
-						printf("Non valido, riinserisci\n");
+						while (birthdayMonth[i] > 12 || birthdayMonth[i] < 1)
+						{
+							printf("Non valido, riinserisci\n");
+							scanf("%d", &birthdayMonth[i]);
+						}
+						printf("Inserisci l'anno di nascita\n");
 						scanf("%d", &birthdayYear[i]);
+						while (birthdayYear[i] > 2022 || birthdayYear[i] < 1900)
+						{
+							printf("Non valido, riinserisci\n");
+							scanf("%d", &birthdayYear[i]);
+						}
 					}
 				}
-				*/
 			
 				//Cabin Logic
 				switch (familyMemb)
@@ -237,6 +240,17 @@ void registration()
 			state = 1;
 			_isRunning = false;
 		}
+		else if (choice == 2)
+		{
+			if (manualNames == true)
+			{
+				manualNames = false;
+			}
+			else
+			{
+				manualNames = true;
+			}
+		}
 		else
 		{
 			printf("Inserisci una scelta valida\n");
@@ -280,18 +294,6 @@ void output()
 		printf("\nSoldi spesi dalla famiglia: %.2f\n", familySpent);
 		familySpent = 0.0f;
 	}
-
-
-
-	/*
-	for (int i = 0; i < numPeople; i++)
-	{
-		printf("\n\nPersona numero %d\n", i + 1);
-		printf("Nome: %s\nCognome: %s\n", names[i], surnames[i]);
-		printf("Giorno di nascita: %d\nMese di nascita: %d\nAnno di nascita: %d\n", birthdayDay[i], birthdayMonth[i], birthdayYear[i]);
-		printf("Soldi spesi: %.2f", moneySpent[i]);
-	}
-	*/
 	isRunning = false;
 }
 
