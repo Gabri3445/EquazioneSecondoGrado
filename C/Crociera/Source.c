@@ -28,8 +28,8 @@ int birthdayDay[_TOT_PEOPLE]; //Birthday day of people
 int birthdayMonth[_TOT_PEOPLE]; //Birthday month of people
 int birthdayYear[_TOT_PEOPLE]; //Birthday year of people
 float moneySpent[_TOT_PEOPLE]; //Money spent by people
-int familyLenght[_TOT_PEOPLE];
-int familyIndex = 0;
+int familyLenght[_TOT_PEOPLE]; //Lenght of each family
+int familyIndex = 0; //At which family are we
 
 //Work vars
 int occupiedCabins[4]; //Number of occupied cabines
@@ -83,9 +83,9 @@ int main()
 
 void registration()
 {
-	int choice, familyMemb;
-	bool _isRunning = true; //Is this running
-	bool _isCabinFull[4];
+	int choice, familyMemb; // Choice = menu user choice, familyMemb = number of family members entered
+	bool _isRunning = true; //Is this function running
+	bool _isCabinFull[4]; //Local is the cabin full?
 	for (int i = 0; i < 4; i++)
 	{
 		_isCabinFull[i] = false;
@@ -264,6 +264,8 @@ void shopping()
 {
 	for (int i = 0; i < numPeople; i++)
 	{
+		/* ((double)rand() / RAND_MAX) returns a random number between 0 and 1
+		* Which gets multiplied by the max value to get a random number between 0 and max*/
 		moneySpent[i] = ((double)rand() / RAND_MAX) * 500;
 	}
 	state = 2;
@@ -271,8 +273,8 @@ void shopping()
 
 void output()
 {
-	int counter = 0;
-	float familySpent = 0.0f;
+	int counter = 0; //At which person are we
+	float familySpent = 0.0f; //How much did the family spend
 	clear();
 	printf("Cabine Occupate\n");
 	for (int i = 0; i < 4; i++)

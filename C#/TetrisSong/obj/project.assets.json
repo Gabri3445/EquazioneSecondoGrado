@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\TetrisSong\\TetrisSong.csproj",
+      "projectUniqueName": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\TetrisSong\\TetrisSong.csproj",
       "projectName": "TetrisSong",
-      "projectPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\TetrisSong\\TetrisSong.csproj",
+      "projectPath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\TetrisSong\\TetrisSong.csproj",
       "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-      "outputPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\TetrisSong\\obj\\",
+      "outputPath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\TetrisSong\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
