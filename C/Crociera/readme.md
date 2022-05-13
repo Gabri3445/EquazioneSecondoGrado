@@ -34,12 +34,15 @@ Output: numPeople, i, occupiedCabins\[\], names\[\], surname\[\], birthdayDay\[\
 | birthdayDay\[\[\_TOT_PEOPLE\]   | INT / GLB / ARR   | I/O           | Giorno di nascita dei crocieristi           |
 | birthdayMonth\[\[\_TOT_PEOPLE\] | INT / GLB / ARR   | I/O           | Mese di nascita dei crocieristi             |
 | birthdayYear\[\[\_TOT_PEOPLE\]  | INT / GLB / ARR   | I/O           | Anno di nascita dei crocieristi             |
+| familyLenght\[\[\_TOT_PEOPLE\]  | INT / GLB / ARR   | I/O           | Quante persone ci sono in una famiglia      |
+| familyIndex                     | INT / GLB         | W             | Numero di famiglie                          |
 | moneySpent\[\[\_TOT_PEOPLE\]    | FLT / GLB / ARR   | O             | Soldi spesi dai crocieristi                 |
 | occupiedCabins\[4\]             | INT / GLB / ARR   | O             | Cabine occupate                             |
 | State                           | INT / GLB         | W             | Stato del programma                         |
 | isRunning                       | BOOL / GLB        | W             | Il programma é in esecuzione?               |
 | isFull                          | BOOL / GLB        | W             | La nave è piena?                            |
 | isCabinFull                     | BOOL / GLB        | W             | Le cabine sono piene?                       |
+| manualNames                     | BOOL / GLB        | I             | Nomi automatici o manuali                   | 
 | Choice                          | INT               | I             | Scelta in vari menu                         |
 | familyMemb                      | INT               | I             | Membri di una singola famiglia              |
 | \_isRunning                     | BOOL              | W             | La funzione è in esecuzione?                |
