@@ -55,5 +55,40 @@ namespace WpfApp1
                 Path = dialog.FileName;
             }
         }
+
+        private void InstallButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Checkbox bool array
+            bool[] checkBox = new bool[]
+            {
+                (bool)SteamCheck.IsChecked,
+                (bool)DiscordCheck.IsChecked,
+                (bool)uTorrentCheck.IsChecked,
+                (bool)MinecraftPRCheck.IsChecked,
+                (bool)EpicGamesCheck.IsChecked,
+                (bool)BattleNetCheck.IsChecked,
+                (bool)LogitechCheck.IsChecked,
+                (bool)OriginCheck.IsChecked,
+                (bool)MinecraftCRCheck.IsChecked,
+                (bool)VS2022Check.IsChecked,
+                (bool)VSCCheck.IsChecked,
+                (bool)SublimeTextCheck.IsChecked,
+                (bool)PyCharmCheck.IsChecked,
+                (bool)BlenderCheck.IsChecked,
+                (bool)EclipseCheck.IsChecked,
+                (bool)DevCCheck.IsChecked,
+                (bool)NodeJSCheck.IsChecked,
+                (bool)QtDesigner.IsChecked,
+                (bool)AMDCheck.IsChecked,
+                (bool)WinRarCheck.IsChecked,
+                (bool)SevZipCheck.IsChecked,
+                (bool)OBSCheck.IsChecked,
+                (bool)GeForceCheck.IsChecked,
+                (bool)VirtualBoxCheck.IsChecked,
+                (bool)SpotifyCheck.IsChecked,
+                (bool)VLCCheck.IsChecked,
+                (bool)AdobeInstallerCheck.IsChecked,
+            };
+        }
     }
 }
