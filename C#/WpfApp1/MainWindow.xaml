@@ -185,8 +185,8 @@
                 </CheckBox>
                 <CheckBox Margin="10" Name="AdobeInstallerCheck">
                     <TextBlock>
-                        <Image Source="/Assets/Images/adobe_.png" Height="13" Width="13"></Image>
-                        Adobe Installer
+                        <Image Source="/Assets/Images/dropbox_icon.png" Height="13" Width="13"></Image>
+                        DropBox
                     </TextBlock>
                 </CheckBox>
             </StackPanel>

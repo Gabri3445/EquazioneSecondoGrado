@@ -14,6 +14,8 @@
     <None Remove="Assets\Images\blender.png" />
     <None Remove="Assets\Images\devpp.png" />
     <None Remove="Assets\Images\discord.png" />
+    <None Remove="Assets\Images\dropbox.png" />
+    <None Remove="Assets\Images\Dropbox_Icon.png" />
     <None Remove="Assets\Images\eclipse.png" />
     <None Remove="Assets\Images\epic.png" />
     <None Remove="Assets\Images\geforce.png" />
@@ -52,6 +54,8 @@
     <Resource Include="Assets\Images\blender.png" />
     <Resource Include="Assets\Images\devpp.png" />
     <Resource Include="Assets\Images\discord.png" />
+    <Resource Include="Assets\Images\dropbox.png" />
+    <Resource Include="Assets\Images\Dropbox_Icon.png" />
     <Resource Include="Assets\Images\eclipse.png" />
     <Resource Include="Assets\Images\epic.png" />
     <Resource Include="Assets\Images\geforce.png" />

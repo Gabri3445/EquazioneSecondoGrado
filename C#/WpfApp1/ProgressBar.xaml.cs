@@ -30,9 +30,9 @@ namespace WpfApp1
         private void ProgressBar_Loaded(object sender, RoutedEventArgs e)
         {
             //create a new thread
-            Thread t = new Thread(new ThreadStart(Start));
+            Thread t0 = new Thread(Start);
             //start the thread
-            t.Start();
+            t0.Start();
         }
 
         //method to run in the new thread
@@ -51,6 +51,7 @@ namespace WpfApp1
                     break;
                 }
             } while (true);
+            return;
         }
     }
 }
