@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/3163782288_757100158_223132457.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_2925049877_2537142312.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_3638614_1825508420.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_780026031_886598697.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_1653824772_886598697.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_3246463260_221307593.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_2857334837_221307593.mp4'
+file 'file:C:/Users/gabri/Documents/Scuola/Manim/Giglo/media/videos/scene/480p15/partial_movie_files/CreateCircle/2201830969_3452554288_556173555.mp4'

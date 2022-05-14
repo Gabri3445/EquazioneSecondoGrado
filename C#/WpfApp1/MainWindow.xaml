@@ -21,92 +21,146 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <Label>Games</Label>
-                <CheckBox Margin="10">
-                    Steam
+                <CheckBox Margin="10" Name="SteamCheck">
+                    <TextBlock>
+                        Steam
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Discord
+                <CheckBox Margin="10" Name="DiscordCheck">
+                    <TextBlock>
+                        Discord
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    uTorrent
+                <CheckBox Margin="10" Name="uTorrentCheck">
+                    <TextBlock>
+                        uTorrent
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Minecraft Premium
+                <CheckBox Margin="10" Name="MinecraftPRCheck">
+                    <TextBlock>
+                        Minecraft Premium
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Epic Games
+                <CheckBox Margin="10" Name="EpicGamesCheck">
+                    <TextBlock>
+                        Epic Games
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Battle.Net
+                <CheckBox Margin="10" Name="BattleNetCheck">
+                    <TextBlock>
+                        Battle.Net
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Logitech G HUB
+                <CheckBox Margin="10" Name="LogitechCheck">
+                    <TextBlock>
+                        Logitech G HUB
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Origin
+                <CheckBox Margin="10" Name="OriginCheck">
+                    <TextBlock>
+                        Origin
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Minecraft (Cracked)
+                <CheckBox Margin="10" Name="MinecraftCRCheck">
+                    <TextBlock>
+                        Minecraft (Cracked)
+                    </TextBlock>
                 </CheckBox>
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <Label>Developing</Label>
-                <CheckBox Margin="10">
-                    Visual Studio 2022
+                <CheckBox Margin="10" Name="VS2022Check">
+                    <TextBlock>
+                        Visual Studio 2022
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Visual Studio Code
+                <CheckBox Margin="10" Name="VSCCheck">
+                    <TextBlock>
+                        Visual Studio Code
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Sublime Text
+                <CheckBox Margin="10" Name="SublimeTextCheck">
+                    <TextBlock>
+                        Sublime Text
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    PyCharm
+                <CheckBox Margin="10" Name="PyCharmCheck">
+                    <TextBlock>
+                        PyCharm
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Blender
+                <CheckBox Margin="10" Name="BlenderCheck">
+                    <TextBlock>
+                        Blender
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Eclipse
+                <CheckBox Margin="10" Name="EclipseCheck">
+                    <TextBlock>
+                        Eclipse
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Dev CPP
+                <CheckBox Margin="10" Name="DevCCheck">
+                    <TextBlock>
+                        Dev CPP
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    NodeJS
+                <CheckBox Margin="10" Name="NodeJSCheck">
+                    <TextBlock>
+                        NodeJS
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    QT Designer
+                <CheckBox Margin="10" Name="QtDesigner">
+                    <TextBlock>
+                        QT Designer
+                    </TextBlock>
                 </CheckBox>
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <Label>Utilities</Label>
-                <CheckBox Margin="10">
-                    AMD Radeon Software
+                <CheckBox Margin="10" Name="AMDCheck">
+                    <TextBlock>
+                        AMD Radeon Software
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    WinRar
+                <CheckBox Margin="10" Name="WinRarCheck">
+                    <TextBlock>
+                        WinRar
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    7-ZIP
+                <CheckBox Margin="10" Name="SevZipCheck">
+                    <TextBlock>
+                        7-Zip
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    OBS
+                <CheckBox Margin="10" Name="OBSCheck">
+                    <TextBlock>
+                        OBS
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    GeForce
+                <CheckBox Margin="10" Name="GeForceCheck">
+                    <TextBlock>
+                        GeForce
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    VirtualBox
+                <CheckBox Margin="10" Name="VirtualBoxCheck">
+                    <TextBlock>
+                        VirtualBox
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Spotify
+                <CheckBox Margin="10" Name="SpotifyCheck">
+                    <TextBlock>
+                        Spotify
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    VLC
+                <CheckBox Margin="10" Name="VLCCheck">
+                    <TextBlock>
+                        VLC
+                    </TextBlock>
                 </CheckBox>
-                <CheckBox Margin="10">
-                    Adobe Installer
+                <CheckBox Margin="10" Name="AdobeInstallerCheck">
+                    <TextBlock>
+                        Adobe Installer
+                    </TextBlock>
                 </CheckBox>
             </StackPanel>
         </Grid>
@@ -117,10 +171,10 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Width="80" Height="30">Choose Path</Button>
-            <TextBlock Grid.Column="1" Name="Path" HorizontalAlignment="Center" VerticalAlignment="Center">Path not set!</TextBlock>
+            <Button Grid.Column="0" Width="80" Height="30" Name="PathChoose" Click="PathChoose_Click">Choose Path</Button>
+            <TextBlock Grid.Column="1" Name="PathText" HorizontalAlignment="Center" VerticalAlignment="Center">Path not set!</TextBlock>
             <Button Grid.Column="2" Width="80" Height="30" Name="AuthorName" Click="AuthorName_Click">Author</Button>
-            <Button Grid.Column="3" Width="80" Height="30">Install</Button>
+            <Button Grid.Column="3" Width="80" Height="30" Name="InstallButton" Click="InstallButton_Click">Install</Button>
         </Grid>
     </Grid>
 </Window>
