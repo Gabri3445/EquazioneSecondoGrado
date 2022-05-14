@@ -23,7 +23,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        string Path;
+        string Path = "";
 
         public static bool isDone { get; private set; }
 
@@ -62,43 +62,50 @@ namespace WpfApp1
 
         private void InstallButton_Click(object sender, RoutedEventArgs e)
         {
-            //Checkbox bool array
-            bool?[] checkBox = new bool?[]
+            if (Path != "")
             {
-                SteamCheck.IsChecked,
-                DiscordCheck.IsChecked,
-                uTorrentCheck.IsChecked,
-                MinecraftPRCheck.IsChecked,
-                EpicGamesCheck.IsChecked,
-                BattleNetCheck.IsChecked,
-                LogitechCheck.IsChecked,
-                OriginCheck.IsChecked,
-                MinecraftCRCheck.IsChecked,
-                VS2022Check.IsChecked,
-                VSCCheck.IsChecked,
-                SublimeTextCheck.IsChecked,
-                PyCharmCheck.IsChecked,
-                BlenderCheck.IsChecked,
-                EclipseCheck.IsChecked,
-                DevCCheck.IsChecked,
-                NodeJSCheck.IsChecked,
-                QtDesigner.IsChecked,
-                AMDCheck.IsChecked,
-                WinRarCheck.IsChecked,
-                SevZipCheck.IsChecked,
-                OBSCheck.IsChecked,
-                GeForceCheck.IsChecked,
-                VirtualBoxCheck.IsChecked,
-                SpotifyCheck.IsChecked,
-                VLCCheck.IsChecked,
-                AdobeInstallerCheck.IsChecked,
-            };
-            isDone = false;
-            ProgressBar pr = new ProgressBar();
-            pr.Show();
-            Thread t1 = new Thread(() => Download(checkBox));
-            t1.IsBackground = true;
-            t1.Start();
+                //Checkbox bool array
+                bool?[] checkBox = new bool?[]
+                {
+                    SteamCheck.IsChecked,
+                    DiscordCheck.IsChecked,
+                    uTorrentCheck.IsChecked,
+                    MinecraftPRCheck.IsChecked,
+                    EpicGamesCheck.IsChecked,
+                    BattleNetCheck.IsChecked,
+                    LogitechCheck.IsChecked,
+                    OriginCheck.IsChecked,
+                    MinecraftCRCheck.IsChecked,
+                    VS2022Check.IsChecked,
+                    VSCCheck.IsChecked,
+                    SublimeTextCheck.IsChecked,
+                    PyCharmCheck.IsChecked,
+                    BlenderCheck.IsChecked,
+                    EclipseCheck.IsChecked,
+                    DevCCheck.IsChecked,
+                    NodeJSCheck.IsChecked,
+                    QtDesigner.IsChecked,
+                    AMDCheck.IsChecked,
+                    WinRarCheck.IsChecked,
+                    SevZipCheck.IsChecked,
+                    OBSCheck.IsChecked,
+                    GeForceCheck.IsChecked,
+                    VirtualBoxCheck.IsChecked,
+                    SpotifyCheck.IsChecked,
+                    VLCCheck.IsChecked,
+                    AdobeInstallerCheck.IsChecked,
+                };
+                isDone = false;
+                ProgressBar pr = new ProgressBar();
+                pr.Show();
+                Thread t1 = new Thread(() => Download(checkBox));
+                t1.IsBackground = true;
+                t1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Select a folder first!", "Error");
+            }
         }
 
         public void Download(bool?[] checkBox)
@@ -117,7 +124,7 @@ namespace WpfApp1
             {
                 DownloadFile(
                     "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86",
-                    "DiscordSetuo.exe"
+                    "DiscordSetup.exe"
                 );
             }
 
@@ -330,7 +337,7 @@ namespace WpfApp1
                         }
                     }
                 );
-            Thread.Sleep(1000);
+            Thread.Sleep(1500);
             return;
         }
     }
