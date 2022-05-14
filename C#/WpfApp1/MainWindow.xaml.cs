@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace WpfApp1
 {
@@ -20,6 +21,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        string Path;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +42,18 @@ namespace WpfApp1
             psi.UseShellExecute = true;
             psi.FileName = uri;
             System.Diagnostics.Process.Start(psi);
+        }
+
+        private void PathChoose_Click(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.InitialDirectory = "C:\\Users";
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                PathText.Text = dialog.FileName;
+                Path = dialog.FileName;
+            }
         }
     }
 }
