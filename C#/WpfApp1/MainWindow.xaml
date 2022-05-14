@@ -1,0 +1,126 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Git Installer" Height="516" Width="800"
+        ResizeMode="CanMinimize"
+        Style="{DynamicResource CustomWindowStyle}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Margin="40,0,40,83" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label>Games</Label>
+                <CheckBox Margin="10">
+                    Steam
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Discord
+                </CheckBox>
+                <CheckBox Margin="10">
+                    uTorrent
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Minecraft Premium
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Epic Games
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Battle.Net
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Logitech G HUB
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Origin
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Minecraft (Cracked)
+                </CheckBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Label>Developing</Label>
+                <CheckBox Margin="10">
+                    Visual Studio 2022
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Visual Studio Code
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Sublime Text
+                </CheckBox>
+                <CheckBox Margin="10">
+                    PyCharm
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Blender
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Eclipse
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Dev CPP
+                </CheckBox>
+                <CheckBox Margin="10">
+                    NodeJS
+                </CheckBox>
+                <CheckBox Margin="10">
+                    QT Designer
+                </CheckBox>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Label>Utilities</Label>
+                <CheckBox Margin="10">
+                    AMD Radeon Software
+                </CheckBox>
+                <CheckBox Margin="10">
+                    WinRar
+                </CheckBox>
+                <CheckBox Margin="10">
+                    7-ZIP
+                </CheckBox>
+                <CheckBox Margin="10">
+                    OBS
+                </CheckBox>
+                <CheckBox Margin="10">
+                    GeForce
+                </CheckBox>
+                <CheckBox Margin="10">
+                    VirtualBox
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Spotify
+                </CheckBox>
+                <CheckBox Margin="10">
+                    VLC
+                </CheckBox>
+                <CheckBox Margin="10">
+                    Adobe Installer
+                </CheckBox>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Width="80" Height="30">Choose Path</Button>
+            <TextBlock Grid.Column="1" Name="Path" HorizontalAlignment="Center" VerticalAlignment="Center">Path not set!</TextBlock>
+            <Button Grid.Column="2" Width="80" Height="30" Name="AuthorName" Click="AuthorName_Click">Author</Button>
+            <Button Grid.Column="3" Width="80" Height="30">Install</Button>
+        </Grid>
+    </Grid>
+</Window>
