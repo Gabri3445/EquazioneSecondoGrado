@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace WpfApp1
@@ -22,6 +23,8 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         string Path;
+
+        public static bool isDone { get; private set; }
 
         public MainWindow()
         {
@@ -59,36 +62,55 @@ namespace WpfApp1
         private void InstallButton_Click(object sender, RoutedEventArgs e)
         {
             //Checkbox bool array
-            bool[] checkBox = new bool[]
+            bool?[] checkBox = new bool?[]
             {
-                (bool)SteamCheck.IsChecked,
-                (bool)DiscordCheck.IsChecked,
-                (bool)uTorrentCheck.IsChecked,
-                (bool)MinecraftPRCheck.IsChecked,
-                (bool)EpicGamesCheck.IsChecked,
-                (bool)BattleNetCheck.IsChecked,
-                (bool)LogitechCheck.IsChecked,
-                (bool)OriginCheck.IsChecked,
-                (bool)MinecraftCRCheck.IsChecked,
-                (bool)VS2022Check.IsChecked,
-                (bool)VSCCheck.IsChecked,
-                (bool)SublimeTextCheck.IsChecked,
-                (bool)PyCharmCheck.IsChecked,
-                (bool)BlenderCheck.IsChecked,
-                (bool)EclipseCheck.IsChecked,
-                (bool)DevCCheck.IsChecked,
-                (bool)NodeJSCheck.IsChecked,
-                (bool)QtDesigner.IsChecked,
-                (bool)AMDCheck.IsChecked,
-                (bool)WinRarCheck.IsChecked,
-                (bool)SevZipCheck.IsChecked,
-                (bool)OBSCheck.IsChecked,
-                (bool)GeForceCheck.IsChecked,
-                (bool)VirtualBoxCheck.IsChecked,
-                (bool)SpotifyCheck.IsChecked,
-                (bool)VLCCheck.IsChecked,
-                (bool)AdobeInstallerCheck.IsChecked,
+                SteamCheck.IsChecked,
+                DiscordCheck.IsChecked,
+                uTorrentCheck.IsChecked,
+                MinecraftPRCheck.IsChecked,
+                EpicGamesCheck.IsChecked,
+                BattleNetCheck.IsChecked,
+                LogitechCheck.IsChecked,
+                OriginCheck.IsChecked,
+                MinecraftCRCheck.IsChecked,
+                VS2022Check.IsChecked,
+                VSCCheck.IsChecked,
+                SublimeTextCheck.IsChecked,
+                PyCharmCheck.IsChecked,
+                BlenderCheck.IsChecked,
+                EclipseCheck.IsChecked,
+                DevCCheck.IsChecked,
+                NodeJSCheck.IsChecked,
+                QtDesigner.IsChecked,
+                AMDCheck.IsChecked,
+                WinRarCheck.IsChecked,
+                SevZipCheck.IsChecked,
+                OBSCheck.IsChecked,
+                GeForceCheck.IsChecked,
+                VirtualBoxCheck.IsChecked,
+                SpotifyCheck.IsChecked,
+                VLCCheck.IsChecked,
+                AdobeInstallerCheck.IsChecked,
             };
+            ProgressBar pr = new ProgressBar();
+            pr.Show();
+            Thread t1 = new Thread(() => Download(checkBox));
+            t1.IsBackground = true;
+            t1.Start();
         }
+
+        public void Download(bool?[] checkBox)
+        {
+            isDone = false;
+            if ((bool)checkBox[1])
+            {
+                Thread.Sleep(6000);
+                MessageBox.Show("Discrod");
+            }
+            isDone = true;
+        }
+
+        //When this gets closed close every other window
+
     }
 }
