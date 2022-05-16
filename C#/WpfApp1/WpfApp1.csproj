@@ -14,6 +14,8 @@
     <None Remove="Assets\Images\blender.png" />
     <None Remove="Assets\Images\devpp.png" />
     <None Remove="Assets\Images\discord.png" />
+    <None Remove="Assets\Images\dropbox.png" />
+    <None Remove="Assets\Images\Dropbox_Icon.png" />
     <None Remove="Assets\Images\eclipse.png" />
     <None Remove="Assets\Images\epic.png" />
     <None Remove="Assets\Images\geforce.png" />
@@ -46,32 +48,90 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Resource Include="Assets\Images\7zip.png" />
-    <Resource Include="Assets\Images\adobe_.png" />
-    <Resource Include="Assets\Images\battle.png" />
-    <Resource Include="Assets\Images\blender.png" />
-    <Resource Include="Assets\Images\devpp.png" />
-    <Resource Include="Assets\Images\discord.png" />
-    <Resource Include="Assets\Images\eclipse.png" />
-    <Resource Include="Assets\Images\epic.png" />
-    <Resource Include="Assets\Images\geforce.png" />
-    <Resource Include="Assets\Images\lg.png" />
-    <Resource Include="Assets\Images\mc.png" />
-    <Resource Include="Assets\Images\nodejs.png" />
-    <Resource Include="Assets\Images\obs_studio.png" />
-    <Resource Include="Assets\Images\origin.png" />
-    <Resource Include="Assets\Images\Pycharm.png" />
-    <Resource Include="Assets\Images\qtdsgn.png" />
-    <Resource Include="Assets\Images\radeon_software_.png" />
-    <Resource Include="Assets\Images\spotify.png" />
-    <Resource Include="Assets\Images\steam.png" />
-    <Resource Include="Assets\Images\sublime.png" />
-    <Resource Include="Assets\Images\torrent.png" />
-    <Resource Include="Assets\Images\virtualbox.png" />
-    <Resource Include="Assets\Images\visualcode.png" />
-    <Resource Include="Assets\Images\visualstudio.png" />
-    <Resource Include="Assets\Images\vlc.png" />
-    <Resource Include="Assets\Images\winrar.png" />
+    <Resource Include="Assets\Images\7zip.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\adobe_.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\battle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\blender.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\devpp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\discord.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\dropbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Dropbox_Icon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\eclipse.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\epic.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\geforce.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\lg.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\mc.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\nodejs.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\obs_studio.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\origin.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\Pycharm.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\qtdsgn.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\radeon_software_.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\spotify.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\steam.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\sublime.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\torrent.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\virtualbox.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\visualcode.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\visualstudio.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\vlc.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Images\winrar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
