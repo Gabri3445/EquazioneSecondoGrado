@@ -253,8 +253,8 @@ namespace WpfApp1
             if ((bool)checkBox[18])
             {
                 DownloadFile(
-                    "https://drivers.amd.com/drivers/installer/21.50/beta/amd-software-adrenalin-edition-22.4.1-minimalsetup-220404_web.exe",
-                    "amd-software-adrenalin-edition-22.4.1-minimalsetup-220404_web.exe"
+                    "https://files02.tchspt.com/tempd/AMD-Software-Adrenalin-Edition-22.4.2-Win10-Win11-April25.exe",
+                    "amd-software-adrenalin-edition.exe"
                 );
             }
 
