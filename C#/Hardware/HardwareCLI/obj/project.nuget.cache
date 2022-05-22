@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "GB+9pZwpS3Req1tHvMth/324HvWRnyIJx/y7nHcKgO8cONX0wRg7rqLqJzOiNh2QfYR9el+zX2ENEfnoi4Vqsw==",
+  "success": true,
+  "projectFilePath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\hidlibrary\\3.2.46\\hidlibrary.3.2.46.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\librehardwaremonitorlibcore\\1.0.3\\librehardwaremonitorlibcore.1.0.3.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.codedom\\4.5.0\\system.codedom.4.5.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.io.ports\\4.5.0\\system.io.ports.4.5.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.management\\4.5.0\\system.management.4.5.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'hidlibrary 3.2.46' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "hidlibrary",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

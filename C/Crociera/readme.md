@@ -12,7 +12,7 @@ di nascita, Mese di nascita e l'anno di Nascita. A prescindere dalla dimensioni 
 famiglia vengono assegnate a una cabina.
 
 Quando la crociera parte vengono generati i soldi spesi da ogni crocierista. 
-Infine vengono stampati tutti i crocieristi e le loro informazioni.
+Infine vengono stampati tutti i crocieristi e le loro informazioni e i soldi spesi da ogni famiglia.
 
 ## I/O
 
