@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "U5fJyylI4dSdQfJotOqEFVst0OTURKPYCmTHW07uuBS+gylP0I5M+BwWwBvCOTvaqINpvL2aqs5EfLRo0NIS6g==",
+  "dgSpecHash": "al2lTJhNIZBFc49OEa2LmMd/O837PDMYcCig4j7yu5mgucC4ZmhjcPGpi+4b75Tr8WLm1wCLG36Th8H4z0Vjzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\TetrisSong\\TetrisSong.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.4\\microsoft.netcore.app.ref.6.0.4.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.4\\microsoft.windowsdesktop.app.ref.6.0.4.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.4\\microsoft.aspnetcore.app.ref.6.0.4.nupkg.sha512",
+    "C:\\Users\\gabri\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.4\\microsoft.netcore.app.host.win-x64.6.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
