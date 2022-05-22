@@ -302,6 +302,10 @@ void shopping()
 		}
 
 	} while (choice != 3);
+	for (int i = 0; i < numPeople; i++)
+	{
+		moneySpent[i] += 199.99f;
+	}
 	state = 2;
 }
 
