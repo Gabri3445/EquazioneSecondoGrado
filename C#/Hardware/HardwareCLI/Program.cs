@@ -164,12 +164,22 @@ namespace PPSU_hwmonitor_c
 
                 // ... you can access any other system information you want here
 
+                //ram
+                if (hardware.HardwareType == HardwareType.RAM)
+                {
+                    hardware.Update();
+
+                    foreach (var sensor in hardware.Sensors)
+                    {
+                        if (sensor.SensorType == SensorType.Level) { }
+                    }
+                }
             }
         }
 
         static void Main(string[] args)
         {
-            c.Open();
+            /*c.Open();
 
             // loop
             while (true)
@@ -177,6 +187,25 @@ namespace PPSU_hwmonitor_c
                 Thread.Sleep(500);
                 ReportSystemInfo();
                 Console.WriteLine("\n");
+            }*/
+
+            Computer computer = new Computer();
+            computer.Open();
+            computer.CPUEnabled = true;
+            computer.GPUEnabled = true;
+            computer.RAMEnabled = true;
+
+            Console.WriteLine("==========================");
+            foreach (IHardware hardware in computer.Hardware)
+            {
+                hardware.Update();
+                foreach (ISensor sensor in hardware.Sensors)
+                {
+                    if (sensor.Hardware.HardwareType == HardwareType.RAM && sensor.Name == "Memory")
+                    {
+                        Console.WriteLine("RAM: " + sensor.Value.GetValueOrDefault());
+                    }
+                }
             }
         }
     }
