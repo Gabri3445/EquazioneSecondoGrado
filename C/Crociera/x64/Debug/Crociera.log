@@ -1,3 +1,5 @@
 ﻿  Source.c
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(34,7): warning C4013: 'Sleep' undefined; assuming extern returning int
+X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(61,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(63,2): warning C4013: 'Sleep' undefined; assuming extern returning int
+X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(220,25): warning C4098: 'registration': 'void' function returning a value
   Crociera.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Crociera\x64\Debug\Crociera.exe
