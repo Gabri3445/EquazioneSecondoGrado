@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GB+9pZwpS3Req1tHvMth/324HvWRnyIJx/y7nHcKgO8cONX0wRg7rqLqJzOiNh2QfYR9el+zX2ENEfnoi4Vqsw==",
+  "dgSpecHash": "r1Ul0ssBRRN2or5fqtmxueWftfFkJvlymPM7cAdGxcEPhbTWLcOVlsaj+YF7BBvE3CoXTtvzZqIL2Y7PtN0jKA==",
   "success": true,
-  "projectFilePath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
+  "projectFilePath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabri\\.nuget\\packages\\hidlibrary\\3.2.46\\hidlibrary.3.2.46.nupkg.sha512",
     "C:\\Users\\gabri\\.nuget\\packages\\librehardwaremonitorlibcore\\1.0.3\\librehardwaremonitorlibcore.1.0.3.nupkg.sha512",

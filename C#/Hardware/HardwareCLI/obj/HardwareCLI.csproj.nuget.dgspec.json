@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj": {}
+    "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj": {}
   },
   "projects": {
-    "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj": {
+    "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
         "projectName": "HardwareCLI",
-        "projectPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
+        "projectPath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\HardwareCLI.csproj",
         "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
-        "outputPath": "X:\\Files\\Document\\!Scuola\\Scuola\\C#\\Hardware\\HardwareCLI\\obj\\",
+        "outputPath": "C:\\Users\\gabri\\Documents\\Scuola\\C#\\Hardware\\HardwareCLI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
