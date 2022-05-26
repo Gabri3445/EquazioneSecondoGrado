@@ -1,0 +1,167 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+.flex
+{
+    display: flex;
+}
+.container
+{
+    flex-direction: column;
+    width: 90%;
+    margin: 10% auto;
+
+}
+.container img
+{
+    width: 100%;
+    height: auto;
+}
+.bold
+{
+    font-weight: bold;
+}
+.subtitle
+{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+
+}
+.title
+{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+
+.mainContent p
+{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    color: #2F2F2F;
+    margin-bottom: 20px;
+}
+.redText
+{
+    color: #FF0000;
+}
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list * 
+{
+    font-family: 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    /* or 167% */
+
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+@media screen and (min-width: 992px) {
+    .container
+    {
+        margin: 70px 70px;
+        flex-direction: column;
+    }
+    .subtitle
+    {
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 100% */
+
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        /* Gray 2 */
+
+        color: #4F4F4F;
+    }
+    .title
+    {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 48px;
+        /* or 89% */
+
+
+        /* Gray 2 */
+
+        color: #4F4F4F;
+    }
+    .mainContent
+    {
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        color: #2F2F2F;
+    }
+
+    .list *
+    {
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        /* or 144% */
+
+
+        /* Gray 2 */
+
+        color: #4F4F4F;
+    }
+    .desktopFlex
+    {
+        display: flex;
+    }
+    .desktopFlex img
+    {
+        flex-grow: 1;
+        width: 550px;
+    }
+    .desktopFlexContainer
+    {
+        width: 345px;
+    }
+}

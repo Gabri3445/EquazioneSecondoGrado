@@ -4,10 +4,11 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="gabri"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-03-05 09:50:51 "/>
+        <attribute name="saved" value="2022-05-24 12:09:55 PM"/>
         <attribute name="created" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDY7MDQ6MzI6MTIgUE07MjgwNg=="/>
         <attribute name="edited" value="Z2Ficmk7REVTS1RPUC0zNzlNQUw3OzIwMjItMDItMDc7MDU6NTg6MTggUE07OTsyOTM4"/>
         <attribute name="edited" value="SU5GIDAzO0xBQklORjAzOzIwMjItMDMtMDU7IjA5OjUwOjUxICI7NDsyMTc5"/>
+        <attribute name="edited" value="Z2Ficmk7REVTS1RPUC1VRE5XT0NEOzIwMjItMDUtMjQ7MTI6MDk6NTUgUE07MTszMDIz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -369,17 +370,7 @@
                                     </then>
                                     <else>
                                         <if expression="scelta == 2">
-                                            <then>
-                                                <while expression="clienti[i] &gt; 0">
-                                                    <assign variable="profitto" expression="profitto + clienti[i]"/>
-                                                    <assign variable="i" expression="i + 1"/>
-                                                </while>
-                                                <output expression="&quot;Numero di clienti: &quot;" newline="False"/>
-                                                <output expression="i" newline="True"/>
-                                                <output expression="&quot;Profitto totale: &quot;" newline="True"/>
-                                                <output expression="profitto" newline="True"/>
-                                                <breakpoint/>
-                                            </then>
+                                            <then/>
                                             <else/>
                                         </if>
                                     </else>

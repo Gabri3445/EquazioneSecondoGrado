@@ -1,13 +1,10 @@
 ﻿  Source.c
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(60,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(62,2): warning C4013: 'Sleep' undefined; assuming extern returning int
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(219,25): warning C4098: 'registration': 'void' function returning a value
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(285,11): warning C4013: 'findIndex' undefined; assuming extern returning int
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(285,22): warning C4047: 'function': 'const char *const ' differs in levels of indirection from 'int'
-X:\Files\Document\!Scuola\Scuola\C\Crociera\Source.c(285,11): warning C4024: 'printf': different types for formal and actual parameter 1
+C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(61,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(63,2): warning C4013: 'Sleep' undefined; assuming extern returning int
+C:\Users\gabri\Documents\Scuola\C\Crociera\Source.c(220,25): warning C4098: 'registration': 'void' function returning a value
   Generating code
-  3 of 13 functions (23.1%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
+  6 of 16 functions (37.5%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Crociera.vcxproj -> X:\Files\Document\!Scuola\Scuola\C\Crociera\x64\Release\Crociera.exe
+  Crociera.vcxproj -> C:\Users\gabri\Documents\Scuola\C\Crociera\x64\Release\Crociera.exe
