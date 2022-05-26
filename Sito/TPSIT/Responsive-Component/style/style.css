@@ -113,7 +113,7 @@
     }
     .title
     {
-        font-family: 'Playfair Display';
+        font-family: 'Playfair Display', sans-serif;
         font-style: normal;
         font-weight: 700;
         font-size: 54px;
@@ -157,11 +157,14 @@
     }
     .desktopFlex img
     {
-        flex-grow: 1;
         width: 550px;
+        height: 772px;
+        margin-top: 20px;
     }
     .desktopFlexContainer
     {
-        width: 345px;
+        margin-left: 55px;
+        margin-top: 20px;
     }
+    
 }
